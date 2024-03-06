@@ -1,15 +1,15 @@
 # Code Patterns
-Para o desenvolvimento coerente dos códigos executados no jogo, e para a melhor legibilidade e compreensão de todos os membros do grupo, foram desenvolvidos padrões de código.
+For a coherent development of the codes of the game, and for a better readability and comprehention of all members of the group, this artifact was developed to solve all this issues, building Code Patterns as a solution.
 
-Além disso, para qualquer contribuição de pessoas externas ao grupo original do projeto, faz-se também necessário seguir tais padrões.
+For every outside contribution in this project, it is also necessary to follow these guidelines.
 
-O projeto irá seguir em sua maioria o padrão já popularizado na comunidade conhecido como CamelCase. Um resumo breve desta prática é juntar palavras em uma, em que a divisão de palavra é marcada pela primeira letra da palavra sendo maiúscula.
+The patterns presented below are heavily inspired by [CamelCase](https://en.wikipedia.org/wiki/Camel_case), a much popular style of code, marked by the junction of words, making their division by upper case letters.
 
-## Classes e Métodos
-Os nomes de classes seguirão o padrão CamelCase, com a primeira palavra da classe sendo maiúscula. Já os métodos seguirão o CamelCase, porém a primeira letra da primeira palavra será minúscula.
+## Classes and Methods
+The name of the classes will follow the classic CamelCase, where the first letter of the every word, including the first of them all, will be upper case. The methods on the other hand will have the first letter of them all lower case, whilst the next words will have the first letter upper case.
 
-## Atributos
-Os atributos possuirão o mesmo procedimento dos métodos.
+## Attributes
+Attributes will follow the same guidelines as the methods.
 
-## Cenas (Scenes) e GameObjects
-Ambas seguirão o padrão CamelCase com a primeira letra da primeira palavra maiúscula.
+## Scenes and GameObjects
+Both will follow the same guidelines as the classes, having the first letter of them all upper case.
