@@ -1,8 +1,3 @@
----
-title: Task title
-about: Brief description of the task
----
-
 ## Task Description
 
 Describe what needs to be done here.
