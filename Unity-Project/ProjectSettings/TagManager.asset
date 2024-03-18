@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MenuObject
+  - MenuBackground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MenuObjects
   - Water
   - UI
   - 
@@ -40,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: MenuObjects
+    uniqueID: 1939620311
+    locked: 0
+  - name: MenuBackground
+    uniqueID: 1924138877
     locked: 0
