@@ -10,14 +10,10 @@ public class BookScripts : MonoBehaviour
         sound = GetComponent<AudioSource>();
     }
 
-    public void PlayBook(){
+    public void PlaySound(){
         sound.Play();
         if(sound.isPlaying){Debug.Log("Saindo");}
         else{Debug.Log("Mamammos");}
-    }
-
-    public void PlayPaper(){
-        sound.Play();
     }
 
 }
