@@ -13,6 +13,13 @@ public class MovePlayer : MonoBehaviour
 
     void Update()
     {
+        HandleMovement();
+        HandleAttack();
+        UpdateAnimationState();
+    }
+
+    void HandleMovement()
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -20,8 +27,15 @@ public class MovePlayer : MonoBehaviour
         transform.Translate(movement);
 
         lastMoveDirection = new Vector2(horizontalInput, verticalInput);
-        
-        UpdateAnimationState();
+    }
+
+    void HandleAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && lastMoveDirection == Vector2.zero)
+        {
+            animator.SetTrigger("trAttacking");
+        } else {
+        }
     }
 
     void UpdateAnimationState()
