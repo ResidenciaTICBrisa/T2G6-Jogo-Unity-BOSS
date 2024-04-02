@@ -1,22 +1,22 @@
-# Description
+# Descrição
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+Por favor, inclua um resumo da alteração e qual problema está sendo corrigido. Por favor, inclua também motivação relevante e contexto. Liste quaisquer dependências necessárias para esta alteração.
 
-Fixes # (issue)
+Corrige # (problema)
 
-## Type of change
+## Tipo de mudança
 
-Please delete options that are not relevant.
+Por favor, exclua as opções que não são relevantes.
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
+- [ ] Correção de bug (mudança não disruptiva que corrige um problema)
+- [ ] Nova funcionalidade (mudança não disruptiva que adiciona funcionalidade)
+- [ ] Mudança disruptiva (correção ou funcionalidade que causaria mau funcionamento da funcionalidade existente)
+- [ ] Atualização de documentação
 
 # Checklist:
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
+- [ ] Meu código segue as diretrizes de estilo deste projeto
+- [ ] Realizei uma revisão do meu próprio código
+- [ ] Comentei meu código, especialmente em áreas de difícil compreensão
+- [ ] Realizei alterações correspondentes na documentação
+- [ ] Minhas mudanças não geram novos avisos
