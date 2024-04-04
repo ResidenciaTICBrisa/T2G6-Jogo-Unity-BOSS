@@ -8,19 +8,17 @@ Based on the concept of collaboration, the BOSS team, together with the Brisa pr
 
 # History
 
-In the city of ____, things are as they are, and no one disagrees with any of the rules.
-
+In the city of oGama, things are as they are, and no one disagrees with any of the rules.
 The main one: Women do not have the right to higher education.
-
 For Sofia, this has always been a source of discomfort, but she has never seen anyone around her fight for something different to happen.
 
 In "Sofia's Diaries," the player must collect items throughout the game that tell the story of this world, including the diaries of the main character, which will unravel the reasons why this city is the way it is.
-
 Following the clues left in each of these items, it will quickly become visible how the solution lies in showing that if other women have been capable of such incredible feats, why wouldn't those of now be?
 
 # Technical Aspects
 
-The game will be in 2D, developed on the Unity platform using the C# programming language. In visual production, most of it will be created in Aseprite software.
+The game will be in 2D, developed on the Unity platform using the C# programming language.
+For visual production, we will use original artwork created in the Aseprite software, and also, if necessary, we will use free artwork from other authors.
 
 ## . . . 
 
@@ -32,16 +30,14 @@ Baseado no conceito de colaboração, a equipe do BOSS, em conjunto com o progra
 
 # História
 
-Na cidade de ____ as coisas são como são e ninguém discorda de nenhuma das regras. 
- 
+Na cidade de oGama as coisas são como são e ninguém discorda de nenhuma das regras. 
 A principal delas: Mulheres não tem direito ao ensino superior. 
- 
 Para Sofia isso sempre foi motivo de incômodo, mas nunca viu ninguém ao seu redor lutar para que algo diferente aconteça. 
  
 Em "Diários de Sofia", o jogador deve coletar ao longo do jogo itens que contam a história deste mundo, dentre eles, os diários da personagem principal, os quais desvendarão os por quês dessa cidade ser do jeito que é. 
- 
 Seguindo as dicas deixadas em cada um desses itens, rapidamente será visível como a solução está em mostrar a  que, se outras mulheres foram capazes de feitos tão incríveis, por qual motivo as de agora não seriam?
 
 # Aspectos Técnicos
 
-O jogo será em 2D, desenvolvido na plataforma Unity usando a linguagem de programação C#. Na produção visual, a maior parte será criada no software Aseprite.
+O jogo será em 2D, desenvolvido na plataforma Unity usando a linguagem de programação C#. 
+Na produção visual, usaremos artes autorais criada no software Aseprite, e também caso seja necessário, usaremos artes grátis de outros autores.
