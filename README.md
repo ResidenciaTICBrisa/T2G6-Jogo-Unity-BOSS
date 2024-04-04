@@ -8,7 +8,7 @@ Based on the concept of collaboration, the BOSS team, together with the Brisa pr
 
 # History
 
-In the city of oGama, things are as they are, and no one disagrees with any of the rules.
+In the city of Ogama, things are as they are, and no one disagrees with any of the rules.
 The main one: Women do not have the right to higher education.
 For Sofia, this has always been a source of discomfort, but she has never seen anyone around her fight for something different to happen.
 
@@ -30,7 +30,7 @@ Baseado no conceito de colaboração, a equipe do BOSS, em conjunto com o progra
 
 # História
 
-Na cidade de oGama as coisas são como são e ninguém discorda de nenhuma das regras. 
+Na cidade de Ogama as coisas são como são e ninguém discorda de nenhuma das regras. 
 A principal delas: Mulheres não tem direito ao ensino superior. 
 Para Sofia isso sempre foi motivo de incômodo, mas nunca viu ninguém ao seu redor lutar para que algo diferente aconteça. 
  
