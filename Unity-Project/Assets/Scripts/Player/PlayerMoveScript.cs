@@ -1,46 +1,54 @@
 using UnityEngine;
+using System;
 
 public class MovePlayer : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public Joystick movementJoystick;
+    public float playerSpeed = 5f;
     private Animator animator;
-    private Vector2 lastMoveDirection;
+    private Rigidbody2D rb;
 
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         HandleMovement();
         HandleAttack();
         UpdateAnimationState();
     }
 
-    void HandleMovement()
+    private void HandleMovement()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = movementJoystick.Direction.x;
+        float verticalInput = movementJoystick.Direction.y;
 
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f).normalized * moveSpeed * Time.deltaTime;
-        transform.Translate(movement);
-
-        lastMoveDirection = new Vector2(horizontalInput, verticalInput);
-    }
-
-    void HandleAttack()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && lastMoveDirection == Vector2.zero)
+        if (horizontalInput != 0 || verticalInput != 0)
         {
-            animator.SetTrigger("trAttacking");
-        } else {
+            rb.velocity = new Vector2(horizontalInput * playerSpeed, verticalInput * playerSpeed);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
         }
     }
 
-    void UpdateAnimationState()
+    private void HandleAttack()
     {
-        animator.SetFloat("MoveX", lastMoveDirection.x);
-        animator.SetFloat("MoveY", lastMoveDirection.y);
+        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity == Vector2.zero)
+        {
+            animator.SetTrigger("trAttacking");
+        }
+    }
+
+    private void UpdateAnimationState()
+    {
+        float x = rb.velocity.x;
+        float y = rb.velocity.y;
+        animator.SetFloat("MoveX", Math.Abs(x) < Math.Abs(y) ? 0 : x);
+        animator.SetFloat("MoveY", Math.Abs(y) < Math.Abs(x) ? 0 : y);
     }
 }
