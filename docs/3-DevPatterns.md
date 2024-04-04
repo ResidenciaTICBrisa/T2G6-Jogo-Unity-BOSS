@@ -1,12 +1,18 @@
 # Padrões de Desenvolvimento
-Para melhor organização do projeto, uma série de padrões estão sendo adotados, como padrão de commit, template de issues, template de pull requests, padrões de código.
+Para melhor organização do projeto, uma série de padrões foram adotadas, como padrão de commit, template de issues, template de pull requests, padrão de ATAS e padrões de código.
 
 ## Padrões de Commit
 Para padronizar os commits do projeto, este artefato foi criado tendo [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) como inspiração.
 
-O padrão básico consiste em "tipo", "issue", "mensagem" e "contribuidores".
+O padrão básico consiste em:<br>
 
-- Tipo: que é o tipo do commit, como docs para documentação, fix para correção de conteúdo, ou mesmo feat para commits de novas funcionalidades;
+"tipo"<br>
+"issue"<br>
+"mensagem"<br> 
+"contribuidores"<br>
+
+
+- Tipo: que é o tipo do commit, como **docs** para documentação, **fix** para correção de conteúdo, ou mesmo **feat** para commits de novas funcionalidades;
 - Issue: este commit corrige qual das issues abertas no momento?
 - Mensagem: a mensagem precisa ser curta, mas eficaz, transmitindo uma pequena ideia do conteúdo do commit;
 - Contribuidores: se houver um coautor no commit, você deve incluí-lo no final;

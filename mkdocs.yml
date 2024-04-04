@@ -1,4 +1,4 @@
-site_name: Jogo Unity BOOS
+site_name: Projeto BOSS - Unity
 theme:
   name: material
   features:
@@ -16,14 +16,14 @@ theme:
     - schema: default
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: teal
+        name: Modo Claro
+      primary: pink
       accent: purple
     - schema: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
-      primary: teal
+        name: Modo Escuro
+      primary: black
       accent: lime
 
 markdown_extensions:
@@ -42,3 +42,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Inicio: index.md
+  - Projeto: 1-AboutTheProject.md
+  - Jogo: 2-AboutTheGame.md
+  - Template: 3-DevPatterns.md
+  - Artes e referêcias: 4-ArtsAndReferences.md
