@@ -1,18 +1,18 @@
 # Backlog
-This artifact has the porpuse of gather information and content from the backlog developed by the group for this project. Two boards were made in the Trello aplication, one to keep in check all the sprints for each release, and another for the requirement that were elicitated in the meetings of the group.
+Este artefato tem o propósito de reunir informações e conteúdo do backlog desenvolvido pelo grupo para este projeto. Dois quadros foram criados na aplicação Trello, um para acompanhar todas as sprints de cada lançamento e outro para os requisitos que foram levantados nas reuniões do grupo.
 
-All of the content mentioned below can be acessed [here](https://trello.com/w/unitybrisa).
+Todo o conteúdo mencionado abaixo pode ser acessado [aqui](https://trello.com/w/unitybrisa).
 
-## Sprint Board
-The Sprint board keep information of every sprint of every release, in which each sprint represents one panel in this board, and the card inside the panel are the activitys that are going to be made.
+## Quadro de Sprints
+O Quadro de Sprints contém informações de cada sprint de cada lançamento, onde cada sprint representa um painel neste quadro, e os cartões dentro do painel são as atividades que serão realizadas.
 
-Each card contain information of the content of the activity, the members that are working on it, the maximum date to complete it and labels that refer to the activity difficulty and area of the project (such as study, documentation or a game task).
+Cada cartão contém informações sobre o conteúdo da atividade, os membros que estão trabalhando nela, a data máxima para concluí-la e rótulos que se referem à dificuldade da atividade e área do projeto (como estudo, documentação ou uma tarefa de jogo).
 
-The Sprint Board can be acessed [here](https://trello.com/b/r3MhZzla/sprints).
+O Quadro de Sprints pode ser acessado [aqui](https://trello.com/b/r3MhZzla/sprints).
 
-## Requirements Board
-This board brings together all the requirements elicited during the group meetings, labeling them as Functional or Non-Functional and how high is their priority.
+## Quadro de Requisitos
+Este quadro reúne todos os requisitos levantados durante as reuniões do grupo, rotulando-os como Funcionais ou Não Funcionais e qual é a sua prioridade.
 
-Also, it has information to which of the four Releases of the project each requirement refers to. Another important aspect is the _id_ of the requirement, that comes right before their title, inside brackets.
+Além disso, ele contém informações sobre para qual dos quatro Lançamentos do projeto cada requisito se refere. Outro aspecto importante é o _id_ do requisito, que vem imediatamente antes de seu título, dentro de colchetes.
 
-The Requirements Board can be acessed [here](https://trello.com/b/q3R7wCJO/requisitos).
+O Quadro de Requisitos pode ser acessado [aqui](https://trello.com/b/q3R7wCJO/requisitos).

@@ -1,14 +1,14 @@
-# Commit Pattern
-To standardize the commits of the project, this artifact was made having the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) as inspiration.
+# Padrão de Commit
+Para padronizar os commits do projeto, este artefato foi criado tendo como inspiração os [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
-The basic pattern consists of "type", "issue", "message" and "contributors".
-- Type: which is the type of the commit, such as docs for documentation, or fix for fixing content, or even feat for feature commits;
-- Issue: this commit fixes which of the current open issues?
-- Message: the message needs to be short but effective, so it passes a small idea of the content of the commit;
-- Contributors: if you have a co-author on the commit, you should put it in the end;
+O padrão básico consiste em "tipo", "problema", "mensagem" e "contribuidores".
+- Tipo: qual é o tipo do commit, como por exemplo docs para documentação, ou fix para correção de conteúdo, ou até mesmo feat para commits de nova funcionalidade;
+- Problema: este commit corrige qual dos problemas abertos atuais?
+- Mensagem: a mensagem precisa ser curta mas eficaz, para passar uma pequena ideia do conteúdo do commit;
+- Contribuidores: se você tiver um co-autor no commit, você deve colocá-lo no final;
 
-The style should look something similar to this:
+O estilo deve ser algo semelhante a isto:
 
 ```bash
-<Type> #(Issue): <Message> Co-authored-by: <Contributor> <Contributor email>
+<Tipo> #(Problema): <Mensagem> Co-autoria: <Contribuidor> <E-mail do Contribuidor>
 ```
