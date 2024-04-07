@@ -1,51 +1,60 @@
 site_name: Projeto BOSS - Unity
+nav: 
+ - Home: 'index.md'
+ - Jogo: 'game.md'
+ - Visão de produto e projeto: 
+    - Visão de produto: 'product.md'
+    - Visão de projeto: 'project.md'
+    - Processos de desenvolvimento de software: 'devprocess.md'
+ - Backlog: 'backlog.md'
+ - Padrões de desenvolvimento: 'patterns.md'
+ - Artes e referências: 'references.md'
+ - Roadmap e Sprints: 
+    - Roadmap e Sprints: 'sprints.md'
+    - Sprint (28/02/24 - 06/03/2024): 'sprint1.md'
+    - Sprint (06/03/24 - 13/03/2024): 'sprint2.md'
+    - Sprint (13/03/24 - 20/03/2024): 'sprint3.md'
+    - Sprint (20/03/24 - 27/03/2024): 'sprint4.md'
+    - Sprint (27/03/24 - 02/04/2024): 'sprint5.md'
+    - Release 1 (08/04): 'release1.md'
+
 theme:
   name: material
+  language: pt
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
     - content.code.copy
-  language: en
+    - content.tooltips
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
   palette:
-    - schema: default
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Modo Claro
-      primary: pink
-      accent: purple
-    - schema: slate
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/toggle-switch
-        name: Modo Escuro
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: black
-      accent: lime
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-
-nav:
-  - Inicio: index.md
-  - Projeto: 1-AboutTheProject.md
-  - Jogo: 2-AboutTheGame.md
-  - Template: 3-DevPatterns.md
-  - Artes e referêcias: 4-ArtsAndReferences.md
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
