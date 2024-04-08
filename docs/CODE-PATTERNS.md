@@ -1,15 +1,15 @@
-# Code Patterns
-For a coherent development of the codes of the game, and for a better readability and comprehention of all members of the group, this artifact was developed to solve all this issues, building Code Patterns as a solution.
+# Padrões de Código
+Para um desenvolvimento coerente dos códigos do jogo e para uma melhor legibilidade e compreensão de todos os membros do grupo, este artefato foi desenvolvido para resolver todas essas questões, construindo Padrões de Código como solução.
 
-For every outside contribution in this project, it is also necessary to follow these guidelines.
+Para todas as contribuições externas neste projeto, também é necessário seguir estas diretrizes.
 
-The patterns presented below are heavily inspired by [CamelCase](https://en.wikipedia.org/wiki/Camel_case), a much popular style of code, marked by the junction of words, making their division by upper case letters.
+Os padrões apresentados abaixo são fortemente inspirados por [CamelCase](https://en.wikipedia.org/wiki/Camel_case), um estilo de código muito popular, marcado pela junção de palavras, tornando sua divisão por letras maiúsculas.
 
-## Classes and Methods
-The name of the classes will follow the classic CamelCase, where the first letter of the every word, including the first of them all, will be upper case. The methods on the other hand will have the first letter of them all lower case, whilst the next words will have the first letter upper case.
+## Classes e Métodos
+O nome das classes seguirá o clássico CamelCase, onde a primeira letra de cada palavra, incluindo a primeira de todas, será maiúscula. Os métodos, por outro lado, terão a primeira letra em minúsculo, enquanto as próximas palavras terão a primeira letra em maiúsculo.
 
-## Attributes
-Attributes will follow the same guidelines as the methods.
+## Atributos
+Os atributos seguirão as mesmas diretrizes dos métodos.
 
-## Scenes and GameObjects
-Both will follow the same guidelines as the classes, having the first letter of them all upper case.
+## Cenas e Objetos do Jogo
+Ambos seguirão as mesmas diretrizes das classes, tendo a primeira letra de cada palavra em maiúscula.

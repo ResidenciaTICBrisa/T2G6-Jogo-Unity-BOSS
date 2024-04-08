@@ -1,18 +1,18 @@
-## Task Description
+## Descrição da Tarefa
 
-Describe what needs to be done here.
+Descreva o que precisa ser feito aqui.
 
-## Acceptance Criteria
+## Critérios de Aceitação
 
-- [ ] Criterion 1
-- [ ] Criterion 2
+- [ ] Critério 1
+- [ ] Critério 2
 - [ ] ...
 
-## Requirements
-Which requirements of the project does this issue refers to?
+## Requisitos
+A quais requisitos do projeto esta questão se refere?
 - []()
 - []()
 
-## Additional Information
+## Informações Adicionais
 
-Add any additional information that may be helpful.
+Adicione qualquer informação adicional que possa ser útil.
