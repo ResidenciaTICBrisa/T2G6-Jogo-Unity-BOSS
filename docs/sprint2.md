@@ -10,13 +10,13 @@
 
 |Tarefa|Descrição|Responsável|
 |--|--|--|
-|Procurar artes gratuitas para o jogo||Lucas Gobbi e Thiago Gomes|
-|Estudar pixel art||Letícia Monteiro e Miguel Arthur|
-|Criar discord||Miguel Arthur|
-|Criar diagrama de classes||Thiago Gomes e Lucas Gobbi|
-|Criar padrões de commit||Lucas Gobbi|
-|Criar padrões de código||Lucas Gobbi|
-|Criar padrões de ata||Miguel Arthur|
-|Criar template de issue||Thiago Gomes|
+|Procurar artes gratuitas para o jogo|-|Lucas Gobbi e Thiago Gomes|
+|Estudar pixel art|-|Letícia Monteiro e Miguel Arthur|
+|Criar discord|-|Miguel Arthur|
+|Criar diagrama de classes|-|Thiago Gomes e Lucas Gobbi|
+|Criar padrões de commit|Todos os padrões podem ser encontrados em [padrões de desenvolvimento](https://residenciaticbrisa.github.io/T2G6-Jogo-Unity-BOSS/patterns/)|Lucas Gobbi|
+|Criar padrões de código|-|Lucas Gobbi|
+|Criar padrões de ata|-|Miguel Arthur|
+|Criar template de issue|-|Thiago Gomes|
 
 

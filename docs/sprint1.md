@@ -10,7 +10,7 @@
 
 |Tarefa|Descrição|Responsável|
 |--|--|--|
-|Baixar Unity||Lucas Gobbi, Thiago Gomes, Letícia Monteiro e Miguel Arthur|
-|Desenvolver Flappy bird||Lucas Gobbi, Thiago Gomes, Letícia Monteiro e Miguel Arthur|
-|Protótipo no Figma||Lucas Gobbi|
+|Baixar Unity|Baixar a ferramenta que irá ser utilizada no desenvolvimento|Lucas Gobbi, Thiago Gomes, Letícia Monteiro e Miguel Arthur|
+|Desenvolver Flappy bird|Assistir o [tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)|Lucas Gobbi, Thiago Gomes, Letícia Monteiro e Miguel Arthur|
+|Protótipo no Figma|O protótipo se encontra [aqui]()|Lucas Gobbi|
 

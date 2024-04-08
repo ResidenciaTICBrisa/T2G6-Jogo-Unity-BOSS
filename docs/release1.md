@@ -10,10 +10,14 @@
 
 |Tarefa|Descrição|Responsável|
 |--|--|--|
-|Adicionar Joystick||Thiago Gomes|
-|Integrar arte com script do boneco||Lucas Gobbi e Thiago Gomes|
-|Evoluir GitPages||Júlia Yoshida e Miguel Arthur|
-|Roadmap||Miguel Arthur e Lucas Gobbi|
+|Programar movimento da câmera pra acompanhar o boneco|-|Lucas Gobbi|
+|Adicionar Joystick|-|Thiago Gomes|
+|Integrar arte com script do boneco|-|Lucas Gobbi e Thiago Gomes|
+|Evoluir GitPages|-|Júlia Yoshida e Miguel Arthur|
+|Roadmap|-|Miguel Arthur e Lucas Gobbi|
+|Fazer slides da apresentação|-|Letícia Monteiro, Júlia Yoshida e Lucas Gobbi|
+|Criar interação do NPC|-|Lucas Gobbi|
+|Adicionar trilha sonora no city map e adicionar som da interação|-|Bruno Ribeiro|
 
 ## Ata de reunião
 

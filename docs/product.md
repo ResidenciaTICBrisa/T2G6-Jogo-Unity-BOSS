@@ -10,7 +10,7 @@
 
 |Função|Tecnologia|
 |--|--|
-|Desenho de pixel art|Asesprite|
+|Desenho de pixel art|Aseprite|
 |Desenvolvimento|Unity</brC#>|
 
 

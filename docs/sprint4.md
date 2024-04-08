@@ -11,8 +11,8 @@
 |Tarefa|Descrição|Responsável|
 |--|--|--|
 |Correção de incoerências|- Deixar o Readme do projeto coerente a gitpage, existem divergências na parte da história do jogo<br>- Desenvolver texto sobre a história do jogo melhor (pedir texto pro Gobbi)<br>- Adicionar referências do Menu no gitpages|Lucas Gobbi e Miguel Arthur|
-|Fazer arte do mapa||Lucas Gobbi|
-|Programar o boneco principal|Movimentos para as 4 direções<br>Movimento na Diagonal mesma velocidade<br>Movimento de Ataque|Thiago Gomes|
+|Fazer arte do mapa|-|Lucas Gobbi|
+|Programar o boneco principal|- Movimentos para as 4 direções<br>- Movimento na Diagonal mesma velocidade<br>- Movimento de Ataque|Thiago Gomes|
 
 ## Ata de reunião
 
