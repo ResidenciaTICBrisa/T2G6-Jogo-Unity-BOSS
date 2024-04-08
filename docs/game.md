@@ -25,13 +25,7 @@
 
 ## Controles do Jogador
 
-<p style="text-indent: 50px;text-align: justify;"> O jogo é destinado ao público mobile, portanto, possui essas interações:</p>
-
-- Toque e Deslize: Toque e deslize na tela para movimentar-se.
-- Interagir: Toque em objetos ou personagens para interagir.
-- Ícones de Ação: Toque em ícones na tela para executar ações específicas.
-- Câmera: Deslize para ajustar a visão ou ângulo da câmera.
-- Interface Simplificada: Controles minimalistas para uma experiência intuitiva.
+<p style="text-indent: 50px;text-align: justify;"> O boneco será movimentado via joystick, além de ter outros dois botões, um para atacar e outro para interagir. </p>
 
 ## Mundo do Jogo
 
