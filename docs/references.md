@@ -4,7 +4,8 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|04/04/2024|0.1|Adicionando roadmap|Miguel Arthur|
+|04/04/2024|0.1|Adicionando referências|Miguel Arthur|
+|10/04/2024|0.2|Adicionando artes próprias|Júlia Yoshida|
 
 <p style="text-indent: 50px;text-align: justify;"> Para o desenvolvimento do projeto, estão sendo utilizadas artes de uso livre em conjunto com artes próprias desenvolvidas pelo nosso time. </p>
 
@@ -17,5 +18,50 @@
 
 ## FoxelDev
 <p style="text-indent: 50px;text-align: justify;"> <a href="https://foxeldev.itch.io/pixelbooks" target="_blank">FoxelDev.Itch.Io</a> é um pacote de artes de uso livre de acordo com a licença: CCO 1.0 - Universal, do autor Foxel Games na qual usamos para pegar a referência do nosso livro da tela inicial e para usar futuramente dentro do jogo.</p>
+
+## Artes próprias
+
+### Personagem principal - Sofia
+
+<p style="text-indent: 50px;text-align: justify;"> As artes da personagem principal, Sofia, foram desenhadas no Aseprite pela Júlia. As sprite sheets de todos os movimentos dela estão apresentadas a seguir.</p> 
+
+<img src="/images/idle.PNG" alt="Imagem 1: Sprite sheet da personagem parada(idle)" width="300"> 
+
+_Imagem 1: Sprite sheet da personagem parada(idle)_
+
+ <img src="/images/frontwalking.PNG" alt="Descrição da imagem" width="400">
+
+_Imagem 2: Sprite sheet da personagem andando de frente_
+
+<img src="/images/backwalking.PNG" alt="Descrição da imagem" width="400">
+
+_Imagem 3: Sprite sheet da personagem andando de costas_
+
+<img src="/images/leftwalking.PNG" alt="Descrição da imagem" width="400"> 
+
+_Imagem 4: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
+
+<img src="/images/rightwalking.PNG" alt="Descrição da imagem" width="400">
+
+_Imagem 5: Sprite sheet da personagem andando para direita/diagonal direita_
+
+<img src="/images/frontpunch.PNG" alt="Descrição da imagem" width="300">
+
+_Imagem 6: Sprite sheet da personagem socando de frente_
+
+<img src="/images/leftpunch.PNG" alt="Descrição da imagem" width="400">
+
+_Imagem 6: Sprite sheet da personagem socando de lado(esquerda)_
+
+<img src="/images/rightpunch.PNG" alt="Descrição da imagem" width="400">    
+
+_Imagem 7: Sprite sheet da personagem socando de lado(direita)_
+
+<img src="/images/backpunch.PNG" alt="Descrição da imagem" width="300">
+
+_Imagem 8: Sprite sheet da personagem socando de costas_
+
+
+
 
 
