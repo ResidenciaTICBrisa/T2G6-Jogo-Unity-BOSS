@@ -62,6 +62,46 @@ _Imagem 7: Sprite sheet da personagem socando de lado(direita)_
 _Imagem 8: Sprite sheet da personagem socando de costas_
 
 
+### Vilão - Prefeito
 
+<p style="text-indent: 50px;text-align: justify;"> As artes do prefeito foram desenhadas no Aseprite pela Letícia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
 
+<img src="../images/idlevillain.PNG" width="700"> 
 
+_Imagem 1: Sprite sheet do personagem parado(idle)_
+
+<img src="../images/backvillain.PNG" width="600">
+
+_Imagem 2: Sprite sheet da personagem andando de costas_
+
+<img src="../images/leftwvillain.PNG" width="700"> 
+
+_Imagem 3: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
+
+<img src="../images/rightwvillain.PNG" width="700">
+
+_Imagem 4: Sprite sheet da personagem andando para direita/diagonal direita_
+
+### Vilão - Robô
+
+<p style="text-indent: 50px;text-align: justify;"> As artes do robô foram desenhadas no Aseprite pela Letícia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
+
+<img src="../images/idlerobot.PNG" width="700"> 
+
+_Imagem 1: Sprite sheet do personagem parado(idle)_
+
+ <img src="../images/frontrobot.PNG" width="700">
+
+_Imagem 2: Sprite sheet do personagem andando de frente_
+
+<img src="../images/backrobot.PNG" width="700">
+
+_Imagem 3: Sprite sheet da personagem andando de costas_
+
+<img src="../images/robotwalking2.PNG" width="500"> 
+
+_Imagem 4: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
+
+<img src="../images/robotwalking1.PNG" width="500">
+
+_Imagem 5: Sprite sheet da personagem andando para direita/diagonal direita_
