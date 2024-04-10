@@ -25,39 +25,39 @@
 
 <p style="text-indent: 50px;text-align: justify;"> As artes da personagem principal, Sofia, foram desenhadas no Aseprite pela Júlia. As sprite sheets de todos os movimentos dela estão apresentadas a seguir.</p> 
 
-<img src="/images/idle.PNG" alt="Imagem 1: Sprite sheet da personagem parada(idle)" width="300"> 
+<img src="../images/idle.PNG" width="300"> 
 
 _Imagem 1: Sprite sheet da personagem parada(idle)_
 
- <img src="/images/frontwalking.PNG" alt="Descrição da imagem" width="400">
+ <img src="../images/frontwalking.PNG" width="400">
 
 _Imagem 2: Sprite sheet da personagem andando de frente_
 
-<img src="/images/backwalking.PNG" alt="Descrição da imagem" width="400">
+<img src="../images/backwalking.PNG" width="400">
 
 _Imagem 3: Sprite sheet da personagem andando de costas_
 
-<img src="/images/leftwalking.PNG" alt="Descrição da imagem" width="400"> 
+<img src="../images/leftwalking.PNG" width="400"> 
 
 _Imagem 4: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
 
-<img src="/images/rightwalking.PNG" alt="Descrição da imagem" width="400">
+<img src="../images/rightwalking.PNG" width="400">
 
 _Imagem 5: Sprite sheet da personagem andando para direita/diagonal direita_
 
-<img src="/images/frontpunch.PNG" alt="Descrição da imagem" width="300">
+<img src="../images/frontpunch.PNG" width="300">
 
 _Imagem 6: Sprite sheet da personagem socando de frente_
 
-<img src="/images/leftpunch.PNG" alt="Descrição da imagem" width="400">
+<img src="../images/leftpunch.PNG" width="400">
 
 _Imagem 6: Sprite sheet da personagem socando de lado(esquerda)_
 
-<img src="/images/rightpunch.PNG" alt="Descrição da imagem" width="400">    
+<img src="../images/rightpunch.PNG" width="400">    
 
 _Imagem 7: Sprite sheet da personagem socando de lado(direita)_
 
-<img src="/images/backpunch.PNG" alt="Descrição da imagem" width="300">
+<img src="../images/backpunch.PNG" width="300">
 
 _Imagem 8: Sprite sheet da personagem socando de costas_
 
