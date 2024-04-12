@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class OldManScript : MonoBehaviour
+public class OldManScript : NPCScript
 {
     // Point A and B are game objects that point out the path of the NPC
     public GameObject pointA;
@@ -13,6 +14,8 @@ public class OldManScript : MonoBehaviour
     private Transform currentPoint;
     public float speed;
     private float timePassed = 0f;
+    private bool stopEverything = false;
+    Vector2 backupSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,30 @@ public class OldManScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        {
+            if (!dialoguePanel.activeInHierarchy)
+            {
+                dialoguePanel.SetActive(true);
+                nameText.text = nameOfNPC;
+                photoPanel.GetComponent<Image>().overrideSprite = photo;
+                StartCoroutine(Typing());
+            }
+            else if (dialogueText.text == dialogues[index])
+            {
+                NextLine();
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+        {
+            RemoveText();
+        }
+        if (stopEverything)
+        {
+            return;
+        }
         // Get the current distance of the NPC to the point
         float distance = transform.position.x - currentPoint.position.x;
         // If distance less than zero, make it positive
@@ -58,11 +85,45 @@ public class OldManScript : MonoBehaviour
     {
         // Make the animation of walk stop
         anim.SetBool("isWalking", false);
-        Vector2 backupSpeed = rb.velocity;
+        backupSpeed = rb.velocity;
         rb.velocity = new Vector2(0, 0);
         // Stop the code for 4 seconds
         yield return new WaitForSeconds(4);
-        anim.SetBool("isWalking", true);
-        rb.velocity = backupSpeed;
+        if (!stopEverything)
+        {
+            anim.SetBool("isWalking", true);
+            rb.velocity = backupSpeed;
+        }
+    }
+
+    public new void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsClose = true;
+            stopEverything = true;
+            anim.SetBool("isWalking", false);
+            backupSpeed = rb.velocity;
+            rb.velocity = new Vector2(0,0);
+        }
+    }
+
+    public new void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsClose = false;
+            RemoveText();
+            stopEverything = false;
+            anim.SetBool("isWalking", true);
+            if(currentPoint == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, 0);
+            } else
+            {
+                rb.velocity = new Vector2(-speed, 0);
+            }
+
+        }
     }
 }

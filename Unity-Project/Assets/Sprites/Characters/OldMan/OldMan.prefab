@@ -261,6 +261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6205ac0c223b6f84dbf29aaa53909257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  nameText: {fileID: 0}
+  dialogues: []
+  nameOfNPC: Velho Legal
+  photo: {fileID: 21300000, guid: 69a003831fa6fb245a1a6c58c8a943ca, type: 3}
+  photoPanel: {fileID: 0}
+  wordSpeed: 0.1
+  playerIsClose: 0
   pointA: {fileID: 976671208882149012}
   pointB: {fileID: 2702232667300954457}
   speed: 1
