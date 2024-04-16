@@ -1,6 +1,7 @@
 site_name: Projeto BOSS - Unity
 nav: 
  - Home: 'index.md'
+ - Conceitos: 'concepts.md'
  - Jogo: 'game.md'
  - Visão de produto e projeto: 
     - Visão de produto: 'product.md'
@@ -11,13 +12,13 @@ nav:
  - Artes e referências: 'references.md'
  - Roadmap e Sprints: 
     - Roadmap e Sprints: 'sprints.md'
-    - Sprint (28/02/24 - 06/03/2024): 'sprint1.md'
-    - Sprint (06/03/24 - 13/03/2024): 'sprint2.md'
-    - Sprint (13/03/24 - 20/03/2024): 'sprint3.md'
-    - Sprint (20/03/24 - 27/03/2024): 'sprint4.md'
-    - Sprint (27/03/24 - 02/04/2024): 'sprint5.md'
-    - Release 1 (08/04): 'release1.md'
-    - Sprint (09/04/24 - 16/04/2024): 'sprint6.md'
+    - Sprint (28/02/24 - 06/03/24): 'sprint1.md'
+    - Sprint (06/03/24 - 13/03/24): 'sprint2.md'
+    - Sprint (13/03/24 - 20/03/24): 'sprint3.md'
+    - Sprint (20/03/24 - 27/03/24): 'sprint4.md'
+    - Sprint (27/03/24 - 02/04/24): 'sprint5.md'
+    - Sprint (02/04/24 - 08/04/24): 'sprint6.md'
+    - Sprint (09/04/24 - 16/04/24): 'sprint7.md'
 
 
 theme:
