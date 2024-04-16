@@ -4,7 +4,7 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|07/04/2024|0.1|Adicionando release 1|Júlia Yoshida|
+|07/04/2024|0.1|Adicionando sprint|Júlia Yoshida|
 |16/04/2024|0.2|Adicionando tutoriais utilizados|Júlia Yoshida|
 
 ## Tarefas

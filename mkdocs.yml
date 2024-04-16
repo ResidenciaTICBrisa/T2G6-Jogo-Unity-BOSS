@@ -19,7 +19,9 @@ nav:
     - Sprint (27/03/24 - 02/04/24): 'sprint5.md'
     - Sprint (02/04/24 - 08/04/24): 'sprint6.md'
     - Sprint (09/04/24 - 16/04/24): 'sprint7.md'
-
+    - Sprint (17/04/24 - 23/04/24): 'sprint8.md'
+ - Releases:
+    - Release 1(08/04/24): 'release1.md'
 
 theme:
   name: material
