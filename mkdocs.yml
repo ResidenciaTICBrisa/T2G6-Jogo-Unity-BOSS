@@ -22,6 +22,7 @@ nav:
     - Sprint (17/04/24 - 23/04/24): 'sprint8.md'
  - Releases:
     - Release 1(08/04/24): 'release1.md'
+ - Linha do tempo: 'timeline.md'
 
 theme:
   name: material
