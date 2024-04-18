@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class NPCScript : MonoBehaviour
     public string nameOfNPC;
     public Sprite photo;
     public GameObject photoPanel;
+    AudioSource sound;
     protected int index = 0;
 
     public float wordSpeed;
@@ -21,6 +23,7 @@ public class NPCScript : MonoBehaviour
     void Start()
     {
         dialogueText.text = "";
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +33,10 @@ public class NPCScript : MonoBehaviour
         {
             if (!dialoguePanel.activeInHierarchy)
             {
+                if (sound)
+                {
+                    sound.Play();
+                }
                 dialoguePanel.SetActive(true);
                 nameText.text = nameOfNPC;
                 photoPanel.GetComponent<Image>().overrideSprite = photo;
@@ -81,6 +88,7 @@ public class NPCScript : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             playerIsClose = true;
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
@@ -89,6 +97,7 @@ public class NPCScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = false;
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
             RemoveText();
         }
     }

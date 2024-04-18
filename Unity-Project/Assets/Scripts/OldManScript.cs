@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class OldManScript : NPCScript
     public GameObject pointB;
     private Rigidbody2D rb;
     private Animator anim;
+    AudioSource sound;
     // Current Point refers to the point that the NPC is going to
     private Transform currentPoint;
     public float speed;
@@ -21,6 +23,7 @@ public class OldManScript : NPCScript
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
         // Start the movement by pointing to B
         currentPoint = pointB.transform;
         rb.velocity = new Vector2(speed, 0);
@@ -35,6 +38,10 @@ public class OldManScript : NPCScript
         {
             if (!dialoguePanel.activeInHierarchy)
             {
+                if (sound)
+                {
+                    sound.Play();
+                }
                 dialoguePanel.SetActive(true);
                 nameText.text = nameOfNPC;
                 photoPanel.GetComponent<Image>().overrideSprite = photo;
@@ -101,6 +108,7 @@ public class OldManScript : NPCScript
         if (other.CompareTag("Player"))
         {
             playerIsClose = true;
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
             stopEverything = true;
             anim.SetBool("isWalking", false);
             backupSpeed = rb.velocity;
@@ -113,6 +121,7 @@ public class OldManScript : NPCScript
         if (other.CompareTag("Player"))
         {
             playerIsClose = false;
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
             RemoveText();
             stopEverything = false;
             anim.SetBool("isWalking", true);
