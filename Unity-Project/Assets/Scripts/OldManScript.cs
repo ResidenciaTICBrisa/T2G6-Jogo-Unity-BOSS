@@ -11,7 +11,6 @@ public class OldManScript : NPCScript
     public GameObject pointB;
     private Rigidbody2D rb;
     private Animator anim;
-    AudioSource sound;
     // Current Point refers to the point that the NPC is going to
     private Transform currentPoint;
     public float speed;
@@ -34,8 +33,9 @@ public class OldManScript : NPCScript
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
         {
+            isTalkable = false;
             if (!dialoguePanel.activeInHierarchy)
             {
                 if (sound)

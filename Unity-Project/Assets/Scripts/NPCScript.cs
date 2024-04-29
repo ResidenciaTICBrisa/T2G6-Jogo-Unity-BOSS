@@ -13,11 +13,12 @@ public class NPCScript : MonoBehaviour
     public string nameOfNPC;
     public Sprite photo;
     public GameObject photoPanel;
-    AudioSource sound;
+    public AudioSource sound;
     protected int index = 0;
 
     public float wordSpeed;
     public bool playerIsClose;
+    protected bool isTalkable;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +30,9 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
         {
+            isTalkable = false;
             if (!dialoguePanel.activeInHierarchy)
             {
                 if (sound)
@@ -81,6 +83,11 @@ public class NPCScript : MonoBehaviour
         {
             RemoveText();
         }
+    }
+
+    public void LetsTalk()
+    {
+        if(playerIsClose) isTalkable = true;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
