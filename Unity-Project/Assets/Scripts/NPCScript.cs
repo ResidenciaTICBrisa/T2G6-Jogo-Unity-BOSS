@@ -19,6 +19,7 @@ public class NPCScript : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     protected bool isTalkable;
+    protected bool skipTalk;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
+        if ((Input.GetKeyDown(KeyCode.E) || isTalkable || skipTalk) && playerIsClose)
         {
             isTalkable = false;
             if (!dialoguePanel.activeInHierarchy)
@@ -65,10 +66,28 @@ public class NPCScript : MonoBehaviour
 
     protected IEnumerator Typing()
     {
+        int count = 0;
         foreach(char letter in dialogues[index].ToCharArray())
         {
+            if((Input.GetKeyDown(KeyCode.E) || skipTalk) && playerIsClose && count > 0)
+            {
+                skipTalk = false;
+                dialogueText.text = dialogues[index];
+                break;
+            }
             dialogueText.text += letter;
+            count++;
             yield return new WaitForSeconds(wordSpeed);
+        }
+    }
+
+    public void SkipTalk()
+    {
+        if (index < dialogues.Length - 1) skipTalk = true;
+        else
+        { 
+            skipTalk = false;
+            RemoveText();
         }
     }
 
