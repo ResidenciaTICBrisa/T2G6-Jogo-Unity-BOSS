@@ -2265,7 +2265,7 @@ Transform:
   m_GameObject: {fileID: 667442370}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.051895905, y: -0.63140273, z: -10}
+  m_LocalPosition: {x: 0.05189495, y: -0.63140893, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2802,7 +2802,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1062335065}
-  - component: {fileID: 1062335064}
   m_Layer: 0
   m_Name: NPCs
   m_TagString: Untagged
@@ -2810,19 +2809,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1062335064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062335063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48922143fd6d32748b3bdcf5e255dfcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTalkable: 0
 --- !u!4 &1062335065
 Transform:
   m_ObjectHideFlags: 0
@@ -14768,6 +14754,78 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1724295502}
+        m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
+        m_MethodName: LetsTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1561391856}
+        m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
+        m_MethodName: SkipTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281313344}
+        m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
+        m_MethodName: SkipTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 585160818}
+        m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
+        m_MethodName: SkipTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 817107313}
+        m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
+        m_MethodName: SkipTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1346358910}
+        m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
+        m_MethodName: SkipTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1225873541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24937,6 +24995,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[9].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5231723717143818733, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1372795541, guid: 74ca0b808c477a9488ac0e194dbcb000, type: 3}
     - target: {fileID: 5696555897994453995, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_Name
       value: InteractButton
