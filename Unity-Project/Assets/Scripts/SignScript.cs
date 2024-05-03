@@ -9,6 +9,7 @@ public class Sign : MonoBehaviour
 	public Text signText;
 	public string text;
 	public bool playerInRange;
+    protected bool isTalkable;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,10 @@ public class Sign : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.E) && playerInRange)
-		{
-			if (signBox.activeInHierarchy)
+        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerInRange)
+        {
+            isTalkable = false;
+            if (signBox.activeInHierarchy)
 				signBox.SetActive(false);
 			else
 			{
@@ -27,13 +29,18 @@ public class Sign : MonoBehaviour
 			}
 		}
     }
-	private void OnTriggerEnter2D(Collider2D collision)
+    public void LetsTalk()
+    {
+        if (playerInRange) isTalkable = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Player"))
 		{
 			playerInRange = true;
 			gameObject.transform.GetChild(0).gameObject.SetActive(true);
 			if (text.Length <= 30) signText.fontSize = 150;
+			else signText.fontSize = 100;
 		}
 	}
 	private void OnTriggerExit2D(Collider2D collision)
