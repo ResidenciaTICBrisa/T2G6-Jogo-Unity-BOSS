@@ -3,6 +3,7 @@
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
 |18/04/2024|0.1|Adicionando a linha do tempo|Júlia Yoshida|
+|06/05/2024|0.2|Adicionando novos pontos marcantes|Lucas Gobbi|
 
 <p style="text-indent: 50px;text-align: justify;"> Aqui se encontram os momentos marcantes do projeto e os responsáveis por essas tarefas.</p>
 
@@ -45,3 +46,21 @@
 <b>15 de abril: Template de NPC's desenvolvido</b>
 <br>*Autor:* Lucas Gobbi
 <br>
+
+<b>25 de abril: Interação com NPC's desenvolvida, com efeitos sonoros e template de UI da interação</b>
+<br>*Autor:* Lucas Gobbi
+<br><br>
+<img src="../images/npc.jpeg" width="900">
+<br><br>
+
+<b>30 de abril: Ataque da personagem programado</b>
+<br>*Autor:* Lucas Gobbi
+<br><br>
+<img src="../images/attack.jpeg" width="900">
+<br><br>
+
+<b>06 de maio: Ambiente da fase 1 completo</b>
+<br>*Autor:* Júlia Yoshida e Miguel Arthur
+<br><br>
+<img src="../images/biblioteca01.jpeg" width="900">
+<br><br>

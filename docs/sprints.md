@@ -6,6 +6,7 @@
 |--|--|--|--|
 |04/04/2024|0.1|Adicionando roadmap|Miguel Arthur|
 |07/04/2024|0.2|Adicionando sprints|Júlia Yoshida|
+|06/05/2024|0.3|Adicionando Github projects|Lucas Gobbi|
 
 <p style="text-indent: 50px;text-align: justify;">Essa seção está dividida em sprints, cada uma com duração de uma semana, que detalham o trabalho realizado por nós, além dos tutoriais e materiais que orientaram nosso estudo.</p>
 
@@ -21,3 +22,14 @@
 <p style="text-indent: 50px;text-align: justify;"> O Quadro de Sprints pode ser visualizado a seguir: </p>
 
 <iframe src="https://trello.com/b/r3MhZzla.html" frameBorder="0" width="900" height="900"></iframe>
+
+## Github Projects
+<p style="text-indent: 50px;text-align: justify;"> O Github Projects do grupo foi desenvolvido para uma organização mais adequada das issues do projeto. Cada issue é dividida em algumas categorias, como: tamanho, prioridade, responsável por ela e etc. </p>
+
+<img src="../images/gitprojects01.png" width="900">
+
+<p style="text-indent: 50px;text-align: justify;"> A partir dessas issues e de seus dados, foram desenvolvidos gráficos para análise de performance do grupo, na aba de insights do projects, a qual está sendo utilizado para melhor distribuição de issues para a equipe.</p>
+
+<img src="../images/gitprojects02.png" width="900">
+
+<p style="text-indent: 50px;text-align: justify;"> Para acessar o projects da equipe basta clicar <a href="https://github.com/orgs/ResidenciaTICBrisa/projects/20/views/2">aqui</a> .</p>
