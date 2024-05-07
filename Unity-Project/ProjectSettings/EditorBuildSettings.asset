@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityMap.unity
     guid: 6d11f841633d35449857256a8f20ff80
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 4ef09ba7aaad7fb8d8197e75916f2f24
+  - enabled: 1
+    path: Assets/Scenes/SofiaHouse.unity
+    guid: 245264ebeb8da9e969205a12cfc08de8
   m_configObjects: {}
