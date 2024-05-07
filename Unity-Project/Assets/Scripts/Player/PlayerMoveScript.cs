@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using System.Collections;
+using UnityEngine.UI;
 
 public class MovePlayer : MonoBehaviour
 {
@@ -7,6 +9,10 @@ public class MovePlayer : MonoBehaviour
     public float playerSpeed = 5f;
     private Animator animator;
     private Rigidbody2D rb;
+    private float atkTimer = 0f;
+    public float atkDuration = 0.5f;
+    private bool isAttacking = false;
+    public Button atkButton;
 
     private void Start()
     {
@@ -16,8 +22,10 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        CheckTimer();
+        //HandleAttack();
+        if (isAttacking == true) return;
         HandleMovement();
-        HandleAttack();
         UpdateAnimationState();
     }
 
@@ -34,14 +42,42 @@ public class MovePlayer : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
+
     }
 
-    private void HandleAttack()
+    public void HandleAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity == Vector2.zero)
+        if (/*Input.GetKeyDown(KeyCode.V)*/ isAttacking == false)
         {
-            animator.SetTrigger("trAttacking");
+            isAttacking = true;
+            Debug.Log("Att");
+            if (animator.GetFloat("MoveX") == 0 && animator.GetFloat("MoveY") == 0)
+            {
+                animator.SetTrigger("TriggerAttackDown");
+
+            } else if (animator.GetFloat("MoveX") > 0)
+            {
+                animator.SetTrigger("TriggerAttackRight");
+
+            } else if (animator.GetFloat("MoveX") < 0)
+            {
+                animator.SetTrigger("TriggerAttackLeft");
+
+            } else if (animator.GetFloat("MoveY") > 0)
+            {
+                animator.SetTrigger("TriggerAttackUp");
+
+            } else if (animator.GetFloat("MoveY") < 0)
+            {
+                animator.SetTrigger("TriggerAttackDown");
+
+            }
+            animator.SetFloat("MoveX", 0);
+            animator.SetFloat("MoveY", 0);
+            rb.velocity = Vector2.zero;
+            
         }
+        
     }
 
     private void UpdateAnimationState()
@@ -50,5 +86,18 @@ public class MovePlayer : MonoBehaviour
         float y = rb.velocity.y;
         animator.SetFloat("MoveX", Math.Abs(x) < Math.Abs(y) ? 0 : x);
         animator.SetFloat("MoveY", Math.Abs(y) < Math.Abs(x) ? 0 : y);
+    }
+
+    private void CheckTimer()
+    {
+        if(isAttacking == true)
+        {
+            atkTimer += Time.deltaTime;
+            if(atkTimer >= atkDuration)
+            {
+                atkTimer = 0;
+                isAttacking = false;
+            }
+        }
     }
 }

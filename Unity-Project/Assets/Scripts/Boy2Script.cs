@@ -23,7 +23,6 @@ public class Boy2Script : NPCScript
     private bool isWalkingDown;
     private bool isWalkingLeft;
     private bool isWalkingRight;
-    AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +36,9 @@ public class Boy2Script : NPCScript
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
         {
+            isTalkable = false;
             if (!dialoguePanel.activeInHierarchy)
             {
                 if (sound)
