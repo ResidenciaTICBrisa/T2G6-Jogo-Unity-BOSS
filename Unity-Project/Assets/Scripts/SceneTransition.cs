@@ -12,14 +12,8 @@ public class Porta : MonoBehaviour
         IrProximaCena();
 
     }
-
     private void IrProximaCena(){
         SceneManager.LoadScene(NomeProximaCena);
-
-
     }
  
-
-
-
 }
