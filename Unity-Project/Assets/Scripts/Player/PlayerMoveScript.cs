@@ -3,8 +3,12 @@ using System;
 using System.Collections;
 using UnityEngine.UI;
 
+
+
+
 public class MovePlayer : MonoBehaviour
 {
+   
     public Joystick movementJoystick;
     public float playerSpeed = 5f;
     private Animator animator;
@@ -13,6 +17,58 @@ public class MovePlayer : MonoBehaviour
     public float atkDuration = 0.5f;
     private bool isAttacking = false;
     public Button atkButton;
+
+
+//parte do código para pega e jogar itens
+    [Header("Config")]
+    List <GameObject> collidingWithList = new List<GameObject>();
+    GameObject collidingWith;
+    Transform item;
+    
+
+    void Update()
+    {
+        Interact();
+    }
+
+    void Interact()
+    {
+        if(this.collidingWith == null) return;
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            switch(this.collidingWith.tag)
+            {
+                case "container":
+                    ContainerController container = this.collidingWith.GetComponent<ContainerController>();
+
+                    if(this.item != null && !container.HaveItem())
+                    {
+                        this.item.position = container.transform.position;
+                        this.item.parent = container.transform;
+                        container.SetItem(this.item);
+                        this.item = null;
+                        return;
+                    }
+
+                    if(this.item == null && container.HaveItem())
+                    {
+                        this.item = container.GetItem();
+                        this.item.position = this.transform.position;
+                        this.item.parent = this.transform;
+                        return;
+                    }
+                    
+                    break;
+            }
+            
+        }
+
+
+
+    }
+
+// final do código
 
     private void Start()
     {

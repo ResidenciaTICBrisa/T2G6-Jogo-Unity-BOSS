@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MenuObject
   - MenuBackground
+  - Container
   layers:
   - Default
   - TransparentFX
