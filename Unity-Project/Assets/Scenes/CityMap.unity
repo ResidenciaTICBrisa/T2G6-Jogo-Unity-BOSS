@@ -3356,6 +3356,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1145703833}
     - target: {fileID: 1123749348651459969, guid: a1e43764259d40ee8b2770b762bc8994, type: 3}
+      propertyPath: talkPanel
+      value: 
+      objectReference: {fileID: 1689848949}
+    - target: {fileID: 1123749348651459969, guid: a1e43764259d40ee8b2770b762bc8994, type: 3}
+      propertyPath: platePanel
+      value: 
+      objectReference: {fileID: 1590897145}
+    - target: {fileID: 1123749348651459969, guid: a1e43764259d40ee8b2770b762bc8994, type: 3}
       propertyPath: playerSpeed
       value: 4
       objectReference: {fileID: 0}
