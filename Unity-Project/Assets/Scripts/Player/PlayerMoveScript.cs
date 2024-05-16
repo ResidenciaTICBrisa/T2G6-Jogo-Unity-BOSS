@@ -17,6 +17,7 @@ public class MovePlayer : MonoBehaviour
     public float atkDuration = 0.5f;
     private bool isAttacking = false;
     public Button atkButton;
+    public GameObject talkPanel;
 
 
 /*parte do código para pega e jogar itens
@@ -93,7 +94,10 @@ public class MovePlayer : MonoBehaviour
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
-            rb.velocity = new Vector2(horizontalInput * playerSpeed, verticalInput * playerSpeed);
+            if (!talkPanel.activeInHierarchy)
+            {
+                rb.velocity = new Vector2(horizontalInput * playerSpeed, verticalInput * playerSpeed);
+            }
         }
         else
         {
