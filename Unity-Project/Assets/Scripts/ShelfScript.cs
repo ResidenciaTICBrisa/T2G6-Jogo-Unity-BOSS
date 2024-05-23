@@ -1,38 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- // Certifique-se de ter o namespace correto
 
 public class ShelfScript : MonoBehaviour
 {
-    public UnityEngine.Rendering.Universal.Light2D light2D; // Referência ao componente Light2D
-    public float activationDistance = 5f; // Distância para ativar a luz
     private bool playerInRange;
+
+    public GameObject exclamation; // Referência ao GameObject da exclamação
 
     // Start is called before the first frame update
     void Start()
     {
-        if (light2D == null)
+        if (exclamation != null)
         {
-            light2D = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
-            if (light2D == null)
-            {
-                Debug.LogError("No Light2D component found on this object.");
-            }
+            exclamation.SetActive(false); // Inicialmente desativa a exclamação
         }
-        light2D.enabled = false; // Inicialmente desativa a luz
+        else
+        {
+            Debug.LogError("No Exclamation GameObject found. Please assign it in the inspector.");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerInRange)
+        if (exclamation != null)
         {
-            light2D.enabled = true;
-        }
-        else
-        {
-            light2D.enabled = false;
+            exclamation.SetActive(playerInRange);
         }
     }
 
