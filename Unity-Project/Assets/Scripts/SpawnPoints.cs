@@ -22,6 +22,9 @@ public class SpawnPoints : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject fade;
+    public Animator anim;
+
     cityMap[] points = new cityMap[3];
 
     // Start is called before the first frame update
@@ -56,27 +59,41 @@ public class SpawnPoints : MonoBehaviour
     // Método chamado quando uma nova cena é carregada
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Scene cena = SceneManager.GetActiveScene();
+        if(cena.name == "MainMenu")
+        {
+            fade.SetActive(false);
+        } else
+        {
+            fade.SetActive(true);
+            anim.SetTrigger("Enter");
+        }
+
         player = GameObject.FindGameObjectWithTag("Player");
         if (currentSpawn == currentPosition.library)
         {
             player.transform.position = points[0].X;
-            currentSpawn = currentPosition.none;
         }
         else if (currentSpawn == currentPosition.house)
         {
             player.transform.position = points[1].X;
-            currentSpawn = currentPosition.none;
         }
         else if (currentSpawn == currentPosition.shop)
         {
             player.transform.position = points[2].X;
-            currentSpawn = currentPosition.none;
         }
 
-        Scene cena = SceneManager.GetActiveScene();
+        currentSpawn = currentPosition.none;
+
         if (cena.name == "Library")
         {
             currentSpawn = currentPosition.library;
+        } else if (cena.name == "Shop")
+        {
+            currentSpawn = currentPosition.shop;
+        } else if (cena.name == "SofiaHouse")
+        {
+            currentSpawn = currentPosition.house;
         }
     }
 }

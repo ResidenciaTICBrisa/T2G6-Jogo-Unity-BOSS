@@ -17,7 +17,7 @@ public class MenuScripts : MonoBehaviour
     }
 
     public void StartGame(){
-        SceneManager.LoadScene("CityMap");
+        SceneManager.LoadScene("SofiaHouse");
     }
     
 }
