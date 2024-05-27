@@ -24,6 +24,8 @@ public class SpawnPoints : MonoBehaviour
 
     public GameObject fade;
     public Animator anim;
+    AudioSource[] sounds;
+    public int musicStatus = 0;
 
     cityMap[] points = new cityMap[3];
 
@@ -34,6 +36,12 @@ public class SpawnPoints : MonoBehaviour
         points[1] = new cityMap(new Vector3(-11.48f, -9.65f, 0));
         points[0] = new cityMap(new Vector3(23.5f, -14.48f, 0));
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Spawn");
+        sounds = GetComponents<AudioSource>();
+        Scene cena = SceneManager.GetActiveScene();
+        if (cena.name == "MainMenu")
+        {
+            sounds[0].Play();
+        }
 
         if (objs.Length > 1)
         {
@@ -60,7 +68,24 @@ public class SpawnPoints : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Scene cena = SceneManager.GetActiveScene();
-        if(cena.name == "MainMenu")
+        // Checagem de cena para escolher trilha sonora
+        if (cena.name == "MainMenu")
+        {
+            sounds[0].Play();
+            musicStatus = 0;
+        } else if(cena.name == "CityMap" && musicStatus == 0)
+        {
+            sounds[0].Stop();
+            sounds[1].Play();
+            musicStatus = 1;
+        } else if (cena.name == "Library")
+        {
+            sounds[1].Stop();
+            musicStatus = 0;
+        }
+
+        // Ativacao da vinheta quando entra em cenas diferentes do menu
+        if (cena.name == "MainMenu")
         {
             fade.SetActive(false);
         } else
@@ -69,6 +94,7 @@ public class SpawnPoints : MonoBehaviour
             anim.SetTrigger("Enter");
         }
 
+        // De acordo com o spawnpoint salvo abaixo, mude a posicao do player para a correspondente
         player = GameObject.FindGameObjectWithTag("Player");
         if (currentSpawn == currentPosition.library)
         {
@@ -85,6 +111,7 @@ public class SpawnPoints : MonoBehaviour
 
         currentSpawn = currentPosition.none;
 
+        // De acordo com qual cena esta agora, como todas elas levam apenas para o citymap, salve o proximo spawnpoint
         if (cena.name == "Library")
         {
             currentSpawn = currentPosition.library;
