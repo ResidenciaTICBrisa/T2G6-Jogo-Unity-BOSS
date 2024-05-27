@@ -16,36 +16,4 @@ public class Porta : MonoBehaviour
     private void IrProximaCena(){
         SceneManager.LoadScene(NomeProximaCena);
     }
-
-    
-
-//código para ocorrer o fade 
-
-    public  static  Porta instance;
-    [SerializeField] Animator TransitionAnim;
-
-    public void NextLevel()
-    {
-        StartCoroutine(LoadLevel());
-
-    }
-
-    IEnumerator LoadLevel()
-    {
-        TransitionAnim.SetTrigger("End");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        TransitionAnim.SetTrigger("Start");
-    }
-   
-
 }
-
-
-
-
-
-
-
-
-
