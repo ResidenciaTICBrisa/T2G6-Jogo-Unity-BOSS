@@ -20,7 +20,7 @@ public class MovePlayer : MonoBehaviour
     public GameObject talkPanel;
 
 
-// parte do código para pega e jogar itens
+/* parte do código para pega e jogar itens
     [Header("Config")]
 // List <GameObject> collidingWithList = new List<GameObject>();
     GameObject collidingWith;
@@ -69,7 +69,7 @@ public class MovePlayer : MonoBehaviour
 
     }
 
- //final do código
+ */
  
 
     private void Start()
