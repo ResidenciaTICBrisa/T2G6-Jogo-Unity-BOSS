@@ -16,8 +16,18 @@ public class FlipPage : MonoBehaviour
     {
 		if (mAnimator != null) 
 		{
-			if (Input.GetKeyDown(KeyCode.F)) mAnimator.SetTrigger("frontFlip");
+			if (Input.GetKeyDown(KeyCode.F)) mAnimator.SetTrigger("fontFlip");
 			if (Input.GetKeyDown(KeyCode.B)) mAnimator.SetTrigger("backFlip");
 		}
+    }
+
+    public void FrontFlip ()
+    {
+        mAnimator.SetTrigger("fontFlip");
+    }
+
+    public void BackFlip ()
+    {
+        mAnimator.SetTrigger("backFlip");
     }
 }
