@@ -6,6 +6,8 @@ TagManager:
   tags:
   - MenuObject
   - MenuBackground
+  - Spawn
+  - Scene
   layers:
   - Default
   - TransparentFX
@@ -43,9 +45,30 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: MenuObjects
-    uniqueID: 1939620311
+  - name: "Ch\xE3o"
+    uniqueID: 1646367147
     locked: 0
-  - name: MenuBackground
-    uniqueID: 1924138877
+  - name: Parede
+    uniqueID: 1364103813
+    locked: 0
+  - name: Porta
+    uniqueID: 4040248765
+    locked: 0
+  - name: "M\xF3veis"
+    uniqueID: 4012330159
+    locked: 0
+  - name: Estante
+    uniqueID: 850062507
+    locked: 0
+  - name: ProdutosSaudaveis
+    uniqueID: 2452296109
+    locked: 0
+  - name: OutrosProdutos
+    uniqueID: 2195375431
+    locked: 0
+  - name: Encaixados
+    uniqueID: 383826649
+    locked: 0
+  - name: OldMan2
+    uniqueID: 823395567
     locked: 0
