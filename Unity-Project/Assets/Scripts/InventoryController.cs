@@ -5,14 +5,24 @@ using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
-    public Objects[] slots; // Inventário que armazena os ScriptableObjects
-    public Image[] slotImage; // Imagens das slots do inventário
-    private GameObject nearbyObject; // Objeto próximo que o jogador pode pegar
+    public Objects[] slots; 
+    public Image[] slotImage;     
+    private GameObject nearbyObject;
+
+    private int selectedSlotIndex = -1; 
 
     void Start()
+{
+    slots = new Objects[slotImage.Length];
+
+    for (int i = 0; i < slotImage.Length; i++)
     {
-        // Inicialize slots e slotImage se necessário
+        int index = i; 
+        slotImage[i].gameObject.AddComponent<Button>(); 
+        slotImage[i].GetComponent<Button>().onClick.AddListener(() => OnSlotClick(index)); 
     }
+}
+
 
     void Update()
     {
@@ -53,5 +63,31 @@ public class InventoryController : MonoBehaviour
                 nearbyObject = null;
             }
         }
+    }
+
+    void OnSlotClick(int index)
+    {
+        if (selectedSlotIndex == -1)
+        {
+            selectedSlotIndex = index;
+            Debug.Log("Slot selecionado: " + index);
+        }
+        else
+        {
+            SwapItems(selectedSlotIndex, index);
+            Debug.Log("Itens trocados: " + selectedSlotIndex + " com " + index);
+            selectedSlotIndex = -1; 
+        }
+    }
+
+    void SwapItems(int index1, int index2)
+    {
+        Objects temp = slots[index1];
+        slots[index1] = slots[index2];
+        slots[index2] = temp;
+
+        Sprite tempSprite = slotImage[index1].sprite;
+        slotImage[index1].sprite = slotImage[index2].sprite;
+        slotImage[index2].sprite = tempSprite;
     }
 }
