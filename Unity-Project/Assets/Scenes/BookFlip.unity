@@ -275,9 +275,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1060101569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -370, y: -4}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 137, y: -4}
   m_SizeDelta: {x: 54, y: 50.9741}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526915836
@@ -764,10 +764,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1060101569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370, y: -4}
-  m_SizeDelta: {x: 54.8663, y: 50.9741}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -137, y: -4}
+  m_SizeDelta: {x: 54.866333, y: 50.9741}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
