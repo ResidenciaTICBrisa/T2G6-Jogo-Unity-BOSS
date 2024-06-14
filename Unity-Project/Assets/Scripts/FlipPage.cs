@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlipPage : MonoBehaviour
 {
@@ -29,5 +30,20 @@ public class FlipPage : MonoBehaviour
     public void BackFlip ()
     {
         mAnimator.SetTrigger("backFlip");
+    }
+
+    public void CloseScene(string sceneNameToUnload)
+    {
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            if (scene.name == sceneNameToUnload)
+            {
+                // Descarrega a cena de forma assíncrona
+                SceneManager.UnloadSceneAsync(sceneNameToUnload);
+                Debug.Log("Unloaded scene: " + sceneNameToUnload);
+                return;
+            }
+        }
     }
 }

@@ -23,6 +23,8 @@ public class SpawnPoints : MonoBehaviour
     public GameObject player;
 
     public GameObject fade;
+
+    public GameObject buttonsCanvas;
     public Animator anim;
     AudioSource[] sounds;
     public int musicStatus = 0;
@@ -51,9 +53,20 @@ public class SpawnPoints : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void DisableCanvas()
+    {
+        int countLoaded = SceneManager.sceneCount;
+        if(buttonsCanvas != null)
+        {
+            Debug.Log(countLoaded);
+            buttonsCanvas.SetActive(countLoaded <= 1);
+        }
+    }
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
         player = GameObject.FindGameObjectWithTag("Player");
         Debug.Log("OnEnable chamado");
     }
@@ -62,11 +75,14 @@ public class SpawnPoints : MonoBehaviour
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     // Método chamado quando uma nova cena é carregada
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        buttonsCanvas = GameObject.FindGameObjectWithTag("ButtonCanvas");
+        DisableCanvas();
         Scene cena = SceneManager.GetActiveScene();
         // Checagem de cena para escolher trilha sonora
         if (cena.name == "MainMenu")
@@ -121,6 +137,20 @@ public class SpawnPoints : MonoBehaviour
         } else if (cena.name == "SofiaHouse")
         {
             currentSpawn = currentPosition.house;
+        }
+    }
+
+    void OnSceneUnloaded(Scene scene)
+    {
+        StartCoroutine(ReenableCanvasAfterSceneUnloaded());
+    }
+
+    IEnumerator ReenableCanvasAfterSceneUnloaded()
+    {
+        yield return null; // Espera um frame para garantir que a cena foi descarregada
+        if (SceneManager.sceneCount <= 1 && buttonsCanvas != null)
+        {
+            buttonsCanvas.SetActive(true);
         }
     }
 }
