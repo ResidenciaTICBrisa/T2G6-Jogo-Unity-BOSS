@@ -39691,6 +39691,7 @@ MonoBehaviour:
   - {fileID: 250851394}
   - {fileID: 114619000}
   - {fileID: 796458185}
+  inventoryPanel: {fileID: 76455800}
 --- !u!58 &1138056810
 CircleCollider2D:
   m_ObjectHideFlags: 0

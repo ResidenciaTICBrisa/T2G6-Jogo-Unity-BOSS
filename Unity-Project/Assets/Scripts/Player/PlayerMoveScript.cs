@@ -24,11 +24,18 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (talkPanel.activeInHierarchy || inventoryPanel.activeInHierarchy)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
+
         CheckTimer();
         if (isAttacking) return;
         HandleMovement();
         UpdateAnimationState();
     }
+
 
     private void HandleMovement()
     {

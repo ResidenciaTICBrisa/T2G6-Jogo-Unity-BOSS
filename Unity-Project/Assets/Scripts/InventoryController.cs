@@ -8,24 +8,26 @@ public class InventoryController : MonoBehaviour
     public Objects[] slots; 
     public Image[] slotImage;     
     private GameObject nearbyObject;
+    public GameObject inventoryPanel; 
 
     private int selectedSlotIndex = -1; 
 
     void Start()
-{
-    slots = new Objects[slotImage.Length];
-
-    for (int i = 0; i < slotImage.Length; i++)
     {
-        int index = i; 
-        slotImage[i].gameObject.AddComponent<Button>(); 
-        slotImage[i].GetComponent<Button>().onClick.AddListener(() => OnSlotClick(index)); 
-    }
-}
+        slots = new Objects[slotImage.Length];
 
+        for (int i = 0; i < slotImage.Length; i++)
+        {
+            int index = i; 
+            slotImage[i].gameObject.AddComponent<Button>(); 
+            slotImage[i].GetComponent<Button>().onClick.AddListener(() => OnSlotClick(index)); 
+        }
+    }
 
     void Update()
     {
+        if (inventoryPanel.activeInHierarchy) return;
+
         if (nearbyObject != null && Input.GetKeyDown(KeyCode.E))
         {
             ObjectType objectType = nearbyObject.GetComponent<ObjectType>();
