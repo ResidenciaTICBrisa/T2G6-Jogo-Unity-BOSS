@@ -8,6 +8,7 @@ TagManager:
   - MenuBackground
   - Container
   - Object
+  - teste
   layers:
   - Default
   - TransparentFX
