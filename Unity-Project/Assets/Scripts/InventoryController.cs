@@ -8,7 +8,7 @@ public class InventoryController : MonoBehaviour
     public Objects[] slots; 
     public Image[] slotImage;     
     private GameObject nearbyObject;
-    public GameObject inventoryPanel; 
+    public GameObject inventoryPanel;
 
     private int selectedSlotIndex = -1; 
 
