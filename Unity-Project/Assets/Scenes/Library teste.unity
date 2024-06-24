@@ -39911,6 +39911,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   slotImage:
   - {fileID: 2102217357}
   - {fileID: 1976990182}
@@ -39920,6 +39924,10 @@ MonoBehaviour:
   - {fileID: 250851394}
   - {fileID: 114619000}
   - {fileID: 796458185}
+  - {fileID: 390561607}
+  - {fileID: 302391256}
+  - {fileID: 2019915352}
+  - {fileID: 241642056}
   inventoryPanel: {fileID: 76455800}
 --- !u!58 &1138056810
 CircleCollider2D:
