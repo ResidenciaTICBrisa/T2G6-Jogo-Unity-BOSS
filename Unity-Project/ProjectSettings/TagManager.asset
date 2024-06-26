@@ -9,6 +9,7 @@ TagManager:
   - Spawn
   - Scene
   - ButtonCanvas
+  - Diary
   layers:
   - Default
   - TransparentFX

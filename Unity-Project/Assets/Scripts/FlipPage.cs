@@ -2,34 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FlipPage : MonoBehaviour
 {
 	private Animator mAnimator;
+    public Button buttonF;
+    public Button buttonB;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
+        Button [] restart = GameObject.Find("CanvasButtons").GetComponentsInChildren<Button>();
+        buttonF = restart[0];
+        buttonB = restart[1];
         mAnimator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		if (mAnimator != null) 
-		{
-			if (Input.GetKeyDown(KeyCode.F)) mAnimator.SetTrigger("fontFlip");
-			if (Input.GetKeyDown(KeyCode.B)) mAnimator.SetTrigger("backFlip");
-		}
+        buttonF.onClick.RemoveAllListeners();
+        buttonB.onClick.RemoveAllListeners();
+        buttonF.onClick.AddListener(FrontFlip);
+        buttonB.onClick.AddListener(BackFlip);
     }
 
     public void FrontFlip ()
     {
         mAnimator.SetTrigger("fontFlip");
+        Debug.Log("CLick " + mAnimator.name);
     }
 
     public void BackFlip ()
     {
         mAnimator.SetTrigger("backFlip");
+        Debug.Log("CLick");
     }
 
     public void CloseScene(string sceneNameToUnload)

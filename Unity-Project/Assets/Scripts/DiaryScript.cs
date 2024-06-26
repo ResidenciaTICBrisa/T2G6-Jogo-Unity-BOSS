@@ -13,8 +13,36 @@ public class DiaryScript : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (playerIsClose) SceneManager.LoadScene(diaryScene, LoadSceneMode.Additive);
-        //canvas.isActive
+        if (playerIsClose)
+        {
+            SceneManager.LoadScene(diaryScene, LoadSceneMode.Additive);
+
+            StartCoroutine(SceneFullyLoaded());
+            //canvas.isActive
+        }
+    }
+
+    IEnumerator SceneFullyLoaded()
+    {
+        yield return null; // Espera um frame para garantir que a cena foi descarregada
+        Scene sceneDiary = SceneManager.GetSceneByName(diaryScene);
+        if (sceneDiary.isLoaded)
+        {
+            string name = gameObject.name + "-";
+            GameObject[] diaries = GameObject.FindGameObjectsWithTag("Diary");
+            Debug.Log(diaries.Length);
+            for (int i = 0; i < diaries.Length; i++)
+            {
+                diaries[i].SetActive(false);
+            }
+            for (int i = 0; i < diaries.Length; i++)
+            {
+                if (diaries[i].name == name)
+                {
+                    diaries[i].SetActive(true);
+                }
+            }
+        }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
