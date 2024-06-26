@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 6ddf732238a6cfe2f9170229945d2d34
+  - enabled: 1
+    path: Assets/Scenes/EstanteInteracao.unity
+    guid: c1c006d0e9e8308f88d0877cc4e8e6a7
+  - enabled: 1
+    path: Assets/Scenes/OpenBook.unity
+    guid: 520923698c35fed87a3469cc33533e6a
   m_configObjects: {}
