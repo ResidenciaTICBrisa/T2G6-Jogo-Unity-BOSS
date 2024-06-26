@@ -16,22 +16,25 @@ public class SpawnPoints : MonoBehaviour
             X = x;
         }
     }
-    public enum currentPosition {none, library, house, shop}
+    public enum currentPosition {none, library, house, shop, houseBed}
 
     public currentPosition currentSpawn = currentPosition.none;
 
     public GameObject player;
 
     public GameObject fade;
+
+    public GameObject buttonsCanvas;
     public Animator anim;
     AudioSource[] sounds;
     public int musicStatus = 0;
 
-    cityMap[] points = new cityMap[3];
+    cityMap[] points = new cityMap[4];
 
     // Start is called before the first frame update
     void Start()
     {
+        points[3] = new cityMap(new Vector3(22.08f, 1.58f, 0));
         points[2] = new cityMap(new Vector3(10.15f,-4.6f,0));
         points[1] = new cityMap(new Vector3(-11.48f, -9.65f, 0));
         points[0] = new cityMap(new Vector3(23.5f, -14.48f, 0));
@@ -41,6 +44,7 @@ public class SpawnPoints : MonoBehaviour
         if (cena.name == "MainMenu")
         {
             sounds[0].Play();
+            currentSpawn = currentPosition.houseBed;
         }
 
         if (objs.Length > 1)
@@ -51,9 +55,20 @@ public class SpawnPoints : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void DisableCanvas()
+    {
+        int countLoaded = SceneManager.sceneCount;
+        if(buttonsCanvas != null)
+        {
+            Debug.Log(countLoaded);
+            buttonsCanvas.SetActive(countLoaded <= 1);
+        }
+    }
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
         player = GameObject.FindGameObjectWithTag("Player");
         Debug.Log("OnEnable chamado");
     }
@@ -62,11 +77,14 @@ public class SpawnPoints : MonoBehaviour
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     // Método chamado quando uma nova cena é carregada
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        buttonsCanvas = GameObject.FindGameObjectWithTag("ButtonCanvas");
+        DisableCanvas();
         Scene cena = SceneManager.GetActiveScene();
         // Checagem de cena para escolher trilha sonora
         if (cena.name == "MainMenu")
@@ -82,6 +100,19 @@ public class SpawnPoints : MonoBehaviour
         {
             sounds[1].Stop();
             musicStatus = 0;
+        }
+
+        int countLoaded = SceneManager.sceneCount;
+        if (countLoaded > 1)
+        {
+            for (int i = 0; i < countLoaded; i++)
+            {
+                Scene isFlip = SceneManager.GetSceneAt(i);
+                if(isFlip.name == "BookFlip")
+                {
+                    return;
+                }
+            }
         }
 
         // Ativacao da vinheta quando entra em cenas diferentes do menu
@@ -107,6 +138,9 @@ public class SpawnPoints : MonoBehaviour
         else if (currentSpawn == currentPosition.shop)
         {
             player.transform.position = points[2].X;
+        } else if (currentSpawn == currentPosition.houseBed)
+        {
+            player.transform.position = points[3].X;
         }
 
         currentSpawn = currentPosition.none;
@@ -121,6 +155,23 @@ public class SpawnPoints : MonoBehaviour
         } else if (cena.name == "SofiaHouse")
         {
             currentSpawn = currentPosition.house;
+        } else if (cena.name == "MainMenu")
+        {
+            currentSpawn = currentPosition.houseBed;
+        }
+    }
+
+    void OnSceneUnloaded(Scene scene)
+    {
+        StartCoroutine(ReenableCanvasAfterSceneUnloaded());
+    }
+
+    IEnumerator ReenableCanvasAfterSceneUnloaded()
+    {
+        yield return null; // Espera um frame para garantir que a cena foi descarregada
+        if (SceneManager.sceneCount <= 1 && buttonsCanvas != null)
+        {
+            buttonsCanvas.SetActive(true);
         }
     }
 }
