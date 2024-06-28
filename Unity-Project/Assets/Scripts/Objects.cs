@@ -7,4 +7,5 @@ public class Objects : ScriptableObject
 {
     public string itemName;
     public Sprite itemSprite;
+    public GameObject objectPrefab;
 }

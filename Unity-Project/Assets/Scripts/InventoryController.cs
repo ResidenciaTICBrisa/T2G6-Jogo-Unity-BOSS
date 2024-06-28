@@ -71,6 +71,19 @@ public class InventoryController : MonoBehaviour
         }
     }
 
+    public void SetNearbyObject(GameObject obj)
+    {
+        nearbyObject = obj;
+    }
+
+    public void ClearNearbyObject(GameObject obj)
+    {
+        if (nearbyObject == obj)
+        {
+            nearbyObject = null;
+        }
+    }
+
     public void SwapItems(int index1, int index2)
     {
         Objects temp = slots[index1];
@@ -83,77 +96,16 @@ public class InventoryController : MonoBehaviour
         slotImage[index1].color = slots[index1] != null ? Color.white : Color.clear;
         slotImage[index2].color = slots[index2] != null ? Color.white : Color.clear;
     }
-}
 
-public class SlotDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
-{
-    private InventoryController inventoryController;
-    public int slotIndex; 
-    private Image itemImage;
-    private GameObject draggedItem;
-
-    private Color originalColor;
-
-    public void Initialize(InventoryController controller, int index)
+    public void DropItem(int index, Vector3 position)
     {
-        inventoryController = controller;
-        slotIndex = index;
-        itemImage = GetComponent<Image>();
-        originalColor = itemImage.color; 
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (itemImage.sprite == null) return;
-
-        draggedItem = new GameObject("DraggedItem");
-        draggedItem.transform.SetParent(transform.root, false);
-        draggedItem.transform.SetAsLastSibling();
-        Image draggedItemImage = draggedItem.AddComponent<Image>();
-        draggedItemImage.sprite = itemImage.sprite;
-        draggedItemImage.raycastTarget = false;
-        RectTransform rectTransform = draggedItem.GetComponent<RectTransform>();
-        rectTransform.sizeDelta = itemImage.GetComponent<RectTransform>().sizeDelta;
-        draggedItemImage.color = itemImage.color;
-        itemImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        if (draggedItem != null)
+        if (slots[index] != null)
         {
-            draggedItem.transform.position = Input.mousePosition;
-        }
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        if (draggedItem != null)
-        {
-            Destroy(draggedItem);
-        }
-        itemImage.color = originalColor;
-    }
-}
-
-public class SlotDropHandler : MonoBehaviour, IDropHandler
-{
-    private InventoryController inventoryController;
-    private int slotIndex;
-
-    public void Initialize(InventoryController controller, int index)
-    {
-        inventoryController = controller;
-        slotIndex = index;
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        SlotDragHandler draggedSlot = eventData.pointerDrag.GetComponent<SlotDragHandler>();
-        if (draggedSlot != null)
-        {
-            int draggedSlotIndex = draggedSlot.slotIndex;
-            inventoryController.SwapItems(draggedSlotIndex, slotIndex);
+            GameObject itemPrefab = slots[index].objectPrefab; // Certifique-se de que Objects tenha uma referência ao prefab
+            Instantiate(itemPrefab, position, Quaternion.identity);
+            slots[index] = null;
+            slotImage[index].sprite = null;
+            slotImage[index].color = Color.clear;
         }
     }
 }
