@@ -24,7 +24,7 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (talkPanel.activeInHierarchy || inventoryPanel.activeInHierarchy)
+        if ((talkPanel != null && talkPanel.activeInHierarchy) || (inventoryPanel != null && inventoryPanel.activeInHierarchy))
         {
             rb.velocity = Vector2.zero;
             return;
@@ -36,7 +36,6 @@ public class MovePlayer : MonoBehaviour
         UpdateAnimationState();
     }
 
-
     private void HandleMovement()
     {
         float horizontalInput = movementJoystick.Direction.x;
@@ -44,7 +43,7 @@ public class MovePlayer : MonoBehaviour
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
-            if (!talkPanel.activeInHierarchy && !inventoryPanel.activeInHierarchy)
+            if ((talkPanel == null || !talkPanel.activeInHierarchy) && (inventoryPanel == null || !inventoryPanel.activeInHierarchy))
             {
                 rb.velocity = new Vector2(horizontalInput * playerSpeed, verticalInput * playerSpeed);
             }
@@ -54,6 +53,7 @@ public class MovePlayer : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
     }
+
 
     public void HandleAttack()
     {

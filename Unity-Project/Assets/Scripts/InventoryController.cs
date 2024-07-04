@@ -2,29 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class InventoryController : MonoBehaviour
 {
-    public Objects[] slots; 
-    public Image[] slotImage;     
+    public Objects[] slots;
+    public Image[] slotImage;
     private GameObject nearbyObject;
-    public GameObject inventoryPanel; 
+    public GameObject inventoryPanel;
+    private GameObject draggedItem;
 
-    private int selectedSlotIndex = -1; 
-
-    void Start()
+    private void Start()
     {
         slots = new Objects[slotImage.Length];
 
         for (int i = 0; i < slotImage.Length; i++)
         {
-            int index = i; 
-            slotImage[i].gameObject.AddComponent<Button>(); 
-            slotImage[i].GetComponent<Button>().onClick.AddListener(() => OnSlotClick(index)); 
+            int index = i;
+            slotImage[i].gameObject.AddComponent<Button>();
+            SlotDragHandler dragHandler = slotImage[i].gameObject.AddComponent<SlotDragHandler>();
+            SlotDropHandler dropHandler = slotImage[i].gameObject.AddComponent<SlotDropHandler>();
+            dragHandler.Initialize(this, index);
+            dropHandler.Initialize(this, index);
         }
     }
 
-    void Update()
+    private void Update()
     {
         if (inventoryPanel.activeInHierarchy) return;
 
@@ -39,6 +42,7 @@ public class InventoryController : MonoBehaviour
                     {
                         slots[i] = objectType.objectType;
                         slotImage[i].sprite = objectType.objectType.itemSprite;
+                        slotImage[i].color = Color.white; 
                         Destroy(nearbyObject);
                         nearbyObject = null;
                         break;
@@ -48,7 +52,7 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Object"))
         {
@@ -56,7 +60,7 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Object"))
         {
@@ -67,22 +71,20 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    void OnSlotClick(int index)
+    public void SetNearbyObject(GameObject obj)
     {
-        if (selectedSlotIndex == -1)
+        nearbyObject = obj;
+    }
+
+    public void ClearNearbyObject(GameObject obj)
+    {
+        if (nearbyObject == obj)
         {
-            selectedSlotIndex = index;
-            Debug.Log("Slot selecionado: " + index);
-        }
-        else
-        {
-            SwapItems(selectedSlotIndex, index);
-            Debug.Log("Itens trocados: " + selectedSlotIndex + " com " + index);
-            selectedSlotIndex = -1; 
+            nearbyObject = null;
         }
     }
 
-    void SwapItems(int index1, int index2)
+    public void SwapItems(int index1, int index2)
     {
         Objects temp = slots[index1];
         slots[index1] = slots[index2];
@@ -91,5 +93,21 @@ public class InventoryController : MonoBehaviour
         Sprite tempSprite = slotImage[index1].sprite;
         slotImage[index1].sprite = slotImage[index2].sprite;
         slotImage[index2].sprite = tempSprite;
+        slotImage[index1].color = slots[index1] != null ? Color.white : Color.clear;
+        slotImage[index2].color = slots[index2] != null ? Color.white : Color.clear;
+    }
+
+    public void DropItem(int index, Vector3 position)
+    {
+        if (slots[index] != null)
+        {
+            GameObject itemPrefab = slots[index].objectPrefab; 
+            GameObject droppedItem = Instantiate(itemPrefab, position, Quaternion.identity);
+            droppedItem.tag = "Object"; 
+            droppedItem.AddComponent<ObjectType>().objectType = slots[index]; 
+            slots[index] = null;
+            slotImage[index].sprite = null;
+            slotImage[index].color = Color.clear;
+        }
     }
 }
