@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21f5ef59bc4881b419e2db5971b0d732, type: 3}
-  m_Name: New Object
+  m_Name: Book1
   m_EditorClassIdentifier: 
-  itemName: teste
-  itemSprite: {fileID: 1488605071, guid: 0a26f7d48ba870e4999d4dbc9f36cf58, type: 3}
+  itemName: Book1
+  itemSprite: {fileID: 1756773259, guid: 6d0380ec4e31ece398d4de0dc47a84f9, type: 3}
   objectPrefab: {fileID: 6530733722431167165, guid: 70cdf4f77d9761dce98703b3c5f850ea, type: 3}
