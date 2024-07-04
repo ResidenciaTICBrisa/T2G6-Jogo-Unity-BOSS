@@ -6,6 +6,7 @@
 |--|--|--|--|
 |04/04/2024|0.1|Adicionando referências|Miguel Arthur|
 |10/04/2024|0.2|Adicionando artes próprias|Júlia Yoshida|
+|04/07/2024|0.3|Adicionando artes próprias|Júlia Yoshida|
 
 <p style="text-indent: 50px;text-align: justify;"> Para o desenvolvimento do projeto, estão sendo utilizadas artes de uso livre em conjunto com artes próprias desenvolvidas pelo nosso time. </p>
 
@@ -23,85 +24,121 @@
 
 ### Personagem principal - Sofia
 
-<p style="text-indent: 50px;text-align: justify;"> As artes da personagem principal, Sofia, foram desenhadas no Aseprite pela Júlia. As sprite sheets de todos os movimentos dela estão apresentadas a seguir.</p> 
+<p style="text-indent: 50px;text-align: justify;"> As artes da personagem principal, Sofia, foram desenhadas no Aseprite pela Júlia. O faceset da Sofia e as sprite sheets de todos os movimentos dela estão apresentadas a seguir.</p> 
 
-<img src="../images/idle.PNG" width="300"> 
+<div style="text-align: center;">
+    <img src="../images/facesetsofia.png" width="300"> 
+    <p>Imagem 1: Faceset da Sofia</p>
+</div>
 
-_Imagem 1: Sprite sheet da personagem parada(idle)_
+<div style="text-align: center;">
+    <img src="../images/idle.PNG" width="300"> 
+    <p>Imagem 2: Sprite sheet da personagem parada(idle)</p>
+</div>
 
- <img src="../images/frontwalking.PNG" width="400">
+<div style="text-align: center;">
+    <img src="../images/frontwalking.PNG" width="400">
+    <p>Imagem 3: Sprite sheet da personagem andando de frente</p>
+</div>
 
-_Imagem 2: Sprite sheet da personagem andando de frente_
+<div style="text-align: center;">
+    <img src="../images/backwalking.PNG" width="400">
+    <p>Imagem 4: Sprite sheet da personagem andando de costas</p>
+</div>
 
-<img src="../images/backwalking.PNG" width="400">
+<div style="text-align: center;">
+    <img src="../images/leftwalking.PNG" width="400"> 
+    <p>Imagem 5: Sprite sheet da personagem andando para esquerda/diagonal esquerda</p>
+</div>
 
-_Imagem 3: Sprite sheet da personagem andando de costas_
+<div style="text-align: center;">
+    <img src="../images/rightwalking.PNG" width="400">
+    <p>Imagem 6: Sprite sheet da personagem andando para direita/diagonal direita</p>
+</div>
 
-<img src="../images/leftwalking.PNG" width="400"> 
+<div style="text-align: center;">
+    <img src="../images/frontpunch.PNG" width="300">
+    <p>Imagem 7: Sprite sheet da personagem socando de frente</p>
+</div>
 
-_Imagem 4: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
+<div style="text-align: center;">
+    <img src="../images/leftpunch.PNG" width="400">
+    <p>Imagem 8: Sprite sheet da personagem socando de lado(esquerda)</p>
+</div>
 
-<img src="../images/rightwalking.PNG" width="400">
+<div style="text-align: center;">
+    <img src="../images/rightpunch.PNG" width="400">    
+    <p>Imagem 9: Sprite sheet da personagem socando de lado(direita)</p>
+</div>
 
-_Imagem 5: Sprite sheet da personagem andando para direita/diagonal direita_
-
-<img src="../images/frontpunch.PNG" width="300">
-
-_Imagem 6: Sprite sheet da personagem socando de frente_
-
-<img src="../images/leftpunch.PNG" width="400">
-
-_Imagem 6: Sprite sheet da personagem socando de lado(esquerda)_
-
-<img src="../images/rightpunch.PNG" width="400">    
-
-_Imagem 7: Sprite sheet da personagem socando de lado(direita)_
-
-<img src="../images/backpunch.PNG" width="300">
-
-_Imagem 8: Sprite sheet da personagem socando de costas_
-
+<div style="text-align: center;">
+    <img src="../images/backpunch.PNG" width="300">
+    <p>Imagem 10: Sprite sheet da personagem socando de costas</p>
+</div>
 
 ### Vilão - Prefeito
 
 <p style="text-indent: 50px;text-align: justify;"> As artes do prefeito foram desenhadas no Aseprite pela Letícia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
 
-<img src="../images/idlevillain.PNG" width="700"> 
+<div style="text-align: center;">
+    <img src="../images/idlevillain.PNG" width="700"> 
+    <p>Imagem 1: Sprite sheet do personagem parado(idle)</p>
+</div>
 
-_Imagem 1: Sprite sheet do personagem parado(idle)_
+<div style="text-align: center;">
+    <img src="../images/backvillain.PNG" width="600">
+    <p>Imagem 2: Sprite sheet da personagem andando de costas</p>
+</div>
 
-<img src="../images/backvillain.PNG" width="600">
+<div style="text-align: center;">
+    <img src="../images/leftwvillain.PNG" width="700"> 
+    <p>Imagem 3: Sprite sheet da personagem andando para esquerda/diagonal esquerda</p>
+</div>
 
-_Imagem 2: Sprite sheet da personagem andando de costas_
-
-<img src="../images/leftwvillain.PNG" width="700"> 
-
-_Imagem 3: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
-
-<img src="../images/rightwvillain.PNG" width="700">
-
-_Imagem 4: Sprite sheet da personagem andando para direita/diagonal direita_
+<div style="text-align: center;">
+    <img src="../images/rightwvillain.PNG" width="700">
+    <p>Imagem 4: Sprite sheet da personagem andando para direita/diagonal direita</p>
+</div>
 
 ### Vilão - Robô
 
-<p style="text-indent: 50px;text-align: justify;"> As artes do robô foram desenhadas no Aseprite pela Letícia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
+<p style="text-indent: 50px;text-align: justify;"> As artes do movimento do robô foram desenhadas pela Letícia e a arte do faceset dele foi desenhada pela Júlia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
 
-<img src="../images/idlerobot.PNG" width="700"> 
+<div style="text-align: center;">
+    <img src="../images/facesetrobot.png" width="300"> 
+    <p>Imagem 1: Faceset do robô</p>
+</div>
 
-_Imagem 1: Sprite sheet do personagem parado(idle)_
+<div style="text-align: center;">
+    <img src="../images/idlerobot.PNG" width="700"> 
+    <p>Imagem 2: Sprite sheet do personagem parado(idle)</p>
+</div>
 
- <img src="../images/frontrobot.PNG" width="700">
+<div style="text-align: center;">
+    <img src="../images/frontrobot.PNG" width="700">
+    <p>Imagem 3: Sprite sheet do personagem andando de frente</p>
+</div>
 
-_Imagem 2: Sprite sheet do personagem andando de frente_
+<div style="text-align: center;">
+    <img src="../images/backrobot.PNG" width="700">
+    <p>Imagem 4: Sprite sheet da personagem andando de costas</p>
+</div>
 
-<img src="../images/backrobot.PNG" width="700">
+<div style="text-align: center;">
+    <img src="../images/robotwalking2.PNG" width="500"> 
+    <p>Imagem 5: Sprite sheet da personagem andando para esquerda/diagonal esquerda</p>
+</div>
 
-_Imagem 3: Sprite sheet da personagem andando de costas_
+<div style="text-align: center;">
+    <img src="../images/robotwalking1.PNG" width="500">
+    <p>Imagem 6: Sprite sheet da personagem andando para direita/diagonal direita</p>
+</div>
 
-<img src="../images/robotwalking2.PNG" width="500"> 
+### Inventário
 
-_Imagem 4: Sprite sheet da personagem andando para esquerda/diagonal esquerda_
+<p style="text-indent: 50px;text-align: justify;"> A arte do inventário foi desenhada no Aseprite pela Júlia. </p> 
 
-<img src="../images/robotwalking1.PNG" width="500">
-
-_Imagem 5: Sprite sheet da personagem andando para direita/diagonal direita_
+<div style="text-align: center;">
+    <img src="../images/inventory.jpeg" width="250">
+    <p>Imagem 1: Arte do inventário</p>
+</div>
