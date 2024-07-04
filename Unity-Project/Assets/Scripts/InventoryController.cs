@@ -101,8 +101,10 @@ public class InventoryController : MonoBehaviour
     {
         if (slots[index] != null)
         {
-            GameObject itemPrefab = slots[index].objectPrefab; // Certifique-se de que Objects tenha uma referência ao prefab
-            Instantiate(itemPrefab, position, Quaternion.identity);
+            GameObject itemPrefab = slots[index].objectPrefab; 
+            GameObject droppedItem = Instantiate(itemPrefab, position, Quaternion.identity);
+            droppedItem.tag = "Object"; 
+            droppedItem.AddComponent<ObjectType>().objectType = slots[index]; 
             slots[index] = null;
             slotImage[index].sprite = null;
             slotImage[index].color = Color.clear;
