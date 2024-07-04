@@ -4,21 +4,21 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|07/04/2024|0.1|Adicionando sprint|Miguel Arthur|
+|03/07/2024|0.1|Adicionando sprint|Miguel Arthur|
 
 ## Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Linha do tempo do projeto|-|Julia e lucas|
-|T2|Estudar Git Project|-|Miguel|
-|T3|Guia de como estamos aprendendo a fazer jogo|-|Julia|
+|T1|Fazer a linha do tempo do projeto|Destacar as atividades realizadas mais marcantes na história do jogo|Júlia Yoshida e Lucas Gobbi|
+|T2|Estudar Git Project|-|Miguel Arthur|
+|T3|Guia de como estamos aprendendo a fazer jogo|Atualizar o GitPages com informações relevantes sobre o desenvolvimento de jogos|Júlia Yoshida|
 |T4|Criar interação do NPC|-|Lucas Gobbi|
-|T5|Plano Teórico do Mapa Principal|-|Lucas gobbi, Leticia e Bruno|
-|T6|Botão Sair do Jogo|-|Lucas gobbi e Leticia|
-|T7|Plano teórico da Fase 1|-|Miguel, Thiago e Julia|
-|T8|Desenhar Vilão Policial|-|Leticia|
-|T9|Bug do Collider com a Boneca Principal|-|Lucas gobbi|
+|T5|Plano teórico do mapa principal|-|Lucas Gobbi, Letícia Monteiro e Bruno Ribeiro|
+|T6|Botão "Sair do Jogo"|-|Lucas Gobbi e Letícia Monteiro|
+|T7|Plano teórico da fase 1|Desenvolver a história da fase 1|Miguel Arthur, Thiago Gomes e Júlia Yoshida|
+|T8|Desenhar vilão policial|-|Letícia Monteiro|
+|T9|Bug do Collider com a boneca principal|-|Lucas Gobbi|
 
 
 

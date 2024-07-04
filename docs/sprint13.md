@@ -4,12 +4,11 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|07/04/2024|0.1|Adicionando sprint|Miguel Arthur|
+|03/07/2024|0.1|Adicionando sprint|Miguel Arthur|
 
 ## Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Spritesheet robo vermelho e cinza|-|Leticia|
-|T2|Mecânica drag and drop|-|Julia|
-|T3|Mecânica Overcooked|-|Miguel|
+|T1|Spritesheet robô vermelho e cinza|-|Letícia Monteiro|
+|T2|Mecânica drag and drop|Desenvolver mecânica drag and drop para utilizá-la no inventário|Júlia Yoshida|

@@ -4,7 +4,7 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|16/04/2024|0.1|Adicionando Release 3|Miguel Arthur|
+|03/07/2024|0.1|Adicionando Release 3|Miguel Arthur|
 
 ## Relato de experiência
 
@@ -13,26 +13,19 @@
 
 ### Desafios
 
-- Adaptação à plataforma Unity;
-- Aprender a desenvolver artes próprias (Aseprite);
-- Desenvolver narrativa do zero;
-- Organização da equipe para que todos participem do jogo;
-- Alinhamento da equipe nas boas práticas e normas específicas do projeto;
-- Para os novos membros, entender o contexto atual do projeto.
+- Tela dos diários: duas cenas ao mesmo tempo gerava diversos conflitos;
+- Template de diários: não conseguimos gerar um template reutilizável do diário quanto às animações, só com script, o que fez demorar mais tempo pra fazer, diferente dos NPCs por exemplo que tem uma blueprint melhor; 
+- Dificuldade em desenvolver a mecânica drag and drop pro inventário;
+- Dificuldade em fazer a mudança de câmera de terceira pessoa pra primeira pessoa quando a personagem interage com a estante;
+- Burnout/Fim de semestre.
 
 ### Soluções
 
-- Muito estudo da plataforma, incluindo fazer um jogo próprio sozinho;
-- Muitas artes feitas para aperfeiçoamento das habilidades;
-- Melhorar as reuniões e comunicação da equipe para melhor alinhamento.
+- Tela dos diários: controlador geral do projeto (aquele mesmo que faz o fade das telas) foi utilizado pra facilitar quando tem duas cenas abertas ao mesmo tempo; 
+- Template de diários: foi na força bruta mesmo, todas as animações e sprites foram feitas na mão;
+- Drag and drop: muitos tutoriais até encontrar um que se encaixasse no contexto do jogo;
 
 ## Resultados
-
-### Tecnologias escolhidas
-
-- Para desenvolvimento do jogo, a própria BOSS definiu o uso da plataforma Unity;
-- Para criação de sprites, foi escolhido a plataforma "Aseprite", devido à sua popularidade e facilidade de uso;
-- Para edição de código, cada membro tem sua preferência, mas em geral Visual Studio e VS Code.
 
 ### Produtos entregues até aqui
 
@@ -42,7 +35,6 @@
 4. Mecânica de inventário da fase 1;
 5. Mudança de perspectiva, de terceira pessoa para primeira pessoa;
 6. Novas mecânicas de interações;
-7. Finalização da fase 1;
-8. Criação dos livros para a fase 1.
+7. Criação dos livros para a fase 1.
 
 

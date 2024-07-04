@@ -3,14 +3,14 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|07/04/2024|0.1|Adicionando sprint|Miguel Arthur|
+|03/07/2024|0.1|Adicionando sprint|Miguel Arthur|
 
 ## Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Atualizando a Linha do tempo|-|Miguel|
-|T2|Atualizando a Gitpage|-|Miguel|
-|T3|Teste Fase 1|-|Miguel, Leticia e Julia|
+|T1|Atualizando a linha do tempo|-|Miguel Arthur|
+|T2|Atualizando a GitPages|-|Miguel Arthur e Júlia Yoshida|
+|T3|Integração da prateleira com o inventário|-|Miguel Arthur, Letícia Monteiro e Júlia Yoshida|
 
 

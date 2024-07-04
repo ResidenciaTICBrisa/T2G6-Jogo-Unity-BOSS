@@ -10,11 +10,11 @@
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Adicionar placas com interação|-|lucas e bruno|
-|T2|Criar Git project do grupo|-|Miguel|
-|T3|Adicionar atas no pages|-|Miguel|
-|T4|Adicionar Efeito Sonoro na interação com o NPC|-|Lucas Gobbi|
-|T5|Adicionar mais NPCs ao Mapa, junto de suas interações|-|Lucas gobbi|
+|T1|Adicionar placas com interação|-|Lucas Gobbi e Bruno Ribeiro|
+|T2|Criar Git project do grupo|-|Miguel Arthur|
+|T3|Adicionar atas no pages|-|Miguel Arthur|
+|T4|Adicionar efeito sonoro na interação com o NPC|-|Lucas Gobbi|
+|T5|Adicionar mais NPCs ao Mapa, junto de suas interações|-|Lucas Gobbi|
 
 
 

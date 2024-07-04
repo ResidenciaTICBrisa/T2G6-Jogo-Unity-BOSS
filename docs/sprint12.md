@@ -4,13 +4,12 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|07/04/2024|0.1|Adicionando sprint|Miguel Arthur|
+|03/07/2024|0.1|Adicionando sprint|Miguel Arthur|
 
 ## Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Desenvolver interação player com diário|-|lucas e bruno|
-|T2|Criação dos livros da biblioteca|-|Lucas|
-|T3|Mecanismo de zoom da prateleira|-|Julia e Miguel|
-|T4|Desenvolvimento de SpawnPoints|-|Lucas|
+|T1|Desenvolver interação do player com diário|-|Lucas Gobbi e Bruno Ribeiro|
+|T2|Criação dos livros da biblioteca|-|Lucas Gobbi|
+|T3|Mecanismo de zoom da prateleira|-|Júlia Yoshida e Miguel Arthur|

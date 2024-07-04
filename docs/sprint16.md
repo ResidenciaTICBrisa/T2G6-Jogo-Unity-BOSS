@@ -3,14 +3,14 @@
 
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
-|07/04/2024|0.1|Adicionando sprint|Miguel Arthur|
+|03/07/2024|0.1|Adicionando sprint|Miguel Arthur|
 
 ## Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Correção de bugs da tela|-|Lucas|
-|T2|correção de bugs interação|-|Bruno|
-|T3|finalizando detalhes fase 1|-|Miguel, Leticia e Julia|
+|T1|Correção de bugs da tela|-|Lucas Gobbi|
+|T2|Correção de bugs interação|-|Bruno Ribeiro|
+|T3|Finalizando detalhes fase 1|-|Miguel Arthur, Letícia Ribeiro e Júlia Yoshida|
 
 
