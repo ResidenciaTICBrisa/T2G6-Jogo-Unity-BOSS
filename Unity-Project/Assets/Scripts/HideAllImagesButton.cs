@@ -8,6 +8,9 @@ public class HideAllImagesButton : MonoBehaviour
 
     void Start()
     {
+        // Inicialize a variável de estado do botão
+        buttonActive = false;
+
         // Certifique-se de que o botão está definido e oculto no início
         if (hideAllButton != null)
         {
@@ -19,13 +22,20 @@ public class HideAllImagesButton : MonoBehaviour
             Debug.LogWarning("HideAllButton is not assigned.");
         }
 
-        // Inicialize a variável de estado do botão
-        buttonActive = false;
+        // Verifica se há alguma imagem visível no início do jogo
+        bool anyImageVisible = IsAnyImageVisible();
+        if (anyImageVisible)
+        {
+            hideAllButton.gameObject.SetActive(true);
+            buttonActive = true;
+        }
+
+        // Log inicial para depuração
+        Debug.Log("Initial check - Any image visible: " + anyImageVisible);
     }
 
     void Update()
     {
-       
         // Verifica se há alguma imagem visível
         bool anyImageVisible = IsAnyImageVisible();
 
@@ -40,6 +50,9 @@ public class HideAllImagesButton : MonoBehaviour
             hideAllButton.gameObject.SetActive(false);
             buttonActive = false;
         }
+
+        // Log para depuração
+        Debug.Log("Any image visible: " + anyImageVisible);
     }
 
     void HideAllImages()
@@ -52,6 +65,12 @@ public class HideAllImagesButton : MonoBehaviour
         {
             img.SetActive(false);
         }
+
+        // Ocultar o botão após esconder todas as imagens
+        hideAllButton.gameObject.SetActive(false);
+        buttonActive = false;
+
+        Debug.Log("All images hidden.");
     }
 
     bool IsAnyImageVisible()
@@ -64,6 +83,7 @@ public class HideAllImagesButton : MonoBehaviour
         {
             if (img.activeSelf)
             {
+                Debug.Log("Image visible: " + img.name);
                 return true;
             }
         }
