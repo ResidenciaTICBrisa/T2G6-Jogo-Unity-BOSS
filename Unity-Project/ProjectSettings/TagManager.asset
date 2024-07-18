@@ -9,6 +9,7 @@ TagManager:
   - Spawn
   - Scene
   - HideableImage
+  - Object
   layers:
   - Default
   - TransparentFX
