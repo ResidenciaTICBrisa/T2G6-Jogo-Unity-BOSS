@@ -8,8 +8,8 @@ TagManager:
   - MenuBackground
   - Spawn
   - Scene
-  - HideableImage
-  - Object
+  - ButtonCanvas
+  - Diary
   layers:
   - Default
   - TransparentFX
@@ -19,7 +19,7 @@ TagManager:
   - UI
   - NPC
   - Player
-  - Imagem
+  - 
   - 
   - 
   - 
@@ -73,7 +73,4 @@ TagManager:
     locked: 0
   - name: OldMan2
     uniqueID: 823395567
-    locked: 0
-  - name: New Layer 10
-    uniqueID: 68306951
     locked: 0
