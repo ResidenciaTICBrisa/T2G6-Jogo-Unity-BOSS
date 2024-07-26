@@ -9,9 +9,9 @@ public class PlayerAwareness : MonoBehaviour
     public Vector2 directionToPlayer {  get; private set; }
 
     [SerializeField]
-    private float _playerAwarenessDistance;
+    public float _playerAwarenessDistance;
 
-    private Transform _player;
+    public Transform _player { get; private set; }
 
     private void Awake()
     {
