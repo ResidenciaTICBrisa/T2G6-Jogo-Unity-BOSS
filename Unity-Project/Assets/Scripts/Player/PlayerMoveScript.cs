@@ -140,11 +140,4 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            other.GetComponent<EnemyMovement>().ReceiveDamage();
-        }
-    }
 }

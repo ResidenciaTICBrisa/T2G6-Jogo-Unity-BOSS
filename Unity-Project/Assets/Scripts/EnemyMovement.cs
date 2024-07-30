@@ -9,9 +9,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float _speed;
 
-    [SerializeField]
-    private float _rotationSpeed;
-
     private Rigidbody2D _rigidbody;
     private PlayerAwareness _playerAwarenessController;
     private Vector2 _targetDirection;
@@ -163,14 +160,6 @@ public class EnemyMovement : MonoBehaviour
                 break;
         }
         Debug.Log(hp);
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            player.GetComponent<MovePlayer>().ReceiveDamage();
-        }
     }
 
 }
