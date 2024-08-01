@@ -307,7 +307,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03af9ed489b52dc17bb96cf8aa06582b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   slotImage:
   - {fileID: 2102217357}
   - {fileID: 1976990182}
@@ -322,14 +334,6 @@ MonoBehaviour:
   - {fileID: 2019915352}
   - {fileID: 241642056}
   inventoryPanel: {fileID: 0}
-  reward: {fileID: 0}
-  correctOrder: []
-  prefabL: {fileID: 0}
-  prefabO: {fileID: 0}
-  prefabV: {fileID: 0}
-  prefabE: {fileID: 0}
-  prefabA: {fileID: 0}
-  prefabC: {fileID: 0}
 --- !u!1 &114618998
 GameObject:
   m_ObjectHideFlags: 0
@@ -40393,14 +40397,6 @@ MonoBehaviour:
   - {fileID: 2019915352}
   - {fileID: 241642056}
   inventoryPanel: {fileID: 76455800}
-  reward: {fileID: 0}
-  correctOrder: []
-  prefabL: {fileID: 0}
-  prefabO: {fileID: 0}
-  prefabV: {fileID: 0}
-  prefabE: {fileID: 0}
-  prefabA: {fileID: 0}
-  prefabC: {fileID: 0}
 --- !u!58 &1138056810
 CircleCollider2D:
   m_ObjectHideFlags: 0

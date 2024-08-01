@@ -11,16 +11,6 @@ public class InventoryController : MonoBehaviour
     private GameObject nearbyObject;
     public GameObject inventoryPanel;
     private GameObject draggedItem;
-    public GameObject reward; // A chave ou recompensa
-    public Objects[] correctOrder; // Ordem correta dos itens
-
-    // Prefabs para as letras
-    public Objects prefabL;
-    public Objects prefabO;
-    public Objects prefabV;
-    public Objects prefabE;
-    public Objects prefabA;
-    public Objects prefabC;
 
     private void Start()
     {
@@ -35,25 +25,11 @@ public class InventoryController : MonoBehaviour
             dragHandler.Initialize(this, index);
             dropHandler.Initialize(this, index);
         }
-
-        reward.SetActive(false); // Desativa a chave até que a missão seja completa
-
-        // Inicializa a ordem correta dos itens
-        correctOrder = new Objects[12];
-        correctOrder[0] = prefabL; // Slot 0: Prefab(L)
-        correctOrder[1] = prefabO; // Slot 1: Prefab(O)
-        correctOrder[2] = prefabV; // Slot 2: Prefab(V)
-        correctOrder[3] = prefabE; // Slot 3: Prefab(E)
-        // Pulando quatro espaços (4 a 7)
-        correctOrder[8] = prefabL; // Slot 8: Prefab(L)
-        correctOrder[9] = prefabA; // Slot 9: Prefab(A)
-        correctOrder[10] = prefabC; // Slot 10: Prefab(C)
-        correctOrder[11] = prefabE; // Slot 11: Prefab(E)
     }
 
     private void Update()
     {
-        if (!inventoryPanel.activeInHierarchy) return;
+        if (inventoryPanel.activeInHierarchy) return;
 
         if (nearbyObject != null && Input.GetKeyDown(KeyCode.E))
         {
@@ -74,8 +50,6 @@ public class InventoryController : MonoBehaviour
                 }
             }
         }
-
-        CheckMissionCompletion();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -135,21 +109,5 @@ public class InventoryController : MonoBehaviour
             slotImage[index].sprite = null;
             slotImage[index].color = Color.clear;
         }
-    }
-
-    private void CheckMissionCompletion()
-    {
-        for (int i = 0; i < correctOrder.Length; i++)
-        {
-            if (i >= 4 && i < 8) // Ignora os slots 4 a 7
-                continue;
-
-            if (slots[i] == null || slots[i] != correctOrder[i])
-            {
-                return; // Missão não completada
-            }
-        }
-        
-        reward.SetActive(true); // Ativa a recompensa
     }
 }
