@@ -40,7 +40,8 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (player.GetComponent<MovePlayer>().hp == 0) return;
+        if (hp == 0) Destroy(gameObject, 2);
+        if (player.GetComponent<MovePlayer>().hp == 0 || hp == 0) return;
         CheckTimer();
         if (isAttacking == true) return;
         UpdateTargetDirection();
@@ -156,6 +157,7 @@ public class EnemyMovement : MonoBehaviour
             case 33:
                 hp = 0;
                 _animatorLife.SetInteger("Hp", 0);
+                _animator.SetTrigger("Dead");
                 Debug.Log("Morri");
                 break;
         }
