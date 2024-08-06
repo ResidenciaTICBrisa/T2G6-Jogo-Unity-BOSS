@@ -25,6 +25,8 @@ public class InventoryController : MonoBehaviour
             dragHandler.Initialize(this, index);
             dropHandler.Initialize(this, index);
         }
+
+        inventoryPanel.SetActive(false); // Esconder o inventário no início
     }
 
     private void Update()
@@ -109,5 +111,10 @@ public class InventoryController : MonoBehaviour
             slotImage[index].sprite = null;
             slotImage[index].color = Color.clear;
         }
+    }
+
+    public void ToggleInventory()
+    {
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
     }
 }
