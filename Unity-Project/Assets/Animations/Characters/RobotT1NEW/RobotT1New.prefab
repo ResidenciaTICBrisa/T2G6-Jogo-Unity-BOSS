@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e48062b481ad45488cfa2f9e6fc8655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 0
+  _playerAwarenessDistance: 5
 --- !u!114 &144549049644923767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1.5
-  _rotationSpeed: 0
   atkDuration: 1
   distanceToAttack: 1.25
   hp: 100
@@ -383,8 +382,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3794111668809778973}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -430,7 +429,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 509351334, guid: 2019f969a13886145a119044803f5206, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9622642, g: 0.20157026, b: 0.1845851, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -450,7 +449,7 @@ Animator:
   m_GameObject: {fileID: 4233702352377665865}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6831eccf46a9f5b4a974f03d514dc63a, type: 2}
+  m_Controller: {fileID: 9100000, guid: c6e0be82bdcf1f644be6c6241337c364, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -505,12 +504,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5, y: -0.21875}
-      - {x: -0.5, y: -0.4375}
-      - {x: -0.4375, y: -0.5}
-      - {x: 0.1875, y: -0.5}
-      - {x: 0.1875, y: -0.28125}
-      - {x: -0.0625, y: -0.21875}
+    - - {x: -0.36267826, y: -0.3557434}
+      - {x: -0.35430858, y: -0.4350491}
+      - {x: -0.18170282, y: -0.4817667}
+      - {x: 0.23876473, y: -0.408288}
+      - {x: 0.4830244, y: 0.08683057}
+      - {x: 0.32177424, y: 0.46360275}
+      - {x: 0.15458758, y: -0.1925953}
   m_UseDelaunayMesh: 0
 --- !u!114 &6415337396457947304
 MonoBehaviour:
@@ -524,6 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c388df34eebfc14ca1732d369dfc63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atkDuration: 1
 --- !u!68 &738749647582536579
 EdgeCollider2D:
   m_ObjectHideFlags: 0

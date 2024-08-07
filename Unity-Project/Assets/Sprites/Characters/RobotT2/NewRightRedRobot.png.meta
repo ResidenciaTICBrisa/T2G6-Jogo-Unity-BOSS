@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7ce685bd9bbc0abba6b0842737eb089
+guid: 92ce7aed6450ab34ba691cab3ee119b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_0
+      name: NewRightRedRobot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01ceabb736ad587e3972e472d1e1486c
-      internalID: -1511400407
+      spriteID: 9453c115f85428e4ab7881d1da3fafc4
+      internalID: -390098555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_1
+      name: NewRightRedRobot_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8414ed08d0495e5428c5bf828b240361
+      internalID: 90470975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewRightRedRobot_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f321aa52c4a374cad27c423c97d979
+      internalID: -2064780033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewRightRedRobot_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088da0c0c3d21654cbd97ed825014183
+      internalID: -2058373854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewRightRedRobot_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03f2b77c5577f540bfc7c33bffba5cf
+      internalID: 1849884747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewRightRedRobot_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
-        width: 80
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b0b2fa6e492d63af84fd45fdc86fd31
-      internalID: -150665867
+      spriteID: 2c3a7008f1a2d204e8b5c1b8f81ea41f
+      internalID: -545308212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_2
+      name: NewRightRedRobot_6
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 0
-        width: 80
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,92 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f35275ce2a64ab626b729ccb229a8b45
-      internalID: -638490547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75003910199d8e5fd82afe00b4aef819
-      internalID: 1009965176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_4
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 591d7880545a01bb0a18496cb06f7a82
-      internalID: -1798127201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_5
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f18a9e18e53e902a9d216243bc91655
-      internalID: 540415782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoFrente_6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fa1e3f9f8d4ede43b2be9507f2334c5
-      internalID: -1842727514
+      spriteID: 03b1a503ffcd98d479fcce528b20d648
+      internalID: 211947004
       vertices: []
       indices: 
       edges: []
@@ -267,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      VermelhoAtaqueNovoFrente_0: -1511400407
-      VermelhoAtaqueNovoFrente_1: -150665867
-      VermelhoAtaqueNovoFrente_2: -638490547
-      VermelhoAtaqueNovoFrente_3: 1009965176
-      VermelhoAtaqueNovoFrente_4: -1798127201
-      VermelhoAtaqueNovoFrente_5: 540415782
-      VermelhoAtaqueNovoFrente_6: -1842727514
+      NewRightRedRobot_0: -390098555
+      NewRightRedRobot_1: 90470975
+      NewRightRedRobot_2: -2064780033
+      NewRightRedRobot_3: -2058373854
+      NewRightRedRobot_4: 1849884747
+      NewRightRedRobot_5: -545308212
+      NewRightRedRobot_6: 211947004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
