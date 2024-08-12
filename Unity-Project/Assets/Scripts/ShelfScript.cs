@@ -5,40 +5,36 @@ using UnityEngine;
 public class ShelfScript : MonoBehaviour
 {
     public GameObject exclamation; // Referência ao GameObject da exclamação
+    public Objects letterObject; // Referência à letra a ser coletada
+    public GameObject firstPersonShelfView; // A visão da estante em primeira pessoa
+    public GameObject closeButton; // Botão de fechar a visão em primeira pessoa
     private bool playerIsClose = false; // Verifica se o jogador está perto
-    private AudioSource sound; // Som a ser reproduzido durante a interação
+    private InventoryController inventoryController;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (exclamation != null)
         {
             exclamation.SetActive(false); // Inicialmente desativa a exclamação
         }
-        else
-        {
-            Debug.LogError("No Exclamation GameObject found. Please assign it in the inspector.");
-        }
 
+        inventoryController = FindObjectOfType<InventoryController>();
+
+        if (firstPersonShelfView != null)
+        {
+            firstPersonShelfView.SetActive(false); // Inicialmente desativa a visão em primeira pessoa
+        }
+        if (closeButton != null)
+        {
+            closeButton.SetActive(false); // Inicialmente desativa o botão de fechar
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        if (playerIsClose)
+        if (playerIsClose && Input.GetKeyDown(KeyCode.E)) // Pressionar 'E' para interagir
         {
-            if (exclamation != null)
-            {
-                exclamation.SetActive(true);
-            }
-        }
-        else
-        {
-            if (exclamation != null)
-            {
-                exclamation.SetActive(false);
-            }
+            OpenShelfView(); // Abre a visão em primeira pessoa da estante
         }
     }
 
@@ -47,10 +43,7 @@ public class ShelfScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerIsClose = true;
-            if (exclamation != null)
-            {
-                exclamation.SetActive(true);
-            }
+            exclamation.SetActive(true);
         }
     }
 
@@ -59,10 +52,41 @@ public class ShelfScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerIsClose = false;
-            if (exclamation != null)
-            {
-                exclamation.SetActive(false);
-            }
+            exclamation.SetActive(false);
+        }
+    }
+
+    public void OpenShelfView()
+    {
+        if (firstPersonShelfView != null)
+        {
+            firstPersonShelfView.SetActive(true); // Mostra a visão em primeira pessoa
+        }
+        if (closeButton != null)
+        {
+            closeButton.SetActive(true); // Mostra o botão de fechar
+        }
+    }
+
+    public void CollectLetter()
+    {
+        if (inventoryController != null && letterObject != null)
+        {
+            inventoryController.AddItem(letterObject); // Adiciona a letra ao inventário
+            firstPersonShelfView.SetActive(false); // Fecha a visão em primeira pessoa após a coleta
+            closeButton.SetActive(false);
+        }
+    }
+
+    public void CloseShelfView()
+    {
+        if (firstPersonShelfView != null)
+        {
+            firstPersonShelfView.SetActive(false); // Fecha a visão em primeira pessoa
+        }
+        if (closeButton != null)
+        {
+            closeButton.SetActive(false); // Esconde o botão de fechar
         }
     }
 }

@@ -2,31 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class InventoryController : MonoBehaviour
 {
-    public Objects[] slots;
-    public Image[] slotImage;
-    private GameObject nearbyObject;
-    public GameObject inventoryPanel;
-    private GameObject draggedItem;
+    public Objects[] slots; // Array de slots de inventário
+    public Image[] slotImages; // Imagens dos slots de inventário
+    private GameObject nearbyObject; // Objeto próximo para coleta
+    public GameObject inventoryPanel; // Painel do inventário
+    public GameObject reward; // Recompensa
+
+    private string[] correctOrder = { "L", "O", "V", "E", "L", "A", "C", "E" };
 
     private void Start()
     {
-        slots = new Objects[slotImage.Length];
+        slots = new Objects[slotImages.Length];
 
-        for (int i = 0; i < slotImage.Length; i++)
+        for (int i = 0; i < slotImages.Length; i++)
         {
             int index = i;
-            slotImage[i].gameObject.AddComponent<Button>();
-            SlotDragHandler dragHandler = slotImage[i].gameObject.AddComponent<SlotDragHandler>();
-            SlotDropHandler dropHandler = slotImage[i].gameObject.AddComponent<SlotDropHandler>();
+            slotImages[i].gameObject.AddComponent<Button>();
+            SlotDragHandler dragHandler = slotImages[i].gameObject.AddComponent<SlotDragHandler>();
+            SlotDropHandler dropHandler = slotImages[i].gameObject.AddComponent<SlotDropHandler>();
             dragHandler.Initialize(this, index);
             dropHandler.Initialize(this, index);
         }
 
-        inventoryPanel.SetActive(false); // Esconder o inventário no início
+        if (reward != null)
+        {
+            reward.SetActive(false);
+        }
+
+        inventoryPanel.SetActive(false);
     }
 
     private void Update()
@@ -35,54 +41,27 @@ public class InventoryController : MonoBehaviour
 
         if (nearbyObject != null && Input.GetKeyDown(KeyCode.E))
         {
-            ObjectType objectType = nearbyObject.GetComponent<ObjectType>();
-            if (objectType != null)
+            ObjectType objectTypeComponent = nearbyObject.GetComponent<ObjectType>();
+            if (objectTypeComponent != null)
             {
-                for (int i = 0; i < slots.Length; i++)
+                Objects objectData = objectTypeComponent.objectType;
+                if (objectData != null)
                 {
-                    if (slots[i] == null)
+                    for (int i = 0; i < slots.Length; i++)
                     {
-                        slots[i] = objectType.objectType;
-                        slotImage[i].sprite = objectType.objectType.itemSprite;
-                        slotImage[i].color = Color.white; 
-                        Destroy(nearbyObject);
-                        nearbyObject = null;
-                        break;
+                        if (slots[i] == null)
+                        {
+                            slots[i] = objectData;
+                            slotImages[i].sprite = objectData.itemSprite;
+                            slotImages[i].color = Color.white;
+                            Destroy(nearbyObject);
+                            nearbyObject = null;
+                            break;
+                        }
                     }
+                    CheckOrder();
                 }
             }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Object"))
-        {
-            nearbyObject = other.gameObject;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Object"))
-        {
-            if (nearbyObject == other.gameObject)
-            {
-                nearbyObject = null;
-            }
-        }
-    }
-
-    public void SetNearbyObject(GameObject obj)
-    {
-        nearbyObject = obj;
-    }
-
-    public void ClearNearbyObject(GameObject obj)
-    {
-        if (nearbyObject == obj)
-        {
-            nearbyObject = null;
         }
     }
 
@@ -92,29 +71,87 @@ public class InventoryController : MonoBehaviour
         slots[index1] = slots[index2];
         slots[index2] = temp;
 
-        Sprite tempSprite = slotImage[index1].sprite;
-        slotImage[index1].sprite = slotImage[index2].sprite;
-        slotImage[index2].sprite = tempSprite;
-        slotImage[index1].color = slots[index1] != null ? Color.white : Color.clear;
-        slotImage[index2].color = slots[index2] != null ? Color.white : Color.clear;
+        Sprite tempSprite = slotImages[index1].sprite;
+        slotImages[index1].sprite = slotImages[index2].sprite;
+        slotImages[index2].sprite = tempSprite;
+        slotImages[index1].color = slots[index1] != null ? Color.white : Color.clear;
+        slotImages[index2].color = slots[index2] != null ? Color.white : Color.clear;
+
+        CheckOrder();
     }
 
     public void DropItem(int index, Vector3 position)
     {
         if (slots[index] != null)
         {
-            GameObject itemPrefab = slots[index].objectPrefab; 
+            GameObject itemPrefab = slots[index].objectPrefab;
             GameObject droppedItem = Instantiate(itemPrefab, position, Quaternion.identity);
-            droppedItem.tag = "Object"; 
-            droppedItem.AddComponent<ObjectType>().objectType = slots[index]; 
+            droppedItem.tag = "Object";
+            droppedItem.AddComponent<ObjectType>().objectType = slots[index];
             slots[index] = null;
-            slotImage[index].sprite = null;
-            slotImage[index].color = Color.clear;
+            slotImages[index].sprite = null;
+            slotImages[index].color = Color.clear;
+        }
+
+        CheckOrder();
+    }
+
+    public void AddItem(Objects item)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i] == null)
+            {
+                slots[i] = item;
+                slotImages[i].sprite = item.itemSprite;
+                slotImages[i].color = Color.white;
+                CheckOrder();
+                return;
+            }
         }
     }
 
+    private void CheckOrder()
+    {
+        int[] targetSlots = { 0, 1, 2, 3, 8, 9, 10, 11 };
+        for (int i = 0; i < correctOrder.Length; i++)
+        {
+            if (slots[targetSlots[i]] == null || slots[targetSlots[i]].itemName != correctOrder[i])
+            {
+                Debug.Log("Letras não estão na ordem correta");
+                return;
+            }
+        }
+        Debug.Log("Puzzle completo!");
+        GiveReward();
+    }
+
+    private void GiveReward()
+    {
+        if (reward != null)
+        {
+            reward.SetActive(true);
+        }
+        Debug.Log("Recompensa recebida!");
+    }
+    
     public void ToggleInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+    }
+    
+    // Método para definir o objeto próximo
+    public void SetNearbyObject(GameObject obj)
+    {
+        nearbyObject = obj;
+    }
+    
+    // Método para limpar o objeto próximo
+    public void ClearNearbyObject(GameObject obj)
+    {
+        if (nearbyObject == obj)
+        {
+            nearbyObject = null;
+        }
     }
 }
