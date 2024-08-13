@@ -13,6 +13,8 @@ public class InventoryController : MonoBehaviour
 
     private string[] correctOrder = { "L", "O", "V", "E", "L", "A", "C", "E" };
 
+    // Início do script...
+
     private void Start()
     {
         slots = new Objects[slotImages.Length];
@@ -65,6 +67,22 @@ public class InventoryController : MonoBehaviour
         }
     }
 
+    // Método para definir o objeto próximo
+    public void SetNearbyObject(GameObject obj)
+    {
+        nearbyObject = obj;
+    }
+
+    // Método para limpar o objeto próximo
+    public void ClearNearbyObject(GameObject obj)
+    {
+        if (nearbyObject == obj)
+        {
+            nearbyObject = null;
+        }
+    }
+
+    // Método para trocar os itens de lugar no inventário
     public void SwapItems(int index1, int index2)
     {
         Objects temp = slots[index1];
@@ -80,6 +98,7 @@ public class InventoryController : MonoBehaviour
         CheckOrder();
     }
 
+    // Método para soltar um item do inventário no mundo do jogo
     public void DropItem(int index, Vector3 position)
     {
         if (slots[index] != null)
@@ -96,6 +115,7 @@ public class InventoryController : MonoBehaviour
         CheckOrder();
     }
 
+    // Método para adicionar um item ao inventário
     public void AddItem(Objects item)
     {
         for (int i = 0; i < slots.Length; i++)
@@ -134,24 +154,9 @@ public class InventoryController : MonoBehaviour
         }
         Debug.Log("Recompensa recebida!");
     }
-    
+
     public void ToggleInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-    }
-    
-    // Método para definir o objeto próximo
-    public void SetNearbyObject(GameObject obj)
-    {
-        nearbyObject = obj;
-    }
-    
-    // Método para limpar o objeto próximo
-    public void ClearNearbyObject(GameObject obj)
-    {
-        if (nearbyObject == obj)
-        {
-            nearbyObject = null;
-        }
     }
 }

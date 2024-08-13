@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f5ef59bc4881b419e2db5971b0d732, type: 3}
+  m_Name: Letra(O)
+  m_EditorClassIdentifier: 
+  itemName: O
+  itemSprite: {fileID: 21300000, guid: f10748282738339599766a2e1418de8a, type: 3}
+  objectPrefab: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
