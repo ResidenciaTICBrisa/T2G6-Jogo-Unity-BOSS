@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShelfScript : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class ShelfScript : MonoBehaviour
     public GameObject firstPersonShelfView; // A visão da estante em primeira pessoa
     public GameObject closeButton; // Botão de fechar a visão em primeira pessoa
     private bool playerIsClose = false; // Verifica se o jogador está perto
-    private InventoryController inventoryController; // Referência ao controlador do inventário
+    private InventoryController inventoryController;
 
     void Start()
     {
@@ -43,7 +44,7 @@ public class ShelfScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerIsClose = true;
-            exclamation.SetActive(true); // Mostra a exclamação quando o jogador está próximo
+            exclamation.SetActive(true);
         }
     }
 
@@ -52,7 +53,7 @@ public class ShelfScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerIsClose = false;
-            exclamation.SetActive(false); // Esconde a exclamação quando o jogador sai
+            exclamation.SetActive(false);
         }
     }
 
