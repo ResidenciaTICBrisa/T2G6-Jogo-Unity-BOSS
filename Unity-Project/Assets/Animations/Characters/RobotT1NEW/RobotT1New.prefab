@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5484985881119788297}
   - component: {fileID: 144549049644923767}
   - component: {fileID: 7504702718762594611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RobotT1New
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099753161150106463}
   - component: {fileID: 2957220229960397837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LifeBarMiniProgress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3577777199983327159}
   - component: {fileID: 4551095741772543367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LifeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 462327008104406423}
   - component: {fileID: 6415337396457947304}
   - component: {fileID: 738749647582536579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4025447536811491653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LifeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5877981623786254010}
   - component: {fileID: 3901671054292458623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LifeBarMiniUnder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

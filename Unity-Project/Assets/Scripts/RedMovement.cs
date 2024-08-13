@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class RedMovement : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class RedMovement : MonoBehaviour
     private Animator _animatorLife;
     public int hp = 100;
     private GameObject player;
+    private GameObject atkObject;
+    private Rigidbody2D atkObjectRB;
 
     // Start is called before the first frame update
     private void Awake()
@@ -35,6 +38,8 @@ public class RedMovement : MonoBehaviour
         _animatorAttack = gameObject.transform.GetChild(0).GetComponent<Animator>();
         _animatorLife = gameObject.transform.GetChild(1).GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        atkObject = gameObject.transform.GetChild(0).gameObject;
+        atkObjectRB = atkObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -42,9 +47,9 @@ public class RedMovement : MonoBehaviour
     {
         if (hp == 0) Destroy(gameObject, 2);
         if (player.GetComponent<MovePlayer>().hp == 0 || hp == 0) return;
+        UpdateTargetDirection();
         CheckTimer();
         if (isAttacking == true) return;
-        UpdateTargetDirection();
         StartCoroutine(RotateTowardsTarget());
         HandleAttack();
     }
@@ -86,40 +91,33 @@ public class RedMovement : MonoBehaviour
     {
         if (isAttacking == false && (_playerAwarenessController._player.position - _playerAwarenessController.transform.position).magnitude < distanceToAttack)
         {
+            atkObject.transform.position = transform.position;
             isAttacking = true;
             if (_animator.GetFloat("MoveX") == 0 && _animator.GetFloat("MoveY") == 0)
             {
                 _animator.SetTrigger("TriggerAttackDown");
-                _animatorAttack.SetTrigger("TriggerAttackDown");
-
             }
             else if (_animator.GetFloat("MoveX") > 0)
             {
                 _animator.SetTrigger("TriggerAttackRight");
-                _animatorAttack.SetTrigger("TriggerAttackRight");
-
             }
             else if (_animator.GetFloat("MoveX") < 0)
             {
                 _animator.SetTrigger("TriggerAttackLeft");
-                _animatorAttack.SetTrigger("TriggerAttackLeft");
-
             }
             else if (_animator.GetFloat("MoveY") > 0)
             {
                 _animator.SetTrigger("TriggerAttackUp");
-                _animatorAttack.SetTrigger("TriggerAttackUp");
-
             }
             else if (_animator.GetFloat("MoveY") < 0)
             {
                 _animator.SetTrigger("TriggerAttackDown");
-                _animatorAttack.SetTrigger("TriggerAttackDown");
 
             }
             _animator.SetFloat("MoveX", 0);
             _animator.SetFloat("MoveY", 0);
             _rigidbody.velocity = Vector2.zero;
+            _animatorAttack.SetBool("BoolAttack", true);
 
         }
 
@@ -129,10 +127,19 @@ public class RedMovement : MonoBehaviour
         if (isAttacking == true)
         {
             atkTimer += Time.deltaTime;
+            //Vector2 atkObjectToPlayerVector = player.transform.position - atkObject.transform.position;
+            //Vector2 directionToPlayer = atkObjectToPlayerVector.normalized;
+            atkObjectRB.velocity = new Vector2(_targetDirection.x * _speed * 2, _targetDirection.y * _speed * 2);
+            Vector2 direcaoMovimento = (player.transform.position - transform.position).normalized;
+            float angulo = Mathf.Atan2(direcaoMovimento.y, direcaoMovimento.x) * Mathf.Rad2Deg;
+            atkObject.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angulo - 90f));
             if (atkTimer >= atkDuration)
             {
                 atkTimer = 0;
                 isAttacking = false;
+                _animatorAttack.SetBool("BoolAttack", false);
+                atkObjectRB.velocity = Vector2.zero;
+                atkObject.transform.position = transform.position;
             }
         }
     }
@@ -153,6 +160,7 @@ public class RedMovement : MonoBehaviour
             case 33:
                 hp = 0;
                 _animatorLife.SetInteger("Hp", 0);
+                _animatorAttack.SetBool("BoolAttack", false);
                 _animator.SetTrigger("Dead");
                 Debug.Log("Morri");
                 break;
