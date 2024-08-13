@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1a99d0e2981b92838301b1617e9ca3e
+guid: e963b1e688a8b9b49b74e3afb62ffd39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_0
+      name: NewFrontRedRobot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c76a52b8f72ba4515bd77764bffc675f
-      internalID: 1676363457
+      spriteID: 8f869b7cfd5799e4aaa8796c1fe65545
+      internalID: 2054444428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_1
+      name: NewFrontRedRobot_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf6c344a24c25e4199c0d0efbdc90b9
+      internalID: -194595076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFrontRedRobot_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff272b3525710d749a337210f00fb884
+      internalID: 1143177915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFrontRedRobot_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f597db6493fdd64aab46cb2e7bf5210
+      internalID: 1352281302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFrontRedRobot_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f942b575ff5c71b43b80700f47a9daf6
+      internalID: 281158007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewFrontRedRobot_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
-        width: 80
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6186c352281f5319a5583ee206527da
-      internalID: 663822550
+      spriteID: 1e2e843b9002a834bb5bd9a41d0e9a62
+      internalID: -1463858638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_2
+      name: NewFrontRedRobot_6
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 0
-        width: 80
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,134 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3778dacb48fda12a80701d0ca5fde23
-      internalID: 291023759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_3
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c65358b37fdf4a579a148bbf76b85a6a
-      internalID: -1678682999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_4
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a84e994bbacf086eb98580fde6e0c755
-      internalID: 1518315096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_5
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffd0abe2729ce3fcb9a99625641e3d7e
-      internalID: 2037467029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bdd8f91f5856b02097a11e3548a0b64
-      internalID: 1301776924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_7
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 848da79989f1c9b0c901608b915773b7
-      internalID: -1722531099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VermelhoAtaqueNovoCosta_8
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 80
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faa50c43073eb4fd5b8834759f0ac179
-      internalID: 549076771
+      spriteID: 4ca5466c97f5342419367c77d42fcdac
+      internalID: 2123796373
       vertices: []
       indices: 
       edges: []
@@ -309,15 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      VermelhoAtaqueNovoCosta_0: 1676363457
-      VermelhoAtaqueNovoCosta_1: 663822550
-      VermelhoAtaqueNovoCosta_2: 291023759
-      VermelhoAtaqueNovoCosta_3: -1678682999
-      VermelhoAtaqueNovoCosta_4: 1518315096
-      VermelhoAtaqueNovoCosta_5: 2037467029
-      VermelhoAtaqueNovoCosta_6: 1301776924
-      VermelhoAtaqueNovoCosta_7: -1722531099
-      VermelhoAtaqueNovoCosta_8: 549076771
+      NewFrontRedRobot_0: 2054444428
+      NewFrontRedRobot_1: -194595076
+      NewFrontRedRobot_2: 1143177915
+      NewFrontRedRobot_3: 1352281302
+      NewFrontRedRobot_4: 281158007
+      NewFrontRedRobot_5: -1463858638
+      NewFrontRedRobot_6: 2123796373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -14,7 +14,6 @@ public class PlayerAttackScript : MonoBehaviour
     {
         if (isAttacking == true)
         {
-            Debug.Log("Frame");
             atkTimer += Time.deltaTime;
             if (atkTimer >= atkDuration)
             {
@@ -33,8 +32,14 @@ public class PlayerAttackScript : MonoBehaviour
         if (isAttacking) return;
         if (other.CompareTag("Enemy") && transform.parent.tag == "Player")
         {
-            other.GetComponent<EnemyMovement>().ReceiveDamage();
-            Debug.Log("Ataquei o Robo");
+            if(other.name == "RobotT2")
+            {
+                other.GetComponent<RedMovement>().ReceiveDamage();
+            } else
+            {
+                other.GetComponent<EnemyMovement>().ReceiveDamage();
+                Debug.Log("Ataquei o Robo");
+            }
         } else if (other.CompareTag("Player") && transform.parent.tag == "Enemy")
         {
             other.GetComponent<MovePlayer>().ReceiveDamage();
@@ -55,6 +60,7 @@ public class PlayerAttackScript : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
+        if(other.CompareTag("Enemy") || other.CompareTag("Player"))
         other.transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 }
