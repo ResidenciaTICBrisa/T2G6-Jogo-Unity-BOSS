@@ -21,7 +21,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            inventoryController.ClearNearbyObject(gameObject);
+            inventoryController.ClearNearbyObject(); // Corrigido para não passar argumento
         }
     }
 }

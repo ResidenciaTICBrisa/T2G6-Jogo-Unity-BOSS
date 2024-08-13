@@ -13,9 +13,7 @@ public class InventoryController : MonoBehaviour
 
     private string[] correctOrder = { "L", "O", "V", "E", "L", "A", "C", "E" };
 
-    // Início do script...
-
-    private void Start()
+    void Start()
     {
         slots = new Objects[slotImages.Length];
 
@@ -37,7 +35,7 @@ public class InventoryController : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
 
-    private void Update()
+    void Update()
     {
         if (inventoryPanel.activeInHierarchy) return;
 
@@ -49,6 +47,7 @@ public class InventoryController : MonoBehaviour
                 Objects objectData = objectTypeComponent.objectType;
                 if (objectData != null)
                 {
+                    Debug.Log("Adding item: " + objectData.itemName);
                     for (int i = 0; i < slots.Length; i++)
                     {
                         if (slots[i] == null)
@@ -56,12 +55,15 @@ public class InventoryController : MonoBehaviour
                             slots[i] = objectData;
                             slotImages[i].sprite = objectData.itemSprite;
                             slotImages[i].color = Color.white;
-                            Destroy(nearbyObject);
-                            nearbyObject = null;
+
+                            // Desativar o objeto em vez de destruí-lo
+                            nearbyObject.SetActive(false);
+                            ClearNearbyObject();
+
+                            CheckOrder();
                             break;
                         }
                     }
-                    CheckOrder();
                 }
             }
         }
@@ -74,12 +76,9 @@ public class InventoryController : MonoBehaviour
     }
 
     // Método para limpar o objeto próximo
-    public void ClearNearbyObject(GameObject obj)
+    public void ClearNearbyObject()
     {
-        if (nearbyObject == obj)
-        {
-            nearbyObject = null;
-        }
+        nearbyObject = null;
     }
 
     // Método para trocar os itens de lugar no inventário
@@ -118,6 +117,7 @@ public class InventoryController : MonoBehaviour
     // Método para adicionar um item ao inventário
     public void AddItem(Objects item)
     {
+        Debug.Log("Adding item: " + item.itemName);
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i] == null)

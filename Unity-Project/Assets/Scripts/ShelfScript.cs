@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ShelfScript : MonoBehaviour
 {
@@ -44,7 +41,10 @@ public class ShelfScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerIsClose = true;
-            exclamation.SetActive(true);
+            if (exclamation != null)
+            {
+                exclamation.SetActive(true); // Ativa a exclamação quando o jogador está próximo
+            }
         }
     }
 
@@ -53,7 +53,10 @@ public class ShelfScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerIsClose = false;
-            exclamation.SetActive(false);
+            if (exclamation != null)
+            {
+                exclamation.SetActive(false); // Desativa a exclamação quando o jogador se afasta
+            }
         }
     }
 
@@ -71,11 +74,16 @@ public class ShelfScript : MonoBehaviour
 
     public void CollectLetter()
     {
+        Debug.Log("CollectLetter chamado.");
         if (inventoryController != null && letterObject != null)
         {
             inventoryController.AddItem(letterObject); // Adiciona a letra ao inventário
-            firstPersonShelfView.SetActive(false); // Fecha a visão em primeira pessoa após a coleta
-            closeButton.SetActive(false);
+            Debug.Log($"Adicionando {letterObject.itemName} ao inventário.");
+            Destroy(gameObject); // Remove a letra da estante
+        }
+        else
+        {
+            Debug.LogError("InventoryController ou LetterObject não estão atribuídos.");
         }
     }
 
