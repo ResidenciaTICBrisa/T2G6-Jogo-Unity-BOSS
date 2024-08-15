@@ -31345,7 +31345,7 @@ MonoBehaviour:
   - "Este bosque \xE9 perigoso. Rob\xF4s guardam o caminho. Volte antes que seja
     tarde."
   - "N\xE3o h\xE1 nada al\xE9m daqui, apenas antigas lendas e perigos ocultos."
-  nameOfNPC: Idosa Resenha
+  nameOfNPC: Sra. Elaine
   photo: {fileID: 21300000, guid: 535b382b2b0d3884389014593d03e802, type: 3}
   photoPanel: {fileID: 1444496209}
   sound: {fileID: 0}
@@ -31508,7 +31508,7 @@ MonoBehaviour:
     encontram. "
   - "H\xE1 muito tempo, este era um santu\xE1rio para quem buscava desafios e divers\xE3o."
   - Mas o tempo foi cruel, e poucos se atrevem a cruzar suas portas agora.
-  nameOfNPC: Julinha
+  nameOfNPC: "Sra. Vit\xF3ria"
   photo: {fileID: 21300000, guid: 2ffcc6ea9d5b8909596f12fd11fd9de5, type: 3}
   photoPanel: {fileID: 1444496209}
   sound: {fileID: 0}
@@ -43869,7 +43869,7 @@ MonoBehaviour:
   - "tamb\xE9m ouvi que quem tenta chegar l\xE1 nunca volta. Minha m\xE3e sempre
     me avisa para n\xE3o ir muito longe."
   nameOfNPC: Julinha
-  photo: {fileID: 21300000, guid: 535b382b2b0d3884389014593d03e802, type: 3}
+  photo: {fileID: 21300000, guid: 5d6e3dd0fe7037f4ab95d86d83a5f4e1, type: 3}
   photoPanel: {fileID: 1444496209}
   sound: {fileID: 0}
   wordSpeed: 0.04
