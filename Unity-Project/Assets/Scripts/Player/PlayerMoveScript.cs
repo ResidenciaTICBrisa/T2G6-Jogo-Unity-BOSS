@@ -25,7 +25,7 @@ public class MovePlayer : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Scene cena = SceneManager.GetActiveScene();
-        if (cena.name == "SampleCharacter")
+        if (cena.name == "Grove")
         {
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
             animatorLife = gameObject.transform.GetChild(1).GetComponent<Animator>();
