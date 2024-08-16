@@ -31126,7 +31126,7 @@ Transform:
   m_GameObject: {fileID: 1428191945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.66561747, y: 1.48595, z: -10}
+  m_LocalPosition: {x: 1.1573901, y: 1.4903699, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31456,6 +31456,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 811216148310861323, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 981705114256608997, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 981705114256608997, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6054447988041142439, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
       propertyPath: text
       value: "Fliperama Carol Shaw: Onde os jogos nunca terminam, e lendas perduram
@@ -31692,7 +31704,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2039516167}
         m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
-        m_MethodName: LetsTalk
+        m_MethodName: SkipTalk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31704,7 +31716,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1674111224}
         m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
-        m_MethodName: LetsTalk
+        m_MethodName: SkipTalk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43683,6 +43695,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 811216148310861323, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 981705114256608997, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 981705114256608997, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.71
+      objectReference: {fileID: 0}
     - target: {fileID: 6054447988041142439, guid: 59c2c128757d80b909dbeea01c1e6a30, type: 3}
       propertyPath: text
       value: 'Bosque dos Campos: Onde sombras guardam segredos e sonhos perdidos.'
@@ -43865,8 +43889,8 @@ MonoBehaviour:
   dialogues:
   - "Oi! Voc\xEA t\xE1 indo em dire\xE7\xE3o ao fliperama, n\xE9? Eu j\xE1 ouvi falar
     dele. Dizem que \xE9 um lugar m\xE1gico,"
-  - cheio de jogos antigos e coisas misteriosas. Mas...
-  - "tamb\xE9m ouvi que quem tenta chegar l\xE1 nunca volta. Minha m\xE3e sempre
+  - Cheio de jogos antigos e coisas misteriosas. Mas...
+  - "Tamb\xE9m ouvi que quem tenta chegar l\xE1 nunca volta. Minha m\xE3e sempre
     me avisa para n\xE3o ir muito longe."
   nameOfNPC: Julinha
   photo: {fileID: 21300000, guid: 5d6e3dd0fe7037f4ab95d86d83a5f4e1, type: 3}
