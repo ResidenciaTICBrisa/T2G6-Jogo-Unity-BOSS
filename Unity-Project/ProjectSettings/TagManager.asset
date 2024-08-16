@@ -78,3 +78,6 @@ TagManager:
   - name: "Altera\xE7\xF5es"
     uniqueID: 1511675829
     locked: 0
+  - name: Detalhes
+    uniqueID: 3769801195
+    locked: 0
