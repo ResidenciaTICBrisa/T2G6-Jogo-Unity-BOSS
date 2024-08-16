@@ -75,3 +75,6 @@ TagManager:
   - name: OldMan2
     uniqueID: 823395567
     locked: 0
+  - name: "Altera\xE7\xF5es"
+    uniqueID: 1511675829
+    locked: 0
