@@ -2,28 +2,29 @@ using UnityEngine;
 
 public class LetterClickHandler : MonoBehaviour
 {
-    public Objects letterObject; // O ScriptableObject da letra
+    private ShelfScript shelfScript;
+    private int clickCount = 0;
 
     private void Start()
     {
-        if (letterObject == null)
-        {
-            Debug.LogError("LetterObject não está atribuído no LetterClickHandler.");
-        }
+        // Referencia ao ShelfScript
+        shelfScript = GetComponentInParent<ShelfScript>();
     }
 
-    public void OnClick()
+    private void OnMouseDown()
     {
-        Debug.Log("OnClick chamado.");
-        InventoryController inventoryController = FindObjectOfType<InventoryController>();
-        if (inventoryController != null && letterObject != null)
+        clickCount++;
+
+        // No segundo clique, coletar a letra e fazê-la sumir
+        if (clickCount == 2)
         {
-            inventoryController.AddItem(letterObject);
-            Debug.Log($"Adicionando {letterObject.itemName} ao inventário.");
-        }
-        else
-        {
-            Debug.LogError("InventoryController não encontrado ou LetterObject não atribuído.");
+            if (shelfScript != null)
+            {
+                shelfScript.CollectLetter();
+            }
+
+            // Reseta o contador para prevenir cliques adicionais terem efeito
+            clickCount = 0;
         }
     }
 }

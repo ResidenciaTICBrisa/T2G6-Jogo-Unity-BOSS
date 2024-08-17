@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShelfScript : MonoBehaviour
@@ -8,15 +10,16 @@ public class ShelfScript : MonoBehaviour
     public GameObject closeButton; // Botão de fechar a visão em primeira pessoa
     private bool playerIsClose = false; // Verifica se o jogador está perto
     private InventoryController inventoryController;
+    public GameObject letterImage; // Referência ao GameObject da imagem da letra
 
     void Start()
     {
+        inventoryController = FindObjectOfType<InventoryController>();
+
         if (exclamation != null)
         {
             exclamation.SetActive(false); // Inicialmente desativa a exclamação
         }
-
-        inventoryController = FindObjectOfType<InventoryController>();
 
         if (firstPersonShelfView != null)
         {
@@ -43,7 +46,7 @@ public class ShelfScript : MonoBehaviour
             playerIsClose = true;
             if (exclamation != null)
             {
-                exclamation.SetActive(true); // Ativa a exclamação quando o jogador está próximo
+                exclamation.SetActive(true); // Ativa a exclamação quando o jogador está perto
             }
         }
     }
@@ -79,7 +82,22 @@ public class ShelfScript : MonoBehaviour
         {
             inventoryController.AddItem(letterObject); // Adiciona a letra ao inventário
             Debug.Log($"Adicionando {letterObject.itemName} ao inventário.");
-            Destroy(gameObject); // Remove a letra da estante
+
+            // Desativa a imagem da letra na estante
+            if (letterImage != null)
+            {
+                letterImage.SetActive(false);
+            }
+
+            // Fecha a visão em primeira pessoa após a coleta
+            if (firstPersonShelfView != null)
+            {
+                firstPersonShelfView.SetActive(false);
+            }
+            if (closeButton != null)
+            {
+                closeButton.SetActive(false);
+            }
         }
         else
         {

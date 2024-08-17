@@ -4793,10 +4793,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 38255005}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &328463804
 GameObject:
   m_ObjectHideFlags: 0
@@ -6864,7 +6865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: 8f47568fbf2b23dbcbd06ea6a24ab7d8, type: 2}
 --- !u!58 &442955531
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6944,9 +6944,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 442955529}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1042298676}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7002,7 +7002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: 49b7b57c222e1fe678edbb9364fb9a21, type: 2}
 --- !u!114 &491606633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7047,9 +7046,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 491606632}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 698814302}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7070,6 +7069,7 @@ GameObject:
   - component: {fileID: 545900808}
   - component: {fileID: 545900810}
   - component: {fileID: 545900809}
+  - component: {fileID: 545900811}
   m_Layer: 8
   m_Name: Image4
   m_TagString: HideableImage
@@ -7135,6 +7135,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545900807}
   m_CullTransparentMesh: 1
+--- !u!114 &545900811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545900807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: 2931b7e8d74994a23b758ba93f010a23, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 2070783251}
 --- !u!1 &611184770
 GameObject:
   m_ObjectHideFlags: 0
@@ -26112,10 +26129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 2084242041}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1001 &639918906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26250,7 +26268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: 49b7b57c222e1fe678edbb9364fb9a21, type: 2}
 --- !u!114 &639918911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26308,9 +26325,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 639918910}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 762437972}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26331,6 +26348,7 @@ GameObject:
   - component: {fileID: 643361176}
   - component: {fileID: 643361178}
   - component: {fileID: 643361177}
+  - component: {fileID: 643361179}
   m_Layer: 8
   m_Name: Image6
   m_TagString: HideableImage
@@ -26396,6 +26414,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643361175}
   m_CullTransparentMesh: 1
+--- !u!114 &643361179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643361175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: b5d1bcff731d7614087d1efbea2aebf3, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 1392573284}
 --- !u!1 &647227236
 GameObject:
   m_ObjectHideFlags: 0
@@ -26557,6 +26592,7 @@ GameObject:
   - component: {fileID: 698814299}
   - component: {fileID: 698814301}
   - component: {fileID: 698814300}
+  - component: {fileID: 698814302}
   m_Layer: 8
   m_Name: Image2
   m_TagString: HideableImage
@@ -26622,6 +26658,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698814298}
   m_CullTransparentMesh: 1
+--- !u!114 &698814302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698814298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: 49b7b57c222e1fe678edbb9364fb9a21, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 491606625}
 --- !u!1 &711032978
 GameObject:
   m_ObjectHideFlags: 0
@@ -27126,10 +27179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 193238978}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &715908251
 GameObject:
   m_ObjectHideFlags: 0
@@ -30388,6 +30442,7 @@ GameObject:
   - component: {fileID: 762437969}
   - component: {fileID: 762437971}
   - component: {fileID: 762437970}
+  - component: {fileID: 762437972}
   m_Layer: 8
   m_Name: Image7
   m_TagString: HideableImage
@@ -30453,6 +30508,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762437968}
   m_CullTransparentMesh: 1
+--- !u!114 &762437972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762437968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: 49b7b57c222e1fe678edbb9364fb9a21, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 111882140}
 --- !u!1 &790743586
 GameObject:
   m_ObjectHideFlags: 0
@@ -30606,9 +30678,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 809398316}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1827761830}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30630,7 +30702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: 6de2c4005bb2f2866a64087fd5844e9b, type: 2}
 --- !u!1001 &869334531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40087,10 +40158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
+  exclamation: {fileID: 1888701298}
   letterObject: {fileID: 11400000, guid: 8f47568fbf2b23dbcbd06ea6a24ab7d8, type: 2}
-  firstPersonShelfView: {fileID: 1042298672}
+  firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 442955523}
 --- !u!1 &1082761600
 GameObject:
   m_ObjectHideFlags: 0
@@ -41502,10 +41574,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 1973884637}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!4 &1138056798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6404362478064210717, guid: a1e43764259d40ee8b2770b762bc8994, type: 3}
@@ -43235,6 +43308,7 @@ GameObject:
   - component: {fileID: 1172269608}
   - component: {fileID: 1172269610}
   - component: {fileID: 1172269609}
+  - component: {fileID: 1172269611}
   m_Layer: 8
   m_Name: Image8
   m_TagString: HideableImage
@@ -43300,6 +43374,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172269607}
   m_CullTransparentMesh: 1
+--- !u!114 &1172269611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172269607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: f428cb5af869c72cdb2273eafdb0a8e2, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 1849926423}
 --- !u!1 &1180399945
 GameObject:
   m_ObjectHideFlags: 0
@@ -43500,6 +43591,7 @@ GameObject:
   - component: {fileID: 1226168115}
   - component: {fileID: 1226168117}
   - component: {fileID: 1226168116}
+  - component: {fileID: 1226168118}
   m_Layer: 8
   m_Name: Image3
   m_TagString: HideableImage
@@ -43565,6 +43657,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226168114}
   m_CullTransparentMesh: 1
+--- !u!114 &1226168118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226168114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: f428cb5af869c72cdb2273eafdb0a8e2, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 1229085686}
 --- !u!1 &1229085686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9165790941783353105, guid: 0a486e71ed32f1e33ba3635333e44f5d, type: 3}
@@ -43643,9 +43752,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1229085694}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1226168118}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43667,7 +43776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: f428cb5af869c72cdb2273eafdb0a8e2, type: 2}
 --- !u!1 &1231900975
 GameObject:
   m_ObjectHideFlags: 0
@@ -45122,9 +45230,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1392573292}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 643361179}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45146,7 +45254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: b5d1bcff731d7614087d1efbea2aebf3, type: 2}
 --- !u!1 &1475503627
 GameObject:
   m_ObjectHideFlags: 0
@@ -46235,10 +46342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 395155205}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &1600118186
 GameObject:
   m_ObjectHideFlags: 0
@@ -46917,10 +47025,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 1231900975}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &1747641833
 GameObject:
   m_ObjectHideFlags: 0
@@ -47324,6 +47433,7 @@ GameObject:
   - component: {fileID: 1827761827}
   - component: {fileID: 1827761829}
   - component: {fileID: 1827761828}
+  - component: {fileID: 1827761830}
   m_Layer: 8
   m_Name: Image1
   m_TagString: HideableImage
@@ -47349,7 +47459,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 2000, y: 1125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827761828
 MonoBehaviour:
@@ -47389,6 +47499,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827761826}
   m_CullTransparentMesh: 1
+--- !u!114 &1827761830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827761826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 0}
+  letterObject: {fileID: 11400000, guid: 6de2c4005bb2f2866a64087fd5844e9b, type: 2}
+  firstPersonShelfView: {fileID: 0}
+  closeButton: {fileID: 0}
+  letterImage: {fileID: 809398308}
 --- !u!1 &1849926423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9165790941783353105, guid: 0a486e71ed32f1e33ba3635333e44f5d, type: 3}
@@ -47892,10 +48019,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 1888701298}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &1920196133
 GameObject:
   m_ObjectHideFlags: 0
@@ -48399,10 +48527,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 1973884637}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &1964981302
 GameObject:
   m_ObjectHideFlags: 0
@@ -49706,9 +49835,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1982991689}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1172269611}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -49743,7 +49872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: f428cb5af869c72cdb2273eafdb0a8e2, type: 2}
 --- !u!1 &2029138133
 GameObject:
   m_ObjectHideFlags: 0
@@ -50288,10 +50416,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 1115030058}
+  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
   firstPersonShelfView: {fileID: 0}
   closeButton: {fileID: 0}
+  letterImage: {fileID: 0}
 --- !u!1 &2070783251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5448270886643333738, guid: d55a0b3412e108e8083d4e7696e1f0cc, type: 3}
@@ -50370,9 +50499,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2070783259}
-        m_TargetAssemblyTypeName: LetterClickHandler, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 545900811}
+        m_TargetAssemblyTypeName: ShelfScript, Assembly-CSharp
+        m_MethodName: CollectLetter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -50394,7 +50523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterObject: {fileID: 11400000, guid: 2931b7e8d74994a23b758ba93f010a23, type: 2}
 --- !u!1 &2084242041
 GameObject:
   m_ObjectHideFlags: 0
@@ -51263,15 +51391,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
       propertyPath: m_TagString
-      value: Object
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 442955532}
     - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 442955527}
@@ -51281,6 +51406,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 442955531}
+    - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 442955532}
   m_SourcePrefab: {fileID: 100100000, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
