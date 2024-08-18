@@ -5,6 +5,7 @@
 |Data|Versão|Descrição|Autores|
 |--|--|--|--|
 |04/04/2024|0.1|Adicionando backlog|Lucas Gobbi|
+|18/08/2024|0.2|Adicionando gráficos de resolução de issues|Júlia Yoshida|
 
 <p style="text-indent: 50px;text-align: justify;"> Este artefato tem o propósito de reunir informações e conteúdo do backlog desenvolvido pelo grupo para este projeto. Dois quadros foram criados na aplicação Trello, um para acompanhar todas as sprints de cada lançamento e outro para os requisitos que foram levantados nas reuniões do grupo. </p>
 
@@ -19,3 +20,20 @@
 
 
 <iframe src="https://trello.com/b/q3R7wCJO.html" frameBorder="0" width="900" height="900"></iframe>
+
+<p style="text-indent: 50px;text-align: justify;"> As Issues criadas no Github foram essenciais para gerenciar e rastrear o trabalho que estávamos desenvolvendo. A partir delas, pudemos gerar alguns gráficos que mostram a contribuição de cada membro. </p>
+
+<div style="text-align: center;">
+    <img src="../images/issues1.jpg" width="800">    
+    <p>Imagem 1: issues por release por membro </p>
+</div>
+
+<div style="text-align: center;">
+    <img src="../images/issues2.jpg" width=800">    
+    <p>Imagem 2: issues por release</p>
+</div>
+
+<div style="text-align: center;">
+    <img src="../images/issues3.jpg" width="800">    
+    <p>Imagem 3: issues concluídas por membro do grupo</p>
+</div>
