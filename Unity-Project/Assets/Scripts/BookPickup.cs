@@ -9,12 +9,11 @@ public class BookPickup : MonoBehaviour
         bookManager = FindObjectOfType<BookManager>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             bookManager.PickUpBook(gameObject);
-            gameObject.SetActive(false); // Esconde o livro da cena
         }
     }
 }
