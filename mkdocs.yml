@@ -73,7 +73,3 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
-extra_css:
-  - stylesheets/extra.css
-extra:
-  generator: false
