@@ -7,6 +7,7 @@
 |04/04/2024|0.1|Adicionando referências|Miguel Arthur|
 |10/04/2024|0.2|Adicionando artes próprias|Júlia Yoshida|
 |04/07/2024|0.3|Adicionando artes próprias|Júlia Yoshida|
+|18/08/2024|0.4|Adicionando artes próprias|Júlia Yoshida|
 
 <p style="text-indent: 50px;text-align: justify;"> Para o desenvolvimento do projeto, estão sendo utilizadas artes de uso livre em conjunto com artes próprias desenvolvidas pelo nosso time. </p>
 
@@ -76,7 +77,7 @@
     <p>Imagem 10: Sprite sheet da personagem socando de costas</p>
 </div>
 
-### Vilão - Prefeito
+### Prefeito
 
 <p style="text-indent: 50px;text-align: justify;"> As artes do prefeito foram desenhadas no Aseprite pela Letícia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
 
@@ -100,7 +101,7 @@
     <p>Imagem 4: Sprite sheet da personagem andando para direita/diagonal direita</p>
 </div>
 
-### Vilão - Robô
+### Robô cinza
 
 <p style="text-indent: 50px;text-align: justify;"> As artes do movimento do robô foram desenhadas pela Letícia e a arte do faceset dele foi desenhada pela Júlia. As sprite sheets de todos os movimentos dele estão apresentadas a seguir.</p> 
 
@@ -141,4 +142,22 @@
 <div style="text-align: center;">
     <img src="../images/inventory.jpeg" width="250">
     <p>Imagem 1: Arte do inventário</p>
+</div>
+
+### Robô vermelho
+
+<p style="text-indent: 50px;text-align: justify;"> A arte do robô vermelho foi desenhada no Aseprite pela Letícia. </p> 
+
+<div style="text-align: center;">
+    <img src="../images/1RoboVermelho.png" width="600">
+    <p>Imagem 1: Sprite sheet do robô vermelho andando</p>
+</div>
+
+### Prefeito robô
+
+<p style="text-indent: 50px;text-align: justify;"> A arte do prefeito robô foi desenhada no Aseprite pela Letícia. </p> 
+
+<div style="text-align: center;">
+    <img src="../images/2RoboPrefeito.png" width="700">
+    <p>Imagem 1: Sprite sheet do prefeito robô andando</p>
 </div>

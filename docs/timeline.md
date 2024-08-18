@@ -20,7 +20,6 @@
 <br><br>
 <img src="../images/map.png" width="900">
 
-
 <b>1 de abril: Menu finalizado</b>
 <br>*Autor:* Lucas Gobbi
 <br><br>
@@ -31,6 +30,10 @@
 <br><br>
 <img src="../images/frontwalking.PNG" width="900">
 
+<b>6 de abril: Personagem principal programada dentro do jogo </b>
+<br>*Autor:* Thiago Gomes
+<br>
+
 <b>8 de abril: Artes autorais de NPC policial e vilão do jogo</b>
 <br>*Autor:* Letícia Monteiro
 <br><br>
@@ -38,9 +41,8 @@
 <br><br>
 <img src="../images/rightwvillain.PNG" width="900">
 
-
-<b>6 de abril: Personagem principal programada dentro do jogo </b>
-<br>*Autor:* Thiago Gomes
+<b>12 de abril: Música da cidade</b>
+<br>*Autor:* Bruno Ribeiro
 <br>
 
 <b>15 de abril: Template de NPC's desenvolvido</b>
@@ -51,16 +53,29 @@
 <br>*Autor:* Lucas Gobbi
 <br><br>
 <img src="../images/npc.jpeg" width="900">
-<br><br>
+<br>
 
 <b>30 de abril: Ataque da personagem programado</b>
 <br>*Autor:* Lucas Gobbi
 <br><br>
 <img src="../images/attack.jpeg" width="900">
-<br><br>
+<br>
 
 <b>06 de maio: Ambiente da fase 1 completo</b>
 <br>*Autor:* Júlia Yoshida e Miguel Arthur
 <br><br>
 <img src="../images/biblioteca01.jpeg" width="900">
+<br>
+
+<b>09 de junho: Inventário da fase 1 e suas mecânicas concluídas</b>
+<br>*Autor:* Júlia Yoshida
+<br>
+<div style="text-align: center;">
+<img src="../images/inventory.jpeg" width="250">
+</div>
+
+<b>10 de julho: Arte autoral do robô vermelho</b>
+<br>*Autor:* Letícia Monteiro
 <br><br>
+<img src="../images/1RoboVermelho.png" width="900">
+<br>

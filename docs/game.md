@@ -7,6 +7,7 @@
 |04/04/2024|0.1|Adicionando informações sobre o jogo|Miguel Arthur|
 |07/04/2024|0.2|Descrição a partir de tópicos do livro "Um Guia para o Design de Grandes Jogos"|Miguel Arthur e Júlia Yoshida|
 |06/05/2024|0.3|Atualizando o game design document|Lucas Gobbi|
+|18/08/2024|0.4|Atualizando mecânicas e experiência de jogo|Júlia Yoshida|
 
 ## História do jogo
 <p style="text-indent: 50px;text-align: justify;"> Na cidade de Ogama, as coisas são como são e ninguém discorda de nenhuma das regras. A principal delas: mulheres não têm direito ao ensino superior. Para Sofia, isso sempre foi motivo de incômodo, mas nunca viu ninguém ao seu redor lutar para que algo diferente aconteça. </p>

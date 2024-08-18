@@ -8,34 +8,19 @@ nav:
     - Visão de produto: 'product.md'
     - Visão de projeto: 'project.md'
     - Processos de desenvolvimento de software: 'devprocess.md'
+    - Padrões de desenvolvimento: 'patterns.md'
  - Backlog: 'backlog.md'
- - Padrões de desenvolvimento: 'patterns.md'
  - Artes e referências: 'references.md'
- - Roadmap e Sprints: 
+ - Sprints: 'sprints1.md'
+ - Roadmap: 
     - Roadmap e Sprints: 'sprints.md'
-    - Sprint (28/02/24 - 06/03/24): 'sprint1.md'
-    - Sprint (06/03/24 - 13/03/24): 'sprint2.md'
-    - Sprint (13/03/24 - 20/03/24): 'sprint3.md'
-    - Sprint (20/03/24 - 27/03/24): 'sprint4.md'
-    - Sprint (27/03/24 - 02/04/24): 'sprint5.md'
-    - Sprint (02/04/24 - 08/04/24): 'sprint6.md'
-    - Sprint (09/04/24 - 16/04/24): 'sprint7.md'
-    - Sprint (17/04/24 - 23/04/24): 'sprint8.md'
-    - Sprint (23/04/24 - 30/04/24): 'sprint9.md'
-    - Sprint (30/04/24 - 08/05/24): 'sprint10.md'
-    - Sprint (08/05/24 - 14/05/24): 'sprint11.md'
-    - Sprint (14/05/24 - 21/05/24): 'sprint12.md'
-    - Sprint (21/05/24 - 28/05/24): 'sprint13.md'
-    - Sprint (28/05/24 - 04/06/24): 'sprint14.md'
-    - Sprint (04/06/24 - 18/06/24): 'sprint15.md'
-    - Sprint (18/06/24 - 25/06/24): 'sprint16.md'
-    - Sprint (25/06/24 - 05/07/24): 'sprint17.md'
-
  - Releases:
     - Release 1(08/04/24): 'release1.md'
     - Release 2(05/05/24): 'release2.md'
     - Release 3(05/07/24): 'release3.md'
+    - Release 4(20/08/24): 'release4.md'
  - Linha do tempo: 'timeline.md'
+ - Tutoriais: 'tutorials.md'
 
 theme:
   name: material
