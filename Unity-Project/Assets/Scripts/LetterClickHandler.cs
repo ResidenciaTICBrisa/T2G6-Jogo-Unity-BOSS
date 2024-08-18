@@ -7,7 +7,7 @@ public class LetterClickHandler : MonoBehaviour
 
     private void Start()
     {
-        // Referencia ao ShelfScript
+        // Referência ao ShelfScript
         shelfScript = GetComponentInParent<ShelfScript>();
     }
 

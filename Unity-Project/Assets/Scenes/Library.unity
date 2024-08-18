@@ -4793,10 +4793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &328463804
 GameObject:
@@ -4919,7 +4916,7 @@ Transform:
   m_GameObject: {fileID: 328463804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18379372, y: -9.883902, z: -10}
+  m_LocalPosition: {x: -0.18379372, y: -9.883919, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6865,41 +6862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22495e74ec4a85a79f623f659a448d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &442955531
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442955523}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0052629113, y: 0}
-  serializedVersion: 2
-  m_Radius: 39.433594
 --- !u!114 &442955532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7147,10 +7109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: 2931b7e8d74994a23b758ba93f010a23, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 2070783251}
 --- !u!1 &611184770
 GameObject:
@@ -26129,10 +26088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1001 &639918906
 PrefabInstance:
@@ -26426,10 +26382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: b5d1bcff731d7614087d1efbea2aebf3, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 1392573284}
 --- !u!1 &647227236
 GameObject:
@@ -26670,10 +26623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: 49b7b57c222e1fe678edbb9364fb9a21, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 491606625}
 --- !u!1 &711032978
 GameObject:
@@ -27179,10 +27129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &715908251
 GameObject:
@@ -30520,10 +30467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: 49b7b57c222e1fe678edbb9364fb9a21, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 111882140}
 --- !u!1 &790743586
 GameObject:
@@ -40158,10 +40102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 1888701298}
   letterObject: {fileID: 11400000, guid: 8f47568fbf2b23dbcbd06ea6a24ab7d8, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 442955523}
 --- !u!1 &1082761600
 GameObject:
@@ -41574,10 +41515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!4 &1138056798 stripped
 Transform:
@@ -43386,10 +43324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: f428cb5af869c72cdb2273eafdb0a8e2, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 1849926423}
 --- !u!1 &1180399945
 GameObject:
@@ -43669,10 +43604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: f428cb5af869c72cdb2273eafdb0a8e2, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 1229085686}
 --- !u!1 &1229085686 stripped
 GameObject:
@@ -46342,10 +46274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &1600118186
 GameObject:
@@ -46572,7 +46501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1692766943
 Transform:
   m_ObjectHideFlags: 0
@@ -47025,10 +46954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &1747641833
 GameObject:
@@ -47511,10 +47437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 11400000, guid: 6de2c4005bb2f2866a64087fd5844e9b, type: 2}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 809398308}
 --- !u!1 &1849926423 stripped
 GameObject:
@@ -48019,10 +47942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &1920196133
 GameObject:
@@ -48527,10 +48447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &1964981302
 GameObject:
@@ -50416,10 +50333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7e24d097a2f1aadaef4fc6f2f4c2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 0}
   letterObject: {fileID: 0}
-  firstPersonShelfView: {fileID: 0}
-  closeButton: {fileID: 0}
   letterImage: {fileID: 0}
 --- !u!1 &2070783251 stripped
 GameObject:
@@ -51403,9 +51317,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 442955529}
-    - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 442955531}
     - targetCorrespondingSourceObject: {fileID: 4120456007676106009, guid: 3bc45d8cde28f906d998e9da04cc01b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 442955532}
