@@ -11,9 +11,8 @@ nav:
     - Padrões de desenvolvimento: 'patterns.md'
  - Backlog: 'backlog.md'
  - Artes e referências: 'references.md'
- - Sprints: 'sprints1.md'
- - Roadmap: 
-    - Roadmap e Sprints: 'sprints.md'
+ - Sprints: 'sprints.md'
+ - Roadmap: 'roadmap.md'
  - Releases:
     - Release 1(08/04/24): 'release1.md'
     - Release 2(05/05/24): 'release2.md'

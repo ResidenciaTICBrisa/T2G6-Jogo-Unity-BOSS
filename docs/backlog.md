@@ -21,7 +21,14 @@
 
 <iframe src="https://trello.com/b/q3R7wCJO.html" frameBorder="0" width="900" height="900"></iframe>
 
-<p style="text-indent: 50px;text-align: justify;"> As Issues criadas no Github foram essenciais para gerenciar e rastrear o trabalho que estávamos desenvolvendo. A partir delas, pudemos gerar alguns gráficos que mostram a contribuição de cada membro. </p>
+## Github Projects
+<p style="text-indent: 50px;text-align: justify;"> O Github Projects do grupo foi desenvolvido para uma organização mais adequada das issues do projeto. Cada issue é dividida em algumas categorias, como: tamanho, prioridade, responsável por ela e etc. </p>
+
+<img src="../images/gitprojects01.png" width="900">
+
+<p style="text-indent: 50px;text-align: justify;"> Para acessar o projects da equipe basta clicar <a href="https://github.com/orgs/ResidenciaTICBrisa/projects/20/views/2">aqui</a> .</p>
+
+<p style="text-indent: 50px;text-align: justify;"> A partir dessas issues e de seus dados, foram desenvolvidos gráficos para análise de performance do grupo, na aba de insights do projects, a qual está sendo utilizado para melhor distribuição de issues para a equipe.</p>
 
 <div style="text-align: center;">
     <img src="../images/issues1.jpg" width="800">    
