@@ -88,8 +88,23 @@
 
 <p style="text-indent: 50px;text-align: justify;"> A ata da reunião dessa sprint pode ser encontrada <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/blob/2eeee920be9a4bb699e7449aa40744d0f6a1408d/docs/ATAS/ATA%20-%2002_04.pdf" target="_blank">aqui</a>.</p>
 
-
 ## Sprint (08/04/24 - 15/04/24)
+
+## Tarefas
+
+|Identificador(Tn)|Tarefa|Descrição|Responsável|
+|--|--|--|--|
+|T1|Fazer a linha do tempo do projeto|Destacar as atividades realizadas mais marcantes na história do jogo|Júlia Yoshida e Lucas Gobbi|
+|T2|Estudar Git Project|-|Miguel Arthur|
+|T3|Guia de como estamos aprendendo a fazer jogo|Atualizar o GitPages com informações relevantes sobre o desenvolvimento de jogos|Júlia Yoshida|
+|T4|Criar interação do NPC|-|Lucas Gobbi|
+|T5|Plano teórico do mapa principal|-|Lucas Gobbi, Letícia Monteiro e Bruno Ribeiro|
+|T6|Botão "Sair do Jogo"|-|Lucas Gobbi e Letícia Monteiro|
+|T7|Plano teórico da fase 1|Desenvolver a história da fase 1|Miguel Arthur, Thiago Gomes e Júlia Yoshida|
+|T8|Desenhar vilão policial|-|Letícia Monteiro|
+|T9|Bug do Collider com a boneca principal|-|Lucas Gobbi|
+
+## Sprint (15/04/24 - 22/04/24) 
 
 ### Tarefas
 
@@ -102,7 +117,7 @@
 |T5|Adicionar mais NPCs ao Mapa, junto de suas interações|-|Lucas Gobbi|
 
 
-## Sprint (15/04/24 - 22/04/24) 
+## Sprint (22/04/24 - 29/04/24)
 
 ### Tarefas
 
@@ -116,8 +131,7 @@
 |T6|Design de exterior da biblioteca|-|Júlia Yoshida e Miguel Arthur|
 |T7|Adicionar animação de ataque da Boneca Principal|-|Lucas Gobbi|
 
-
-## Sprint (22/04/24 - 29/04/24)
+## Sprint (29/04/24 - 06/05/24)
 
 ### Tarefas
 
@@ -130,7 +144,7 @@
 |T5|Biblioteca completamente modelada, com detalhes, prateleiras, mesas|-|Miguel Arthur e Júlia Yoshida|
 |T6|Botão da interação da boneca principal |-|Lucas Gobbi|
 
-## Sprint (29/04/24 - 06/05/24)
+## Sprint (06/05/24 - 13/05/24)
 
 ### Tarefas
 
@@ -142,7 +156,7 @@
 |T4|Criação de diários #0, #1 e #2|-|Lucas Gobbi|
 |T5|Desenhar faceset da Sofia|Desenhar imagem da Sofia que será utilizada em diálogos|Júlia Yoshida|
 
-## Sprint (06/05/24 - 13/05/24)
+## Sprint (13/05/24 - 20/05/24)
 
 ### Tarefas
 
@@ -152,7 +166,7 @@
 |T2|Criação dos livros da biblioteca|-|Lucas Gobbi|
 |T3|Mecanismo de zoom da prateleira|-|Júlia Yoshida e Miguel Arthur|
 
-## Sprint (13/05/24 - 20/05/24)
+## Sprint (21/05/24 - 28/05/24)
 
 ### Tarefas
 
@@ -161,7 +175,7 @@
 |T1|Spritesheet robô vermelho e cinza|-|Letícia Monteiro|
 |T2|Mecânica drag and drop|Desenvolver mecânica drag and drop para utilizá-la no inventário|Júlia Yoshida|
 
-## Sprint (21/05/24 - 28/05/24)
+## Sprint (04/06/24 - 11/06/24)
 
 ### Tarefas
 
@@ -173,7 +187,7 @@
 |T4|Desenvolvimento de SpawnPoints|-|Lucas Gobbi|
 |T5|Desenhar faceset do Robô|Desenhar imagem do Robô que será utilizada em diálogos|Júlia Yoshida|
 
-## Sprint (04/06/24 - 11/06/24)
+## Sprint (11/06/24 - 18/06/24)
 
 ### Tarefas
 
@@ -184,23 +198,23 @@
 |T3|Interação do NPC vilão com o player|-|Lucas Gobbi|
 |T4|Roteiro da fase 1|-|Miguel Arthur|
 
-## Sprint (11/06/24 - 18/06/24)
-### Tarefas
-
-|Identificador(Tn)|Tarefa|Descrição|Responsável|
-|--|--|--|--|
-
 ## Sprint (18/06/24 - 25/06/24)
 ### Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
+|T1|Correção de bugs da tela|-|Lucas Gobbi|
+|T2|Correção de bugs interação|-|Bruno Ribeiro|
+|T3|Finalizando detalhes fase 1|-|Miguel Arthur, Letícia Ribeiro e Júlia Yoshida|
 
 ## Sprint (25/06/24 - 02/07/24)
 ### Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
+|T1|Atualizando a linha do tempo|-|Miguel Arthur|
+|T2|Atualizando a GitPages|-|Miguel Arthur e Júlia Yoshida|
+|T3|Integração da prateleira com o inventário|-|Miguel Arthur, Letícia Monteiro e Júlia Yoshida|
 
 ## Sprint (02/07/24 - 09/07/24)
 ### Tarefas
@@ -213,21 +227,20 @@
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Desenvolver arte do robô vermelho|-|Letícia Monteiro|
 
 ## Sprint (16/07/24 - 23/07/24)
 ### Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-|T1|Desenvolver arte do prefeito robô|-|Letícia Monteiro|
+|T1|Desenvolver arte do robô vermelho|-|Letícia Monteiro|
 
 ## Sprint (30/07/24 - 06/08/24)
 ### Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
-
+|T1|Desenvolver arte do prefeito robô|-|Letícia Monteiro|
 
 ## Sprint (06/08/24 - 13/08/24)
 ### Tarefas

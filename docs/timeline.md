@@ -4,6 +4,7 @@
 |--|--|--|--|
 |18/04/2024|0.1|Adicionando a linha do tempo|Júlia Yoshida|
 |06/05/2024|0.2|Adicionando novos pontos marcantes|Lucas Gobbi|
+|18/08/2024|0.3|Adicionando novos pontos marcantes|Júlia Yoshida|
 
 <p style="text-indent: 50px;text-align: justify;"> Aqui se encontram os momentos marcantes do projeto e os responsáveis por essas tarefas.</p>
 
