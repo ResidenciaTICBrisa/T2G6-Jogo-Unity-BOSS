@@ -221,12 +221,20 @@
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
+|T1|Compor uma trilha para a fase que se passa na biblioteca.|-|Bruno Ribeiro|
+|T2|Combate robô vermelho|Desenvolvimento do Robo Vermelho, que é o inimigo de ataque a longa distância|Lucas Gobbi|
+|T3|Criar landing page|-|Júlia Yoshida|
+|T4|Criar protótipo alta fidelidade inventario dos diários|-|Lucas Gobbi|
 
 ## Sprint (09/07/24 - 16/07/24)
 ### Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
+|T1|Diarios da fase 2|Ao longo da fase 2, a Sofia encontrará dois diários. Devem ser elaborados os conteúdos deles e suas artes|Lucas Gobbi|
+|T2|Resolver bug de proporção tela diário|Corrigir bug quando a player interage com o diário, devido a proporção da tela. Deve-se alterar o modo que o canvas age na cena BookFlip para que tanto o background quanto os botões mantenham um design e proporção coerentes|Lucas Gobbi|
+|T3|Desenvolver sistema de inventário dos diários|Adicionar botão de inventário que o player pode clicar em qualquer cena|Júlia Yoshida|
+
 
 ## Sprint (16/07/24 - 23/07/24)
 ### Tarefas
@@ -234,6 +242,8 @@
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
 |T1|Desenvolver arte do robô vermelho|-|Letícia Monteiro|
+|T2|Finalizar fase 1|Criar o diálogo com a bibliotecária que introduza a mecânica da fase para a jogadora|Letícia Monteiro e Miguel Arthur|
+|T3|Desenvolver sistema de inventário dos diários|O inventário deve persistir entre as cenas|Júlia Yoshida|
 
 ## Sprint (30/07/24 - 06/08/24)
 ### Tarefas
@@ -241,12 +251,22 @@
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
 |T1|Desenvolver arte do prefeito robô|-|Letícia Monteiro|
+|T2|Finalizar fase 1|Corrigir bug no script do inventário|Miguel Arthur|
+|T3|Desenvolver sistema de inventário dos diários|O player deve poder coletar os diários|Júlia Yoshida|
+|T4|Atualizar arte do vilão da fase 2|Por problemas na animação quando as sprites foram adicionadas na cena, o design do personagem e seus ataques precisaram ser modificados|Letícia Monteiro|
+|T5|Adicionar o livro da Ada Lovelace ao jogo, na tela de BookFlip|-|Lucas Gobbi|
 
 ## Sprint (06/08/24 - 13/08/24)
 ### Tarefas
 
 |Identificador(Tn)|Tarefa|Descrição|Responsável|
 |--|--|--|--|
+|T1|Corrigir bug das vozes de alguns NPCS|Existem NPCs que não tem audio source com alguma voz. Adicionar um efeito que corresponda a esse NPC|Lucas Gobbi|
+|T2|Finalizar fase 1|Adicionar animação quando o jogador cumprir a meta, que deve incentivá-lo a continuar no jogo|Miguel Arthur|
+|T3|Desenvolver sistema de inventário dos diários|Desenvolver mecânica em que o player entra no inventário e pode scrollar pelos diários do jogo, mas só pode abrir os que ele já coletou|Júlia Yoshida|
+|T4|Atualizando as sprites da Sofia da fase 3|Para a última fase do jogo, foi necessário atualizar o ataque do player para ter um de longa distancia|Letícia Monteiro|
+|T5|Fazer as sprites do vilão da fase 3|-|Letícia Monteiro|
+
 
 ## Sprint (13/08/24 - 20/08/24)
 ### Tarefas
@@ -256,3 +276,6 @@
 |T1|Atualizar GitPages|-|Júlia Yoshida|
 |T2|Fazer os slides da release 4|-|Letícia Monteiro|
 |T3|Gravar gameplay pra apresentar na release 4|-|Lucas Gobbi|
+|T4|Integração da fase 2|Integração dos elementos desenvolvidos para a fase 2, para que ela se torne oficialmente pronta. Esses módulos são: <br>- [76](https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/76) : Mapa da fase 2; <br>- [85](https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/85) : Robo cinza; <br>- [101](https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/101) : Robo vermelho; <br>- [102](https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/102) : Diários da fase 2.|Lucas Gobbi|
+|T5|Ambientação da fase 3|Para a terceira fase, foi definido que o último combate será ambientado em uma universidade. Portanto, é necessário criar esse cenário de forma que os personagens possam ser adicionados posteriormente|Letícia Monteiro|
+|T6|Desenvolver sistema de inventário dos diários|O player deve poder scrollar pelas páginas do diário selecionado|Júlia Yoshida|
