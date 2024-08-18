@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1275339, y: 2.3076813, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5966995967807404702}
   - {fileID: 8464643201746153291}
@@ -401,7 +401,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.43158242, w: 0.90207356}
   m_LocalPosition: {x: 0.004, y: 0.005, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6404362478064210717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.136}
@@ -546,9 +546,12 @@ PolygonCollider2D:
     - - {x: -0.5, y: -0.21875}
       - {x: -0.5, y: -0.4375}
       - {x: -0.4375, y: -0.5}
-      - {x: 0.1875, y: -0.5}
-      - {x: 0.1875, y: -0.28125}
-      - {x: -0.0625, y: -0.21875}
+      - {x: -0.048202235, y: -0.48111734}
+      - {x: 0.36647284, y: -0.34167784}
+      - {x: 0.4834935, y: 0.37957287}
+      - {x: 0.27498972, y: 0.4486851}
+      - {x: 0.22228651, y: -0.0035278127}
+      - {x: -0.028082177, y: -0.28758556}
   m_UseDelaunayMesh: 0
 --- !u!114 &3877833010082807656
 MonoBehaviour:
@@ -562,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c388df34eebfc14ca1732d369dfc63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atkDuration: 1
 --- !u!1 &6622552280536644172
 GameObject:
   m_ObjectHideFlags: 0
