@@ -51,7 +51,11 @@ public class BookManager : MonoBehaviour
             heldBook.GetComponent<BookPickup>().enabled = false;
             heldBook.transform.position = playerHand.position;
             heldBook.transform.SetParent(playerHand);
-            heldBook.SetActive(false); // Desativa o livro no cenário
+            //heldBook.SetActive(false); // Desativa o livro no cenário
+
+            Rigidbody2D rb = heldBook.GetComponent<Rigidbody2D>();
+            rb.constraints = RigidbodyConstraints2D.None;
+            heldBook.layer = LayerMask.NameToLayer("BookCaido");
         }
     }
 
@@ -64,8 +68,8 @@ public class BookManager : MonoBehaviour
             activeBooks.Remove(heldBook); // Remove o livro da lista de ativos
             
             Rigidbody2D rb = heldBook.GetComponent<Rigidbody2D>();
-            rb.constraints = RigidbodyConstraints2D.None;
-            heldBook.layer = LayerMask.NameToLayer("BookCaido");
+            //rb.constraints = RigidbodyConstraints2D.None;
+            //heldBook.layer = LayerMask.NameToLayer("BookCaido");
             Vector2 direction = (villain.position - playerHand.position).normalized;
             rb.velocity = direction * 10f; // Ajuste a velocidade conforme necessário
             
