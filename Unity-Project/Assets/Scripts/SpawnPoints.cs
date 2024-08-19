@@ -16,7 +16,7 @@ public class SpawnPoints : MonoBehaviour
             X = x;
         }
     }
-    public enum currentPosition {none, library, house, shop, houseBed}
+    public enum currentPosition {none, library, house, shop, houseBed, grove}
 
     public currentPosition currentSpawn = currentPosition.none;
 
@@ -29,11 +29,12 @@ public class SpawnPoints : MonoBehaviour
     AudioSource[] sounds;
     public int musicStatus = 0;
 
-    cityMap[] points = new cityMap[4];
+    cityMap[] points = new cityMap[5];
 
     // Start is called before the first frame update
     void Start()
     {
+        points[4] = new cityMap(new Vector3(0, -15f, 0));
         points[3] = new cityMap(new Vector3(22.08f, 1.58f, 0));
         points[2] = new cityMap(new Vector3(10.15f,-4.6f,0));
         points[1] = new cityMap(new Vector3(-11.48f, -9.65f, 0));
@@ -141,6 +142,9 @@ public class SpawnPoints : MonoBehaviour
         } else if (currentSpawn == currentPosition.houseBed)
         {
             player.transform.position = points[3].X;
+        } else if (currentSpawn == currentPosition.grove)
+        {
+            player.transform.position = points[4].X;
         }
 
         currentSpawn = currentPosition.none;
@@ -158,6 +162,9 @@ public class SpawnPoints : MonoBehaviour
         } else if (cena.name == "MainMenu")
         {
             currentSpawn = currentPosition.houseBed;
+        } else if (cena.name == "Grove")
+        {
+            currentSpawn = currentPosition.grove;
         }
     }
 
