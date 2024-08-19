@@ -14,7 +14,7 @@ public class MovePlayer : MonoBehaviour
     private bool isAttacking = false;
     public Button atkButton;
     public GameObject talkPanel;
-    public GameObject inventoryPanel;
+    public GameObject inventoryPanel; // Mantido de 'nova'
 
     private void Start()
     {
@@ -24,7 +24,9 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ((talkPanel != null && talkPanel.activeInHierarchy) || (inventoryPanel != null && inventoryPanel.activeInHierarchy))
+        // Combinação das verificações de 'nova' e 'dev'
+        if ((talkPanel != null && talkPanel.activeInHierarchy) || 
+            (inventoryPanel != null && inventoryPanel.activeInHierarchy))
         {
             rb.velocity = Vector2.zero;
             return;
@@ -43,7 +45,8 @@ public class MovePlayer : MonoBehaviour
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
-            if ((talkPanel == null || !talkPanel.activeInHierarchy) && (inventoryPanel == null || !inventoryPanel.activeInHierarchy))
+            if ((talkPanel == null || !talkPanel.activeInHierarchy) && 
+                (inventoryPanel == null || !inventoryPanel.activeInHierarchy))
             {
                 rb.velocity = new Vector2(horizontalInput * playerSpeed, verticalInput * playerSpeed);
             }
@@ -54,13 +57,13 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-
     public void HandleAttack()
     {
         if (!isAttacking)
         {
             isAttacking = true;
             Debug.Log("Att");
+
             if (animator.GetFloat("MoveX") == 0 && animator.GetFloat("MoveY") == 0)
             {
                 animator.SetTrigger("TriggerAttackDown");
@@ -81,6 +84,7 @@ public class MovePlayer : MonoBehaviour
             {
                 animator.SetTrigger("TriggerAttackDown");
             }
+
             animator.SetFloat("MoveX", 0);
             animator.SetFloat("MoveY", 0);
             rb.velocity = Vector2.zero;
@@ -105,6 +109,9 @@ public class MovePlayer : MonoBehaviour
                 atkTimer = 0;
                 isAttacking = false;
             }
+        }
+    }
+}
         }
     }
 }
