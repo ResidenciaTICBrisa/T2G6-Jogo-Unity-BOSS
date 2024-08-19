@@ -11,6 +11,7 @@ TagManager:
   - ButtonCanvas
   - Diary
   - Enemy
+  - GameManager
   layers:
   - Default
   - TransparentFX

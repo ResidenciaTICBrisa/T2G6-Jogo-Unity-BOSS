@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BookFlip.unity
     guid: 14b2c5aa14aa084bb9f5314a37899eca
+  - enabled: 1
+    path: Assets/Scenes/InventoryScene.unity
+    guid: 3efdccb30cb605c4e9257d9a51bb264b
   m_configObjects: {}

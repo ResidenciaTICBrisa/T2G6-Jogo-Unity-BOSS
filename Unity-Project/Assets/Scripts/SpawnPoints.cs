@@ -80,7 +80,7 @@ public class SpawnPoints : MonoBehaviour
         SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
-    // Método chamado quando uma nova cena é carregada
+    // Mï¿½todo chamado quando uma nova cena ï¿½ carregada
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         buttonsCanvas = GameObject.FindGameObjectWithTag("ButtonCanvas");
@@ -108,13 +108,17 @@ public class SpawnPoints : MonoBehaviour
             for (int i = 0; i < countLoaded; i++)
             {
                 Scene isFlip = SceneManager.GetSceneAt(i);
-                if(isFlip.name == "BookFlip")
+                if(isFlip.name == "BookFlip" || isFlip.name == "InventoryScene")
                 {
+                    isOverlaid = true;
                     return;
                 }
             }
         }
-
+        if (isOverlaid)
+        {
+            return;
+        }
         // Ativacao da vinheta quando entra em cenas diferentes do menu
         if (cena.name == "MainMenu")
         {
