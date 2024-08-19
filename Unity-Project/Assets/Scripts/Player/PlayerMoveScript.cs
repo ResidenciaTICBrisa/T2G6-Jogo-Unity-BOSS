@@ -24,7 +24,6 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Combinação das verificações de 'nova' e 'dev'
         if ((talkPanel != null && talkPanel.activeInHierarchy) || 
             (inventoryPanel != null && inventoryPanel.activeInHierarchy))
         {
