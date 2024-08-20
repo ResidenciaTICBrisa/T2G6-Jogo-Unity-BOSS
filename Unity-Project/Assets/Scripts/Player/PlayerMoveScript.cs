@@ -2,6 +2,9 @@ using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
+using System.Data;
 
 public class MovePlayer : MonoBehaviour
 {
@@ -14,11 +17,20 @@ public class MovePlayer : MonoBehaviour
     private bool isAttacking = false;
     public Button atkButton;
     public GameObject talkPanel;
+    public int hp = 100;
+    public Animator animatorLife;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        Scene cena = SceneManager.GetActiveScene();
+        if (cena.name == "Grove")
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            animatorLife = gameObject.transform.GetChild(1).GetComponent<Animator>();
+            Debug.Log(animatorLife);
+        }
     }
 
     private void FixedUpdate()
@@ -28,6 +40,29 @@ public class MovePlayer : MonoBehaviour
         if (isAttacking == true) return;
         HandleMovement();
         UpdateAnimationState();
+    }
+
+    public void ReceiveDamage()
+    {
+        Debug.Log("damage taken");
+        switch (hp)
+        {
+            case 100:
+                hp = 66;
+                animatorLife.SetInteger("Hp", 66);
+                break;
+            case 66:
+                hp = 33;
+                animatorLife.SetInteger("Hp", 33);
+                break;
+            case 33:
+                hp = 0;
+                animatorLife.SetInteger("Hp", 0);
+                animator.SetTrigger("Hp");
+                Debug.Log("Morri");
+                break;
+        }
+        Debug.Log(hp);
     }
 
     private void HandleMovement()
@@ -104,4 +139,5 @@ public class MovePlayer : MonoBehaviour
             }
         }
     }
+
 }

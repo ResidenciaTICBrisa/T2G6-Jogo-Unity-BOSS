@@ -9,6 +9,11 @@ public class FlipPage : MonoBehaviour
 	private Animator mAnimator;
     public Button buttonF;
     public Button buttonB;
+
+    [SerializeField]
+    private int maxIndex;
+    [SerializeField]
+    private int currentIndex = 0;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -22,15 +27,40 @@ public class FlipPage : MonoBehaviour
         buttonB.onClick.AddListener(BackFlip);
     }
 
+    private void Update()
+    {
+        if (maxIndex == 0)
+        {
+            buttonF.interactable = false;
+            buttonB.interactable = false;
+            return;
+        } else
+        {
+            buttonF.interactable = true;
+        }
+        if (currentIndex == 0)
+        {
+            buttonB.interactable = false;
+        } else if (currentIndex == maxIndex) { 
+            buttonF.interactable = false;
+        } else
+        {
+            buttonF.interactable = true;
+            buttonB.interactable = true;
+        }
+    }
+
     public void FrontFlip ()
     {
         mAnimator.SetTrigger("fontFlip");
+        currentIndex++;
         Debug.Log("CLick " + mAnimator.name);
     }
 
     public void BackFlip ()
     {
         mAnimator.SetTrigger("backFlip");
+        currentIndex--;
         Debug.Log("CLick");
     }
 

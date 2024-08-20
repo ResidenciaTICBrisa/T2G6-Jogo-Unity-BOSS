@@ -10,6 +10,7 @@ TagManager:
   - Scene
   - ButtonCanvas
   - Diary
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - NPC
   - Player
-  - 
+  - Attack
   - 
   - 
   - 
