@@ -8,11 +8,13 @@ public class VillainBehavior : MonoBehaviour
     public float minAttackInterval = 1f; // Intervalo mínimo para lançar um projétil
     public float maxAttackInterval = 3f; // Intervalo máximo para lançar um projétil
     public float projectileSpeed = 10f; // Velocidade do projétil
+    Animator m_Animator;
 
     private float timeToNextAttack; // Tempo até o próximo ataque
 
     void Start()
-    {
+    {   
+        m_Animator = GetComponent<Animator>();
         SetNextAttackTime(); // Define o tempo inicial para o próximo ataque
     }
 
@@ -28,6 +30,21 @@ public class VillainBehavior : MonoBehaviour
         {
             Vector2 direction = (player.position - transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+
+            bool cima, baixo, esquerda, direita;
+    
+            cima = (Vector2.Distance(direction, Vector2.up) < 0.585f);
+            baixo = (Vector2.Distance(direction, Vector2.down) < 0.585f);
+            esquerda = (Vector2.Distance(direction, Vector2.left) < 0.585f);
+            direita = (Vector2.Distance(direction, Vector2.right) < 0.585f);
+        
+            m_Animator.SetBool("Cima", cima);
+            m_Animator.SetBool("Esquerda", direita);
+            m_Animator.SetBool("Direita", esquerda);
+            m_Animator.SetBool("Baixo", baixo);
+        
+            m_Animator.SetBool("Andando", true);
+        
         }
     }
 
@@ -51,9 +68,9 @@ public class VillainBehavior : MonoBehaviour
     void LaunchProjectile()
     {
         if (projectilePrefab != null && player != null)
-        {
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        {   
             Vector2 direction = (player.position - transform.position).normalized;
+            GameObject projectile = Instantiate(projectilePrefab, transform.position+(Vector3)direction, Quaternion.identity);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = direction * projectileSpeed;
         }

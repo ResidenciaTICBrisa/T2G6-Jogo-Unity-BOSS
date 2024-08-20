@@ -56,6 +56,7 @@ public class BookManager : MonoBehaviour
             Rigidbody2D rb = heldBook.GetComponent<Rigidbody2D>();
             rb.constraints = RigidbodyConstraints2D.None;
             heldBook.layer = LayerMask.NameToLayer("BookCaido");
+            rb.velocity = Vector2.zero;
         }
     }
 

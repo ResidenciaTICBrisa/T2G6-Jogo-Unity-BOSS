@@ -48,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Anterior
+    uniqueID: 3867973043
+    locked: 0
   - name: "Ch\xE3o"
     uniqueID: 1646367147
     locked: 0

@@ -6,6 +6,7 @@ public class BookRotation : MonoBehaviour
 
     private bool isRotating = false;
 
+
     void Update()
     {
         if (isRotating)
@@ -14,6 +15,12 @@ public class BookRotation : MonoBehaviour
             transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
         }
     }
+    
+    void OnCollisionEnter2D(Collision2D Other)
+    {
+        if (isRotating)Destroy(gameObject);
+    }
+
 
     public void StartRotation()
     {
