@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5484985881119788297}
   - component: {fileID: 144549049644923767}
   - component: {fileID: 7504702718762594611}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: RobotT1New
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100000
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72f8d47f43d37f44aa40902e25a7094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1.5
-  atkDuration: 1
+  _speed: 1
+  atkDuration: 2
   distanceToAttack: 1.25
   hp: 100
 --- !u!95 &7504702718762594611

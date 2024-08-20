@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 3821032705479356794}
   - component: {fileID: 4489965437016422988}
   - component: {fileID: 4390592744941581113}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: RobotT2
   m_TagString: Enemy
   m_Icon: {fileID: 0}

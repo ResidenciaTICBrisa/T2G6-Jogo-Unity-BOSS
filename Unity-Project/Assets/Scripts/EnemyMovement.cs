@@ -158,6 +158,7 @@ public class EnemyMovement : MonoBehaviour
                 hp = 0;
                 _animatorLife.SetInteger("Hp", 0);
                 _animator.SetTrigger("Dead");
+                this.transform.GetComponent<BoxCollider2D>().enabled = false;
                 Debug.Log("Morri");
                 break;
         }

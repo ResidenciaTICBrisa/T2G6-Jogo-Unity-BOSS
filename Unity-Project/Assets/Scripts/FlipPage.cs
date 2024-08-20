@@ -29,6 +29,15 @@ public class FlipPage : MonoBehaviour
 
     private void Update()
     {
+        if (maxIndex == 0)
+        {
+            buttonF.interactable = false;
+            buttonB.interactable = false;
+            return;
+        } else
+        {
+            buttonF.interactable = true;
+        }
         if (currentIndex == 0)
         {
             buttonB.interactable = false;
