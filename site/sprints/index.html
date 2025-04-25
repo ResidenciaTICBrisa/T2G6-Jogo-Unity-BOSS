@@ -1,0 +1,3197 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../references/">
+      
+      
+        <link rel="next" href="../roadmap/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Sprints - Projeto BOSS - Unity</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sprints" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Projeto BOSS - Unity" class="md-header__button md-logo" aria-label="Projeto BOSS - Unity" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projeto BOSS - Unity
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprints
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../landingpage/landingpage.html" class="md-tabs__link">
+        
+  
+    
+  
+  Landing Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../concepts/" class="md-tabs__link">
+        
+  
+    
+  
+  Conceitos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../game/" class="md-tabs__link">
+        
+  
+    
+  
+  Jogo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../product/" class="md-tabs__link">
+          
+  
+  Visão de produto e projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../backlog/" class="md-tabs__link">
+        
+  
+    
+  
+  Backlog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../references/" class="md-tabs__link">
+        
+  
+    
+  
+  Artes e referências
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Sprints
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../roadmap/" class="md-tabs__link">
+        
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../release1/" class="md-tabs__link">
+          
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../timeline/" class="md-tabs__link">
+        
+  
+    
+  
+  Linha do tempo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/" class="md-tabs__link">
+        
+  
+    
+  
+  Tutoriais
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projeto BOSS - Unity" class="md-nav__button md-logo" aria-label="Projeto BOSS - Unity" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Projeto BOSS - Unity
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../landingpage/landingpage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Landing Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceitos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jogo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão de produto e projeto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Visão de produto e projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devprocess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processos de desenvolvimento de software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Padrões de desenvolvimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artes e referências
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sprints
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sprints
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-280224-060324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (28/02/24 - 06/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (28/02/24 - 06/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-060324-130324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (06/03/24 - 13/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (06/03/24 - 13/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-130324-200324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (13/03/24 - 20/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (13/03/24 - 20/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-de-reuniao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ata de reunião
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-200324-270324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (20/03/24 - 27/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (20/03/24 - 27/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-de-reuniao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ata de reunião
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-270324-020424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (27/03/24 - 02/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (27/03/24 - 02/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-020424-080424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (02/04/24 - 08/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (02/04/24 - 08/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-de-reuniao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ata de reunião
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-080424-150424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (08/04/24 - 15/04/24)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefas_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-150424-220424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (15/04/24 - 22/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (15/04/24 - 22/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-220424-290424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (22/04/24 - 29/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (22/04/24 - 29/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-290424-060524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (29/04/24 - 06/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (29/04/24 - 06/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-060524-130524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (06/05/24 - 13/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (06/05/24 - 13/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-130524-200524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (13/05/24 - 20/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (13/05/24 - 20/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-210524-280524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (21/05/24 - 28/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (21/05/24 - 28/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-040624-110624" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (04/06/24 - 11/06/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (04/06/24 - 11/06/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-110624-180624" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (11/06/24 - 18/06/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (11/06/24 - 18/06/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-180624-250624" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (18/06/24 - 25/06/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (18/06/24 - 25/06/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-250624-020724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (25/06/24 - 02/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (25/06/24 - 02/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-020724-090724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (02/07/24 - 09/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (02/07/24 - 09/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-090724-160724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (09/07/24 - 16/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (09/07/24 - 16/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-160724-230724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (16/07/24 - 23/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (16/07/24 - 23/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-300724-060824" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (30/07/24 - 06/08/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (30/07/24 - 06/08/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-060824-130824" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (06/08/24 - 13/08/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (06/08/24 - 13/08/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-130824-200824" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (13/08/24 - 20/08/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (13/08/24 - 20/08/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 1(08/04/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 2(05/05/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 3(05/07/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 4(20/08/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linha do tempo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutoriais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-280224-060324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (28/02/24 - 06/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (28/02/24 - 06/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-060324-130324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (06/03/24 - 13/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (06/03/24 - 13/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-130324-200324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (13/03/24 - 20/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (13/03/24 - 20/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-de-reuniao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ata de reunião
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-200324-270324" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (20/03/24 - 27/03/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (20/03/24 - 27/03/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-de-reuniao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ata de reunião
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-270324-020424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (27/03/24 - 02/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (27/03/24 - 02/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-020424-080424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (02/04/24 - 08/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (02/04/24 - 08/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ata-de-reuniao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ata de reunião
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-080424-150424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (08/04/24 - 15/04/24)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefas_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-150424-220424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (15/04/24 - 22/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (15/04/24 - 22/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-220424-290424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (22/04/24 - 29/04/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (22/04/24 - 29/04/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-290424-060524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (29/04/24 - 06/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (29/04/24 - 06/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-060524-130524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (06/05/24 - 13/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (06/05/24 - 13/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-130524-200524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (13/05/24 - 20/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (13/05/24 - 20/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-210524-280524" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (21/05/24 - 28/05/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (21/05/24 - 28/05/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-040624-110624" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (04/06/24 - 11/06/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (04/06/24 - 11/06/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-110624-180624" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (11/06/24 - 18/06/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (11/06/24 - 18/06/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-180624-250624" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (18/06/24 - 25/06/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (18/06/24 - 25/06/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-250624-020724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (25/06/24 - 02/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (25/06/24 - 02/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-020724-090724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (02/07/24 - 09/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (02/07/24 - 09/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-090724-160724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (09/07/24 - 16/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (09/07/24 - 16/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-160724-230724" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (16/07/24 - 23/07/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (16/07/24 - 23/07/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-300724-060824" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (30/07/24 - 06/08/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (30/07/24 - 06/08/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-060824-130824" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (06/08/24 - 13/08/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (06/08/24 - 13/08/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-130824-200824" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprint (13/08/24 - 20/08/24)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint (13/08/24 - 20/08/24)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tarefas_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarefas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sprints">Sprints</h1>
+<h2 id="sprint-280224-060324">Sprint (28/02/24 - 06/03/24)</h2>
+<h3 id="tarefas">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Instalar Unity</td>
+<td>Instalar o software Unity para iniciarmos os estudos</td>
+<td>Lucas Gobbi, Thiago Gomes, Letícia Monteiro e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Desenvolver Flappy bird</td>
+<td>Ver o tutorial para nos familiarizarmos com Unity</td>
+<td>Lucas Gobbi, Thiago Gomes, Letícia Monteiro e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Protótipo no Figma</td>
+<td>Fazer protótipo do projeto no Figma</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-060324-130324">Sprint (06/03/24 - 13/03/24)</h2>
+<h3 id="tarefas_1">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Procurar artes gratuitas para o jogo</td>
+<td>-</td>
+<td>Lucas Gobbi e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Estudar pixel art</td>
+<td>-</td>
+<td>Letícia Monteiro e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Criar discord</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Criar diagrama de classes</td>
+<td>-</td>
+<td>Thiago Gomes e Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Criar padrões de commit</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Criar padrões de código</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>Criar padrões de ata</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>Criar template de issue</td>
+<td>-</td>
+<td>Thiago Gomes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-130324-200324">Sprint (13/03/24 - 20/03/24)</h2>
+<h3 id="tarefas_2">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Programar o Menu Principal</td>
+<td>-</td>
+<td>Lucas Gobbi e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Adicionar música ao Menu Principal</td>
+<td>Créditos<br>- FOLHA VIRANDO: Sound Effect by <a href="https://pixabay.com/users/floraphonic-38928062/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=186600 ">floraphonic</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=186600 ">Pixabay</a><br>- LIVRO ABRINDO: Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=48311 ">Pixabay</a><br>- MÚSICA DE FUNDO: Music by <a href="https://pixabay.com/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=143149 ">UNIVERSFIELD</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=143149 ">Pixabay</a></td>
+<td>Lucas Gobbi e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Desenvolver arte do Menu Principal</td>
+<td>- Referência livro menu: <a href="https://foxeldev.itch.io/pixelbooks">Pixek Art Book</a><br>- Referência chão de madeira menu: <a href="https://samu.artstation.com/albums/78871">Pixek Art Book</a></td>
+<td>Lucas Gobbi, Letícia Monteiro e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Criar GitPages</td>
+<td>Criar GitPages para documentar os seguintes tópicos do projeto:<br>- Sobre o Projeto: adicionar a descrição sobre o que é o projeto, quem são os mentores e a equipe;<br>- Sobre o Jogo: adicionar a história do jogo;<br>- Artes e referências: adicionar as referências de arte de uso livre que iremos utilizar;<br>- Códigos de conduta: adicionar os padrões de desenvolvimento que iremos seguir.</td>
+<td>Thiago Gomes e Letícia Monteiro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ata-de-reuniao">Ata de reunião</h3>
+<p style="text-indent: 50px;text-align: justify;"> A ata da reunião dessa sprint pode ser encontrada <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/blob/2eeee920be9a4bb699e7449aa40744d0f6a1408d/docs/ATAS/ATA%20-%2026_03.pdf" target="_blank">aqui</a>.</p>
+
+<h2 id="sprint-200324-270324">Sprint (20/03/24 - 27/03/24)</h2>
+<h3 id="tarefas_3">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Correção de incoerências</td>
+<td>- Deixar o Readme do projeto coerente com o GitPages: existem divergências na parte da história do jogo; <br>- Desenvolver melhor texto sobre a história do jogo; <br>- Adicionar referências do Menu no GitPages;</td>
+<td>Lucas Gobbi e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Fazer arte do mapa</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Programar o boneco principal</td>
+<td>- Movimentos para as 4 direções: o boneco deve ser capaz de se movimentar para esquerda, direita, cima e baixo;<br>- Movimento na diagonal na mesma velocidade: o boneco deve ser capaz de se movimentar na diagonal na mesma velocidade em que ele se movimenta para outras direções; <br>- Movimento de ataque: o boneco deve ter um ataque básico(soco).</td>
+<td>Thiago Gomes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ata-de-reuniao_1">Ata de reunião</h3>
+<p style="text-indent: 50px;text-align: justify;"> A ata da reunião dessa sprint pode ser encontrada <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/blob/2eeee920be9a4bb699e7449aa40744d0f6a1408d/docs/ATAS/ATA_2%20-%2026_03.pdf" target="_blank">aqui</a>.</p>
+
+<h2 id="sprint-270324-020424">Sprint (27/03/24 - 02/04/24)</h2>
+<h3 id="tarefas_4">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Programar NPC amigo</td>
+<td>-</td>
+<td>Lucas Gobbi e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Desenvolver design do boneco principal</td>
+<td>-</td>
+<td>Júlia Yoshida e Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Achar arte NPC amigo</td>
+<td>-</td>
+<td>Lucas Gobbi e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Pesquisar mulher importantes na computação</td>
+<td>A pesquisa se encontra <a href="https://docs.google.com/document/d/16lcnfqix6dCMXCDF4VuPFlssMLXAQDJi-jvA9BIXLUI/edit">aqui</a></td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Colocar mapa no jogo com colliders</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Nivelamento em Unity</td>
+<td>Assistir o <a href="https://www.youtube.com/watch?v=XtQMytORBmM">tutorial</a></td>
+<td>Bruno Ribeiro e Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-020424-080424">Sprint (02/04/24 - 08/04/24)</h2>
+<h3 id="tarefas_5">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Programar movimento da câmera pra acompanhar o boneco</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Adicionar Joystick</td>
+<td>-</td>
+<td>Thiago Gomes</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Integrar arte com script do boneco</td>
+<td>-</td>
+<td>Lucas Gobbi e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Evoluir GitPages</td>
+<td>-</td>
+<td>Júlia Yoshida e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Roadmap</td>
+<td>-</td>
+<td>Miguel Arthur e Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Fazer slides da apresentação</td>
+<td>-</td>
+<td>Letícia Monteiro, Júlia Yoshida e Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>Criar interação do NPC</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>Adicionar trilha sonora no city map e adicionar som da interação</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ata-de-reuniao_2">Ata de reunião</h3>
+<p style="text-indent: 50px;text-align: justify;"> A ata da reunião dessa sprint pode ser encontrada <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/blob/2eeee920be9a4bb699e7449aa40744d0f6a1408d/docs/ATAS/ATA%20-%2002_04.pdf" target="_blank">aqui</a>.</p>
+
+<h2 id="sprint-080424-150424">Sprint (08/04/24 - 15/04/24)</h2>
+<h2 id="tarefas_6">Tarefas</h2>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Fazer a linha do tempo do projeto</td>
+<td>Destacar as atividades realizadas mais marcantes na história do jogo</td>
+<td>Júlia Yoshida e Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Estudar Git Project</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Guia de como estamos aprendendo a fazer jogo</td>
+<td>Atualizar o GitPages com informações relevantes sobre o desenvolvimento de jogos</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Criar interação do NPC</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Plano teórico do mapa principal</td>
+<td>-</td>
+<td>Lucas Gobbi, Letícia Monteiro e Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Botão "Sair do Jogo"</td>
+<td>-</td>
+<td>Lucas Gobbi e Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>Plano teórico da fase 1</td>
+<td>Desenvolver a história da fase 1</td>
+<td>Miguel Arthur, Thiago Gomes e Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>Desenhar vilão policial</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T9</td>
+<td>Bug do Collider com a boneca principal</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-150424-220424">Sprint (15/04/24 - 22/04/24)</h2>
+<h3 id="tarefas_7">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Adicionar placas com interação</td>
+<td>-</td>
+<td>Lucas Gobbi e Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Criar Git project do grupo</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Adicionar atas no pages</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Adicionar efeito sonoro na interação com o NPC</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Adicionar mais NPCs ao Mapa, junto de suas interações</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-220424-290424">Sprint (22/04/24 - 29/04/24)</h2>
+<h3 id="tarefas_8">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Casa da Sofia, projetar e passar pro jogo com tilemap</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Projetar loja e passar pro jogo como tilemap</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Design de interior da biblioteca</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Adicionar artes do NPC policial ao jogo</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Definição da mecânica da fase 1</td>
+<td>-</td>
+<td>Miguel Arthur, Júlia Yoshida e Thiago Gomes</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Design de exterior da biblioteca</td>
+<td>-</td>
+<td>Júlia Yoshida e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>Adicionar animação de ataque da Boneca Principal</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-290424-060524">Sprint (29/04/24 - 06/05/24)</h2>
+<h3 id="tarefas_9">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Loja finalizada 100%</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Casa da Sofia 100% pronta</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Organização do Github Projects</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Atualizar o Game Design Document</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Biblioteca completamente modelada, com detalhes, prateleiras, mesas</td>
+<td>-</td>
+<td>Miguel Arthur e Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Botão da interação da boneca principal</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-060524-130524">Sprint (06/05/24 - 13/05/24)</h2>
+<h3 id="tarefas_10">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Projetar fase 2</td>
+<td>Desenvolver a história da fase 2</td>
+<td>Lucas Gobbi, Bruno Ribeiro e Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Finalizar loja</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Correção de bugs</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Criação de diários #0, #1 e #2</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Desenhar faceset da Sofia</td>
+<td>Desenhar imagem da Sofia que será utilizada em diálogos</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-130524-200524">Sprint (13/05/24 - 20/05/24)</h2>
+<h3 id="tarefas_11">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Desenvolver interação do player com diário</td>
+<td>-</td>
+<td>Lucas Gobbi e Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Criação dos livros da biblioteca</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Mecanismo de zoom da prateleira</td>
+<td>-</td>
+<td>Júlia Yoshida e Miguel Arthur</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-210524-280524">Sprint (21/05/24 - 28/05/24)</h2>
+<h3 id="tarefas_12">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Spritesheet robô vermelho e cinza</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Mecânica drag and drop</td>
+<td>Desenvolver mecânica drag and drop para utilizá-la no inventário</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-040624-110624">Sprint (04/06/24 - 11/06/24)</h2>
+<h3 id="tarefas_13">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Design da fase 2</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Design do inventário da fase 1</td>
+<td>Desenhar o inventário</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Mecânica Overcooked</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Desenvolvimento de SpawnPoints</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Desenhar faceset do Robô</td>
+<td>Desenhar imagem do Robô que será utilizada em diálogos</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-110624-180624">Sprint (11/06/24 - 18/06/24)</h2>
+<h3 id="tarefas_14">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Desenvolvimento do inventário da fase 1</td>
+<td>Adicionar o inventário da fase 1 que vai ser utilizado para coletar os livros das estantes.</br>- Deve ser utilizada a arte do inventário criada para a fase.</br>- Deve ser possível trocar os itens de lugar utilizando drag and drop.</br>- Deve ser possível retirar os itens do inventário e colocá-los em locais permitidos na cena(na mesa, no chão e de volta na estante) utilizando drag and drop.</br>- Não deve ser possível andar com o inventário aberto.</br>- O joystick não deve aparecer com o inventário aberto.</br>- Não deve ser possível coletar itens com o inventário aberto.</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Design da fase 2</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Interação do NPC vilão com o player</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Roteiro da fase 1</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-180624-250624">Sprint (18/06/24 - 25/06/24)</h2>
+<h3 id="tarefas_15">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Correção de bugs da tela</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Correção de bugs interação</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Finalizando detalhes fase 1</td>
+<td>-</td>
+<td>Miguel Arthur, Letícia Ribeiro e Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-250624-020724">Sprint (25/06/24 - 02/07/24)</h2>
+<h3 id="tarefas_16">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Atualizando a linha do tempo</td>
+<td>-</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Atualizando a GitPages</td>
+<td>-</td>
+<td>Miguel Arthur e Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Integração da prateleira com o inventário</td>
+<td>-</td>
+<td>Miguel Arthur, Letícia Monteiro e Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-020724-090724">Sprint (02/07/24 - 09/07/24)</h2>
+<h3 id="tarefas_17">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Compor uma trilha para a fase que se passa na biblioteca.</td>
+<td>-</td>
+<td>Bruno Ribeiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Combate robô vermelho</td>
+<td>Desenvolvimento do Robo Vermelho, que é o inimigo de ataque a longa distância</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Criar landing page</td>
+<td>-</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Criar protótipo alta fidelidade inventario dos diários</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-090724-160724">Sprint (09/07/24 - 16/07/24)</h2>
+<h3 id="tarefas_18">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Diarios da fase 2</td>
+<td>Ao longo da fase 2, a Sofia encontrará dois diários. Devem ser elaborados os conteúdos deles e suas artes</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Resolver bug de proporção tela diário</td>
+<td>Corrigir bug quando a player interage com o diário, devido a proporção da tela. Deve-se alterar o modo que o canvas age na cena BookFlip para que tanto o background quanto os botões mantenham um design e proporção coerentes</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Desenvolver sistema de inventário dos diários</td>
+<td>Adicionar botão de inventário que o player pode clicar em qualquer cena</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-160724-230724">Sprint (16/07/24 - 23/07/24)</h2>
+<h3 id="tarefas_19">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Desenvolver arte do robô vermelho</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Finalizar fase 1</td>
+<td>Criar o diálogo com a bibliotecária que introduza a mecânica da fase para a jogadora</td>
+<td>Letícia Monteiro e Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Desenvolver sistema de inventário dos diários</td>
+<td>O inventário deve persistir entre as cenas</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-300724-060824">Sprint (30/07/24 - 06/08/24)</h2>
+<h3 id="tarefas_20">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Desenvolver arte do prefeito robô</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Finalizar fase 1</td>
+<td>Corrigir bug no script do inventário</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Desenvolver sistema de inventário dos diários</td>
+<td>O player deve poder coletar os diários</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Atualizar arte do vilão da fase 2</td>
+<td>Por problemas na animação quando as sprites foram adicionadas na cena, o design do personagem e seus ataques precisaram ser modificados</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Adicionar o livro da Ada Lovelace ao jogo, na tela de BookFlip</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-060824-130824">Sprint (06/08/24 - 13/08/24)</h2>
+<h3 id="tarefas_21">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Corrigir bug das vozes de alguns NPCS</td>
+<td>Existem NPCs que não tem audio source com alguma voz. Adicionar um efeito que corresponda a esse NPC</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Finalizar fase 1</td>
+<td>Adicionar animação quando o jogador cumprir a meta, que deve incentivá-lo a continuar no jogo</td>
+<td>Miguel Arthur</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Desenvolver sistema de inventário dos diários</td>
+<td>Desenvolver mecânica em que o player entra no inventário e pode scrollar pelos diários do jogo, mas só pode abrir os que ele já coletou</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Atualizando as sprites da Sofia da fase 3</td>
+<td>Para a última fase do jogo, foi necessário atualizar o ataque do player para ter um de longa distancia</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Fazer as sprites do vilão da fase 3</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sprint-130824-200824">Sprint (13/08/24 - 20/08/24)</h2>
+<h3 id="tarefas_22">Tarefas</h3>
+<table>
+<thead>
+<tr>
+<th>Identificador(Tn)</th>
+<th>Tarefa</th>
+<th>Descrição</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>Atualizar GitPages</td>
+<td>-</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Fazer os slides da release 4</td>
+<td>-</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Gravar gameplay pra apresentar na release 4</td>
+<td>-</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Integração da fase 2</td>
+<td>Integração dos elementos desenvolvidos para a fase 2, para que ela se torne oficialmente pronta. Esses módulos são: <br>- <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/76">76</a> : Mapa da fase 2; <br>- <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/85">85</a> : Robo cinza; <br>- <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/101">101</a> : Robo vermelho; <br>- <a href="https://github.com/ResidenciaTICBrisa/T2G6-Jogo-Unity-BOSS/issues/102">102</a> : Diários da fase 2.</td>
+<td>Lucas Gobbi</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Ambientação da fase 3</td>
+<td>Para a terceira fase, foi definido que o último combate será ambientado em uma universidade. Portanto, é necessário criar esse cenário de forma que os personagens possam ser adicionados posteriormente</td>
+<td>Letícia Monteiro</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Desenvolver sistema de inventário dos diários</td>
+<td>O player deve poder scrollar pelas páginas do diário selecionado</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,63 @@
+site_name: Projeto BOSS - Unity
+nav: 
+ - Landing Page: 'landingpage/landingpage.html'
+ - Home: 'index.md'
+ - Conceitos: 'concepts.md'
+ - Jogo: 'game.md'
+ - Visão de produto e projeto: 
+    - Visão de Produto e Projeto: 'product.md'
+    - Processos de desenvolvimento de software: 'devprocess.md'
+    - Padrões de desenvolvimento: 'patterns.md'
+ - Backlog: 'backlog.md'
+ - Artes e referências: 'references.md'
+ - Sprints: 'sprints.md'
+ - Roadmaps: 
+    - Roadmap de desenvolvimento: 'desenvolvimento_roadmap.md'
+    - Roadmap de deploy contínuo: 'deploy_continuo_roadmap.md'
+    - Roadmap de proposta de contribuição: 'contribuicao_roadmap.md'
+    - Roadmap: 'roadmap.md'
+ - Releases:
+    - Release 1(22/04/2025): 'release1.md'
+    - Release 2(05/05/24): 'release2.md'
+    - Release 3(05/07/24): 'release3.md'
+    - Release 4(20/08/24): 'release4.md'
+    
+ - Linha do tempo: 'timeline.md'
+ - Tutoriais: 'tutorials.md'
+
+theme:
+  name: material
+  language: pt
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference

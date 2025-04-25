@@ -28142,14 +28142,6 @@ CompositeCollider2D:
         Y: -40031448
       - X: 20031448
         Y: -40031448
-    - - X: 130000000
-        Y: -30000000
-      - X: 120000000
-        Y: -30000000
-      - X: 120000000
-        Y: -40000000
-      - X: 130000000
-        Y: -40000000
     - - X: -120000000
         Y: -30000000
       - X: -130000000
@@ -28157,6 +28149,14 @@ CompositeCollider2D:
       - X: -130000000
         Y: -40000000
       - X: -120000000
+        Y: -40000000
+    - - X: 130000000
+        Y: -30000000
+      - X: 120000000
+        Y: -30000000
+      - X: 120000000
+        Y: -40000000
+      - X: 130000000
         Y: -40000000
     - - X: -90000000
         Y: -80000000
@@ -28884,9 +28884,8 @@ Rigidbody2D:
   m_Constraints: 0
 --- !u!1 &1678484095
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4598906017910182293, guid: 436ab4b4298d7e7ff94fb5c1f00f6274, type: 3}
+  m_PrefabInstance: {fileID: 6182289487217677521}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -28902,9 +28901,8 @@ GameObject:
   m_IsActive: 1
 --- !u!224 &1678484096
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5371679058552280952, guid: 436ab4b4298d7e7ff94fb5c1f00f6274, type: 3}
+  m_PrefabInstance: {fileID: 6182289487217677521}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678484095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}

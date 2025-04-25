@@ -1,0 +1,59 @@
+site_name: Projeto BOSS - Unity
+nav: 
+ - Landing Page: 'landingpage/landingpage.html'
+ - Home: 'index.md'
+ - Conceitos: 'concepts.md'
+ - Jogo: 'game.md'
+ - Visão de produto e projeto: 
+    - Visão de produto: 'product.md'
+    - Visão de projeto: 'project.md'
+    - Processos de desenvolvimento de software: 'devprocess.md'
+    - Padrões de desenvolvimento: 'patterns.md'
+ - Backlog: 'backlog.md'
+ - Artes e referências: 'references.md'
+ #- Sprints: 'sprints.md'
+ - Roadmaps: 
+    - Roadmap de desenvolvimento: 'desenvolvimento_roadmap.md'
+    - Roadmap de deploy contínuo: 'deploy_continuo_roadmap.md'
+    - Roadmap de proposta de contribuição: 'contribuicao_roadmap.md'
+    - Roadmap: 'roadmap.md'
+ - Releases:
+    - Release 1(22/04/2025): 'release1.md'
+    
+
+theme:
+  name: material
+  language: pt
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference

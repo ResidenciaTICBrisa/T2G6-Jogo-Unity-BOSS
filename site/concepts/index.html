@@ -1,0 +1,1399 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../game/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Conceitos - Projeto BOSS - Unity</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conceitos-e-definicoes-importantes" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Projeto BOSS - Unity" class="md-header__button md-logo" aria-label="Projeto BOSS - Unity" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projeto BOSS - Unity
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceitos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../landingpage/landingpage.html" class="md-tabs__link">
+        
+  
+    
+  
+  Landing Page
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Conceitos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../game/" class="md-tabs__link">
+        
+  
+    
+  
+  Jogo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../product/" class="md-tabs__link">
+          
+  
+  Visão de produto e projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../backlog/" class="md-tabs__link">
+        
+  
+    
+  
+  Backlog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../references/" class="md-tabs__link">
+        
+  
+    
+  
+  Artes e referências
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sprints/" class="md-tabs__link">
+        
+  
+    
+  
+  Sprints
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../roadmap/" class="md-tabs__link">
+        
+  
+    
+  
+  Roadmap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../release1/" class="md-tabs__link">
+          
+  
+  Releases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../timeline/" class="md-tabs__link">
+        
+  
+    
+  
+  Linha do tempo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/" class="md-tabs__link">
+        
+  
+    
+  
+  Tutoriais
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projeto BOSS - Unity" class="md-nav__button md-logo" aria-label="Projeto BOSS - Unity" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Projeto BOSS - Unity
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../landingpage/landingpage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Landing Page
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Conceitos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Conceitos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de versão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pixel-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pixel Art
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pixel Art">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-por-que-usar-pixel-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Por que usar pixel art?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sprite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-unity" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Unity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tile-tileset-e-tilemap" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Tile, Tileset e Tilemap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-npc" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. NPC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cena" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Cena
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Game Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-game-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Game Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-level-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Level Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jogo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão de produto e projeto
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Visão de produto e projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devprocess/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processos de desenvolvimento de software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Padrões de desenvolvimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artes e referências
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Releases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Releases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 1(08/04/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 2(05/05/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 3(05/07/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release 4(20/08/24)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linha do tempo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutoriais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de versão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pixel-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pixel Art
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pixel Art">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-por-que-usar-pixel-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Por que usar pixel art?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sprite
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-unity" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Unity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tile-tileset-e-tilemap" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Tile, Tileset e Tilemap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-npc" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. NPC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cena" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Cena
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Game Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-game-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Game Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-level-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Level Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="conceitos-e-definicoes-importantes">Conceitos e definições importantes</h1>
+<h2 id="historico-de-versao">Histórico de versão</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11/04/2024</td>
+<td>0.1</td>
+<td>Adicionando conceitos</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>16/04/2024</td>
+<td>0.2</td>
+<td>Adicionando conceito de NPC e tiles</td>
+<td>Júlia Yoshida</td>
+</tr>
+<tr>
+<td>18/08/2024</td>
+<td>0.3</td>
+<td>Adicionando conceito de game object, game design e level design</td>
+<td>Júlia Yoshida</td>
+</tr>
+</tbody>
+</table>
+<p style="text-indent: 50px;text-align: justify;"> Essa seção é dedicada a conceitos e definições importantes relacionados ao nosso projeto que serão utilizados por toda a documentação. </p>
+
+<h2 id="1-pixel-art">1. Pixel Art</h2>
+<p style="text-indent: 50px;text-align: justify;"> O pixel é a menor unidade de uma imagem na qual é possível aplicar cor, tendo formato quadrado. Pixel Art, por sua vez, consiste na criação de arte utilizando esses pixels visíveis. Surgiu junto aos primeiros consoles de videogame, tais como Atari e Super Nintendo, devido às limitações de resolução e armazenamento características daquela época. </p>
+
+<h3 id="11-por-que-usar-pixel-art">1.1 Por que usar pixel art?</h3>
+<p style="text-indent: 50px;text-align: justify;"> A criação de jogos com Pixel Art é mais acessível do que com gráficos em 3D, devido à facilidade de manipulação dos detalhes e à menor demanda por definição. Além disso, a existência de softwares intuitivos e gratuitos, como o Unity, facilita a programação nesse estilo, sendo uma excelente opção para iniciantes no desenvolvimento de jogos. </p>
+
+<p style="text-indent: 50px;text-align: justify;"> As possibilidades criativas com Pixel Art são vastas, permitindo uma personalização ampla e uma curva de aprendizado mais rápida. Isso possibilita a criação de cenários e personagens diversificados, com variedade na jogabilidade. </p>
+
+<p style="text-indent: 50px;text-align: justify;"> Os jogos em Pixel Art tendem a ser mais leves devido à sua resolução menor, o que os torna ideais para dispositivos móveis. Além disso, a estética retrô da Pixel Art evoca nostalgia nos jogadores, pois muitos dos jogos clássicos, como Super Mario Bros., Chrono Trigger e Sonic, foram criados nesse estilo. </p>
+
+<h2 id="3-sprite">3. Sprite</h2>
+<p style="text-indent: 50px;text-align: justify;"> Sprite em um jogo é uma representação gráfica bidimensional de um personagem, objeto ou elemento do cenário. Sprites são essenciais para dar vida ao jogo, permitindo que os personagens realizem uma variedade de ações, como caminhar, correr, pular e muito mais. Para cada uma dessas ações, é necessário criar diferentes variações do sprite, representando cada movimento de forma detalhada. Imagine que você está construindo a movimentação de um personagem em seu jogo. Você precisaria desenhar cada frame de animação para cada movimento que o personagem realizará, como caminhar ou pular. Isso se assemelha ao processo de criação de uma animação tradicional, onde uma sequência de desenhos à mão é utilizada para criar movimento. </p>
+
+<h2 id="4-unity">4. Unity</h2>
+<p style="text-indent: 50px;text-align: justify;"> O Unity é uma plataforma de criação e operação de conteúdo interativo 3D, sendo uma game engine que centraliza e simplifica o desenvolvimento de jogos eletrônicos. Assim, o Unity torna possível que os desenvolvedores otimizem tempo na produção de jogos por não precisarem densenvolver tudo do zero. O Unity oferece suporte para a linguagem de programçaõ C#, que é a que estamos utilizando no nosso projeto. </p>
+
+<p style="text-indent: 50px;text-align: justify;"> O Unity fornece vários elementos que compõe um jogo, como: </p>
+
+<ul>
+<li>Motor gráfico para renderização de gráficos 2D e 3D;</li>
+<li>Motor de física que simula interações entre objetos;</li>
+<li>Sistema de iluminação;</li>
+<li>Texturas;</li>
+<li>Animações;</li>
+<li>Sons;</li>
+<li>Programação de inteligência artificial;</li>
+<li>Simulação de partículas.</li>
+</ul>
+<h2 id="5-tile-tileset-e-tilemap">5. Tile, Tileset e Tilemap</h2>
+<p style="text-indent: 50px;text-align: justify;"> Um tileset é a coleção de pequenas imagens ou texturas(tile) que representam diferentes partes do ambiente do jogo, como pisos, paredes, objetos, e assim por diante. Essas texturas são organizadas em uma única imagem, geralmente em uma grade, onde cada célula da grade é um "tile". Essa organização facilita o processo de design do jogo, pois permite que os desenvolvedores criem cenários complexos combinando esses tiles de forma modular. Então, um tileset fornece os elementos visuais necessários para construir os diferentes aspectos do mundo do jogo, enquanto o tilemap dita como esses elementos devem ser dispostos no espaço do jogo. </p>
+
+<h2 id="6-npc">6. NPC</h2>
+<p style="text-indent: 50px;text-align: justify;">Os NPCs(Non-Player Characters), ou personagens não jogáveis, são como os habitantes virtuais que povoam os mundos dos jogos. Eles são todos aqueles que não estão sob o domínio direto do jogador, desde os figurantes que vagueiam pelas ruas até os personagens com um propósito mais substancial na narrativa. Embora muitos desses personagens sigam rotinas pré-estabelecidas, alguns podem responder às ações do jogador de maneiras diversas. Por exemplo, podem se defender se atacados ou oferecer tarefas e informações que influenciam diretamente a experiência do jogo. </p>
+
+<h2 id="7-cena">7. Cena</h2>
+<p style="text-indent: 50px;text-align: justify;">As cenas são o local onde você trabalha com o conteúdo no Unity. Elas são ativos que contêm parte ou a totalidade de um jogo ou aplicação. Por exemplo, em um jogo simples, você pode construir tudo em uma única cena, enquanto que em um jogo mais complexo, pode ser necessário usar uma cena para cada nível, cada uma contendo seus próprios ambientes, personagens, obstáculos, decorações e interfaces. Você pode criar quantas cenas quiser em um projeto. Ao criar um novo projeto e abri-lo pela primeira vez, o Unity carrega uma cena de amostra contendo apenas uma Câmera e uma Luz.</p>
+
+<h2 id="8-game-object">8. Game Object</h2>
+<p style="text-indent: 50px;text-align: justify;"> A classe GameObject do Unity representa qualquer coisa que pode existir em uma Cena. GameObjects são os blocos de construção das cenas no Unity, funcionando como contêineres para componentes funcionais que determinam como o GameObject aparece e o que ele faz. Na programação, a classe GameObject oferece uma série de métodos que permitem trabalhar com esses objetos no código, como localizar, criar conexões, enviar mensagens entre GameObjects, adicionar ou remover componentes ligados ao GameObject e ajustar valores relacionados ao seu estado dentro da cena. </p>
+
+<h2 id="9-game-design">9. Game Design</h2>
+<p style="text-indent: 50px;text-align: justify;">Game design é o processo de criar a mecânica, estrutura e experiências interativas de um jogo. Envolve a definição das regras, objetivos, narrativa, personagens, níveis e interações do jogador com o ambiente. O game design combina elementos técnicos e criativos para proporcionar uma experiência divertida, desafiadora e envolvente ao jogador. O designer de jogos também pensa na progressão, nas recompensas e no equilíbrio entre dificuldade e jogabilidade, visando criar um jogo coeso e interessante.</p>
+
+<h2 id="10-level-design">10. Level Design</h2>
+<p style="text-indent: 50px;text-align: justify;">O level design é uma área do desenvolvimento de jogos que se concentra na criação dos ambientes onde o jogo ocorre, como fases, missões ou cenários. Esse processo envolve tanto aspectos técnicos quanto artísticos, pois é necessário construir esses ambientes digitais de forma que sejam funcionais e visualmente atraentes. O processo de criação de um nível começa com a fase conceitual, onde são feitos esboços e modelos físicos ou digitais do cenário. </p>
+<p style="text-indent: 50px;text-align: justify;">O level design é uma subárea do game design que se concentra especificamente na criação dos ambientes ou níveis dentro do jogo, onde os jogadores irão interagir e enfrentar os desafios propostos. Podemos dizer que o game design é o planejamento macro do jogo como um todo, enquanto level design lida com o planejamento e criação dos espaços específicos onde o jogo acontece.</p>
+
+<h2 id="referencias">Referências</h2>
+<ul>
+<li>
+<p>[1] <a href="https://blog.saibala.com.br/
+o-que-e-pixel-art-e-qual-e-a-sua-utilizacao-no-universo-dos-games/">O que é pixel art e qual é a sua utilização no mundo dos games?</a></p>
+</li>
+<li>
+<p>[2] <a href="https://www.alura.com.br/artigos/sprite-como-funciona-em-jogos-2d">O que é um sprite e como ele funciona em jogos 2D?</a></p>
+</li>
+<li>
+<p>[3] <a href="https://ebaconline.com.br/blog/o-que-e-um-desenvolvedor-unity-e-como-se-tornar-um">O que é um desenvolvedor Unity e como se tornar um?</a></p>
+</li>
+<li>
+<p>[4] <a href="https://www.domestika.org/pt/blog/6985-o-que-e-tileset-e-tilemap-no-desenvolvimento-de-games">O que é tileset e tilemap no desenvolvimento de games?</a></p>
+</li>
+<li>
+<p>[5] <a href="https://canaltech.com.br/games/o-que-e-npc/">O que é NPC?</a></p>
+</li>
+<li>
+<p>[6] <a href="https://docs.unity3d.com/Manual/CreatingScenes.html">Unity - Manual: Scenes</a></p>
+</li>
+<li>
+<p>[7] <a href="https://docs.unity3d.com/Manual/class-GameObject.html">Unity - Manual: Game Object</a></p>
+</li>
+<li>
+<p>[8] <a href="https://www.karagamedesign.com/post/what-is-game-design-guide">What is Game Design? Everything you need to know</a></p>
+</li>
+<li>
+<p>[9] <a href="https://www.techopedia.com/definition/88/level-design">Level design</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
