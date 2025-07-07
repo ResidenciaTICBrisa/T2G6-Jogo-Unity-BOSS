@@ -1,65 +1,245 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackScript : MonoBehaviour
+/// <summary>
+/// Handles attack collisions and damage dealing for both player and enemy attacks.
+/// Manages attack timing, knockback effects, and damage application to targets.
+/// </summary>
+public class AttackController : MonoBehaviour
 {
+    [Header("Attack Settings")]
+    [SerializeField] private float attackDuration = 1f;
+    [SerializeField] private float knockbackForce = 10000000f;
 
-    private float atkTimer = 0f;
-    public float atkDuration = 1f;
+    private float attackTimer = 0f;
     private bool isAttacking = false;
-    private void CheckTimer()
-    {
-        if (isAttacking == true)
-        {
-            atkTimer += Time.deltaTime;
-            if (atkTimer >= atkDuration)
-            {
-                atkTimer = 0;
-                isAttacking = false;
-            }
-        }
-    }
+
+    // Tags
+    private const string PLAYER_TAG = "Player";
+    private const string ENEMY_TAG = "Enemy";
+    private const string ROBOT_T2_NAME = "RobotT2";
+
     private void FixedUpdate()
     {
-        CheckTimer();
+        UpdateAttackTimer();
     }
-    public void OnTriggerEnter2D(Collider2D other)
+
+    #region Attack Timer Management
+
+    private void UpdateAttackTimer()
     {
-        Debug.Log(transform.parent.tag);
-        if (isAttacking) return;
-        if (other.CompareTag("Enemy") && transform.parent.tag == "Player")
+        if (!isAttacking)
+            return;
+
+        attackTimer += Time.deltaTime;
+        
+        if (attackTimer >= attackDuration)
         {
-            if(other.name == "RobotT2")
-            {
-                other.GetComponent<RedMovement>().ReceiveDamage();
-            } else
-            {
-                other.GetComponent<EnemyMovement>().ReceiveDamage();
-                Debug.Log("Ataquei o Robo");
-            }
-        } else if (other.CompareTag("Player") && transform.parent.tag == "Enemy")
-        {
-            other.GetComponent<MovePlayer>().ReceiveDamage();
-            Debug.Log("Ataquei o Player");
+            EndAttack();
         }
+    }
+
+    private void EndAttack()
+    {
+        attackTimer = 0f;
+        isAttacking = false;
+    }
+
+    #endregion
+
+    #region Collision Detection
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log($"Attack collision detected from: {GetAttackerTag()}");
+        
+        if (isAttacking)
+            return;
+
+        if (IsValidAttackTarget(other))
+        {
+            DealDamageToTarget(other);
+            StartAttack();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (IsEnemyTarget(other))
+        {
+            ApplyKnockbackToTarget(other);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (IsValidTarget(other))
+        {
+            StopTargetMovement(other);
+        }
+    }
+
+    #endregion
+
+    #region Attack Logic
+
+    private bool IsValidAttackTarget(Collider2D target)
+    {
+        string attackerTag = GetAttackerTag();
+        
+        return (IsPlayerAttackingEnemy(target, attackerTag) || 
+                IsEnemyAttackingPlayer(target, attackerTag));
+    }
+
+    private bool IsPlayerAttackingEnemy(Collider2D target, string attackerTag)
+    {
+        return target.CompareTag(ENEMY_TAG) && attackerTag == PLAYER_TAG;
+    }
+
+    private bool IsEnemyAttackingPlayer(Collider2D target, string attackerTag)
+    {
+        return target.CompareTag(PLAYER_TAG) && attackerTag == ENEMY_TAG;
+    }
+
+    private void DealDamageToTarget(Collider2D target)
+    {
+        string attackerTag = GetAttackerTag();
+        
+        if (IsPlayerAttackingEnemy(target, attackerTag))
+        {
+            DealDamageToEnemy(target);
+        }
+        else if (IsEnemyAttackingPlayer(target, attackerTag))
+        {
+            DealDamageToPlayer(target);
+        }
+    }
+
+    private void DealDamageToEnemy(Collider2D enemy)
+    {
+        if (IsSpecialRobot(enemy))
+        {
+            DealDamageToSpecialRobot(enemy);
+        }
+        else
+        {
+            DealDamageToRegularEnemy(enemy);
+        }
+    }
+
+    private bool IsSpecialRobot(Collider2D enemy)
+    {
+        return enemy.name == ROBOT_T2_NAME;
+    }
+
+    private void DealDamageToSpecialRobot(Collider2D robot)
+    {
+        var redMovement = robot.GetComponent<RedMovement>();
+        if (redMovement != null)
+        {
+            redMovement.ReceiveDamage();
+            Debug.Log("Damaged special robot");
+        }
+    }
+
+    private void DealDamageToRegularEnemy(Collider2D enemy)
+    {
+        var enemyController = enemy.GetComponent<EnemyController>();
+        if (enemyController != null)
+        {
+            enemyController.ReceiveDamage();
+            Debug.Log("Damaged regular enemy");
+        }
+    }
+
+    private void DealDamageToPlayer(Collider2D player)
+    {
+        var playerController = player.GetComponent<PlayerController>();
+        if (playerController != null)
+        {
+            playerController.ReceiveDamage();
+            Debug.Log("Damaged player");
+        }
+    }
+
+    private void StartAttack()
+    {
         isAttacking = true;
     }
 
-    public void OnTriggerStay2D(Collider2D other)
+    #endregion
+
+    #region Knockback System
+
+    private void ApplyKnockbackToTarget(Collider2D target)
     {
-        if (other.CompareTag("Enemy"))
+        var targetRigidbody = GetTargetRigidbody(target);
+        if (targetRigidbody == null)
+            return;
+
+        Vector3 knockbackDirection = CalculateKnockbackDirection(target);
+        ApplyKnockbackForce(targetRigidbody, knockbackDirection);
+        
+        Debug.Log($"Applied knockback: {targetRigidbody.velocity}");
+    }
+
+    private Vector3 CalculateKnockbackDirection(Collider2D target)
+    {
+        Vector3 attackerPosition = GetAttackerPosition();
+        Vector3 targetPosition = target.transform.position;
+        
+        return (targetPosition - attackerPosition).normalized;
+    }
+
+    private void ApplyKnockbackForce(Rigidbody2D targetRigidbody, Vector3 direction)
+    {
+        targetRigidbody.AddForce(direction * knockbackForce, ForceMode2D.Force);
+    }
+
+    #endregion
+
+    #region Utility Methods
+
+    private string GetAttackerTag()
+    {
+        return transform.parent?.tag ?? string.Empty;
+    }
+
+    private Vector3 GetAttackerPosition()
+    {
+        return transform.parent?.position ?? transform.position;
+    }
+
+    private bool IsEnemyTarget(Collider2D target)
+    {
+        return target.CompareTag(ENEMY_TAG);
+    }
+
+    private bool IsValidTarget(Collider2D target)
+    {
+        return target.CompareTag(ENEMY_TAG) || target.CompareTag(PLAYER_TAG);
+    }
+
+    private Rigidbody2D GetTargetRigidbody(Collider2D target)
+    {
+        return target.GetComponent<Rigidbody2D>();
+    }
+
+    private void StopTargetMovement(Collider2D target)
+    {
+        var targetRigidbody = GetTargetRigidbody(target);
+        if (targetRigidbody != null)
         {
-            Vector3 direction = (other.transform.position - transform.parent.transform.position).normalized;
-            other.transform.GetComponent<Rigidbody2D>().AddForce(direction * 10000000, ForceMode2D.Force);
-            Debug.Log(other.transform.GetComponent<Rigidbody2D>().velocity);
+            targetRigidbody.velocity = Vector2.zero;
         }
     }
 
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.CompareTag("Enemy") || other.CompareTag("Player"))
-        other.transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-    }
+    #endregion
+
+    #region Public Properties
+
+    public bool IsAttacking => isAttacking;
+    public float AttackDuration => attackDuration;
+    public float KnockbackForce => knockbackForce;
+
+    #endregion
 }

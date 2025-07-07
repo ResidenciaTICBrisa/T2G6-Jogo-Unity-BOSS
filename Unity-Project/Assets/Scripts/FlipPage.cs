@@ -71,7 +71,7 @@ public class FlipPage : MonoBehaviour
             Scene scene = SceneManager.GetSceneAt(i);
             if (scene.name == sceneNameToUnload)
             {
-                // Descarrega a cena de forma assíncrona
+                // Descarrega a cena de forma assï¿½ncrona
                 SceneManager.UnloadSceneAsync(sceneNameToUnload);
                 Debug.Log("Unloaded scene: " + sceneNameToUnload);
                 return;

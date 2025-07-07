@@ -1,138 +1,170 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>
+/// Old Man NPC that patrols between two points and stops to talk with the player.
+/// Inherits dialogue functionality from NPCScript and adds movement behavior.
+/// </summary>
 public class OldManScript : NPCScript
 {
-    // Point A and B are game objects that point out the path of the NPC
-    public GameObject pointA;
-    public GameObject pointB;
+    [Header("Movement")]
+    [SerializeField] private GameObject pointA;
+    [SerializeField] private GameObject pointB;
+    [SerializeField] private float speed = 2f;
+
+    [Header("Pause Settings")]
+    [SerializeField] private float pauseInterval = 8f;
+    [SerializeField] private float pauseDuration = 4f;
+
     private Rigidbody2D rb;
-    private Animator anim;
-    // Current Point refers to the point that the NPC is going to
-    private Transform currentPoint;
-    public float speed;
-    private float timePassed = 0f;
-    private bool stopEverything = false;
-    Vector2 backupSpeed;
-    // Start is called before the first frame update
-    void Start()
+    private Animator animator;
+    private Transform currentTargetPoint;
+    private float timeSinceLastPause = 0f;
+    private bool isMovementStopped = false;
+    private Vector2 velocityBeforePause;
+
+    private const float DESTINATION_THRESHOLD = 1f;
+    private const string WALKING_ANIMATION_PARAMETER = "isWalking";
+
+    protected virtual void Start()
+    {
+        InitializeComponents();
+        StartMovementToPoint(pointB.transform);
+    }
+
+    protected virtual void Update()
+    {
+        base.HandleDialogueInput();
+        
+        if (isMovementStopped)
+            return;
+
+        HandleMovement();
+        HandlePeriodicPause();
+    }
+
+    private void InitializeComponents()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        sound = GetComponent<AudioSource>();
-        // Start the movement by pointing to B
-        currentPoint = pointB.transform;
-        rb.velocity = new Vector2(speed, 0);
-        // Start the animation of walking
-        anim.SetBool("isWalking", true);
+        animator = GetComponent<Animator>();
+        
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void StartMovementToPoint(Transform targetPoint)
     {
-        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
-        {
-            isTalkable = false;
-            if (!dialoguePanel.activeInHierarchy)
-            {
-                if (sound)
-                {
-                    sound.Play();
-                }
-                dialoguePanel.SetActive(true);
-                nameText.text = nameOfNPC;
-                photoPanel.GetComponent<Image>().overrideSprite = photo;
-                StartCoroutine(Typing());
-            }
-            else if (dialogueText.text == dialogues[index])
-            {
-                NextLine();
-            }
+        currentTargetPoint = targetPoint;
+        SetMovementVelocity();
+        SetWalkingAnimation(true);
+    }
 
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+    private void HandleMovement()
+    {
+        if (HasReachedDestination())
         {
-            RemoveText();
-        }
-        if (stopEverything)
-        {
-            return;
-        }
-        // Get the current distance of the NPC to the point
-        float distance = transform.position.x - currentPoint.position.x;
-        // If distance less than zero, make it positive
-        if(distance < 0) distance = distance * -1;
-
-        // If the distance of the NPC to the point is less than one, go to the other point
-        if(distance < 1 && currentPoint == pointB.transform){
-            currentPoint = pointA.transform;
-            // Rotate the sprite of the NPC
-            transform.localRotation *= Quaternion.Euler(0, 180, 0);
-            rb.velocity = new Vector2(-speed, 0);
-        } else if(distance < 1 && currentPoint == pointA.transform){
-            currentPoint = pointB.transform;
-            transform.localRotation *= Quaternion.Euler(0, 180, 0);
-            rb.velocity = new Vector2(speed, 0);
-        }
-
-        // This part of the code makes the NPC stop walking for a breaf moment (every 8 seconds)
-        timePassed += Time.deltaTime;
-        if(timePassed > 8f)
-        {
-            timePassed = 0f;
-            StartCoroutine("Pause");
+            SwitchToOppositePoint();
         }
     }
 
-    IEnumerator Pause()
+    private bool HasReachedDestination()
     {
-        // Make the animation of walk stop
-        anim.SetBool("isWalking", false);
-        backupSpeed = rb.velocity;
-        rb.velocity = new Vector2(0, 0);
-        // Stop the code for 4 seconds
-        yield return new WaitForSeconds(4);
-        if (!stopEverything)
+        float distanceToTarget = Mathf.Abs(transform.position.x - currentTargetPoint.position.x);
+        return distanceToTarget < DESTINATION_THRESHOLD;
+    }
+
+    private void SwitchToOppositePoint()
+    {
+        if (currentTargetPoint == pointB.transform)
         {
-            anim.SetBool("isWalking", true);
-            rb.velocity = backupSpeed;
+            StartMovementToPoint(pointA.transform);
+        }
+        else
+        {
+            StartMovementToPoint(pointB.transform);
+        }
+        
+        FlipSprite();
+    }
+
+    private void FlipSprite()
+    {
+        transform.localRotation *= Quaternion.Euler(0, 180, 0);
+    }
+
+    private void SetMovementVelocity()
+    {
+        float direction = currentTargetPoint == pointB.transform ? 1f : -1f;
+        rb.velocity = new Vector2(speed * direction, 0);
+    }
+
+    private void HandlePeriodicPause()
+    {
+        timeSinceLastPause += Time.deltaTime;
+        
+        if (timeSinceLastPause >= pauseInterval)
+        {
+            timeSinceLastPause = 0f;
+            StartCoroutine(PauseMovement());
         }
     }
 
-    public new void OnTriggerEnter2D(Collider2D other)
+    private IEnumerator PauseMovement()
     {
-        if (other.CompareTag("Player"))
+        StopMovement();
+        yield return new WaitForSeconds(pauseDuration);
+        
+        if (!isMovementStopped)
         {
-            playerIsClose = true;
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            stopEverything = true;
-            anim.SetBool("isWalking", false);
-            backupSpeed = rb.velocity;
-            rb.velocity = new Vector2(0,0);
+            ResumeMovement();
         }
     }
 
-    public new void OnTriggerExit2D(Collider2D other)
+    private void StopMovement()
     {
-        if (other.CompareTag("Player"))
-        {
-            playerIsClose = false;
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            RemoveText();
-            stopEverything = false;
-            anim.SetBool("isWalking", true);
-            if(currentPoint == pointB.transform)
-            {
-                rb.velocity = new Vector2(speed, 0);
-            } else
-            {
-                rb.velocity = new Vector2(-speed, 0);
-            }
+        SetWalkingAnimation(false);
+        velocityBeforePause = rb.velocity;
+        rb.velocity = Vector2.zero;
+    }
 
-        }
+    private void ResumeMovement()
+    {
+        SetWalkingAnimation(true);
+        rb.velocity = velocityBeforePause;
+    }
+
+    private void SetWalkingAnimation(bool isWalking)
+    {
+        if (animator != null)
+            animator.SetBool(WALKING_ANIMATION_PARAMETER, isWalking);
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        base.OnTriggerEnter2D(other);
+        StopAllMovement();
+    }
+
+    protected override void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        base.OnTriggerExit2D(other);
+        ResumeAllMovement();
+    }
+
+    private void StopAllMovement()
+    {
+        isMovementStopped = true;
+        StopMovement();
+    }
+
+    private void ResumeAllMovement()
+    {
+        isMovementStopped = false;
+        SetWalkingAnimation(true);
+        SetMovementVelocity();
     }
 }

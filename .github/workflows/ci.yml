@@ -1,0 +1,48 @@
+name: Build project
+
+on: [push, pull_request]
+
+jobs:
+  buildForAllSupportedPlatforms:
+    name: Build for ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows64 # Build para Windows 64‑bit
+          - Android # Build para Android (.apk)
+    steps:
+    
+        # 1) Faz checkout do código
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+        
+        # 2) Usa cache para acelerar builds subsequentes
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+
+        # 3) (Condicional) Para Android, libera espaço em disco antes do build
+      - if: matrix.targetPlatform == 'Android'
+        uses: jlumbroso/free-disk-space@v1.3.1
+
+        # 4) Executa o build Unity via action oficial game-ci
+      - uses: game-ci/unity-builder@v4
+        with:
+          projectPath: 'Unity-Project'
+          targetPlatform: ${{ matrix.targetPlatform }}
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+
+        # 5) Faz upload do artefato gerado (o build) para ser baixado depois
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}

@@ -31499,15 +31499,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156408338238638416, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LetsTalk
+      value: TriggerDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3156408338238638416, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LetsTalk
+      value: TriggerDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3156408338238638416, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: LetsTalk
+      value: TriggerDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3156408338238638416, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -32120,7 +32120,7 @@ Transform:
   m_GameObject: {fileID: 1428191945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7788515, y: 1.4918699, z: -10}
+  m_LocalPosition: {x: 1.6976185, y: 1.4916701, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32442,17 +32442,20 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1444496213}
   dialogueText: {fileID: 1444496212}
   nameText: {fileID: 1444496211}
+  photoPanel: {fileID: 1444496209}
   dialogues:
   - "Ol\xE1, jovem. O que traz uma mo\xE7a como voc\xEA t\xE3o longe da cidade?"
   - "Este bosque \xE9 perigoso. Rob\xF4s guardam o caminho. Volte antes que seja
     tarde."
   - "N\xE3o h\xE1 nada al\xE9m daqui, apenas antigas lendas e perigos ocultos."
-  nameOfNPC: Sra. Elaine
+  npcName: Sra. Elaine
   photo: {fileID: 21300000, guid: 535b382b2b0d3884389014593d03e802, type: 3}
-  photoPanel: {fileID: 1444496209}
-  sound: {fileID: 0}
+  audioSource: {fileID: 0}
   wordSpeed: 0.04
+  dialogueIndex: 0
   playerIsClose: 0
+  isTalkable: 0
+  skipTalk: 0
 --- !u!224 &1465574468 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 705540525238529620, guid: 17d24f8d708f67b4fa7d0e5b4c365df9, type: 3}
@@ -32897,17 +32900,20 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1444496213}
   dialogueText: {fileID: 1444496212}
   nameText: {fileID: 1444496211}
+  photoPanel: {fileID: 1444496209}
   dialogues:
   - "Bem-vinda ao Fliperama Carol Shaw, o lugar onde os sonhos e as mem\xF3rias se
     encontram. "
   - "H\xE1 muito tempo, este era um santu\xE1rio para quem buscava desafios e divers\xE3o."
   - Mas o tempo foi cruel, e poucos se atrevem a cruzar suas portas agora.
-  nameOfNPC: "Sra. Vit\xF3ria"
+  npcName: Sra. Vitoria
   photo: {fileID: 21300000, guid: 2ffcc6ea9d5b8909596f12fd11fd9de5, type: 3}
-  photoPanel: {fileID: 1444496209}
-  sound: {fileID: 0}
+  audioSource: {fileID: 0}
   wordSpeed: 0.04
+  dialogueIndex: 0
   playerIsClose: 0
+  isTalkable: 0
+  skipTalk: 0
 --- !u!1001 &1711287169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33136,7 +33142,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1465574460}
         m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
-        m_MethodName: SkipTalk
+        m_MethodName: SkipCurrentDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33148,7 +33154,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2039516167}
         m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
-        m_MethodName: SkipTalk
+        m_MethodName: SkipCurrentDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33160,7 +33166,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1674111224}
         m_TargetAssemblyTypeName: NPCScript, Assembly-CSharp
-        m_MethodName: SkipTalk
+        m_MethodName: SkipCurrentDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45724,18 +45730,21 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1444496213}
   dialogueText: {fileID: 1444496212}
   nameText: {fileID: 1444496211}
+  photoPanel: {fileID: 1444496209}
   dialogues:
   - "Oi! Voc\xEA t\xE1 indo em dire\xE7\xE3o ao fliperama, n\xE9? Eu j\xE1 ouvi falar
     dele. Dizem que \xE9 um lugar m\xE1gico,"
   - Cheio de jogos antigos e coisas misteriosas. Mas...
   - "Tamb\xE9m ouvi que quem tenta chegar l\xE1 nunca volta. Minha m\xE3e sempre
     me avisa para n\xE3o ir muito longe."
-  nameOfNPC: Julinha
+  npcName: Julinha
   photo: {fileID: 21300000, guid: 5d6e3dd0fe7037f4ab95d86d83a5f4e1, type: 3}
-  photoPanel: {fileID: 1444496209}
-  sound: {fileID: 0}
+  audioSource: {fileID: 0}
   wordSpeed: 0.04
+  dialogueIndex: 0
   playerIsClose: 0
+  isTalkable: 0
+  skipTalk: 0
 --- !u!1001 &2091442729
 PrefabInstance:
   m_ObjectHideFlags: 0

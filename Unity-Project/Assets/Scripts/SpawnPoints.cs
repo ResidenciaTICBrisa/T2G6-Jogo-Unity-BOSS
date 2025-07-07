@@ -81,7 +81,7 @@ public class SpawnPoints : MonoBehaviour
         SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
-    // Método chamado quando uma nova cena é carregada
+    // Mï¿½todo chamado quando uma nova cena ï¿½ carregada
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         buttonsCanvas = GameObject.FindGameObjectWithTag("ButtonCanvas");

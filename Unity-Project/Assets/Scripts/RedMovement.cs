@@ -45,7 +45,7 @@ public class RedMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (hp == 0) Destroy(gameObject, 2);
-        if (player.GetComponent<MovePlayer>().hp == 0 || hp == 0) return;
+        if (player.GetComponent<PlayerController>().currentHealth == 0 || hp == 0) return;
         UpdateTargetDirection();
         CheckTimer();
         if (isAttacking == true) return;

@@ -1,133 +1,164 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class NPCScript : MonoBehaviour
 {
-    public GameObject dialoguePanel;
-    public Text dialogueText;
-    public Text nameText;
-    public string[] dialogues;
-    public string nameOfNPC;
-    public Sprite photo;
-    public GameObject photoPanel;
-    public AudioSource sound;
-    protected int index = 0;
+    [Header("Dialogue UI")]
+    [SerializeField] public GameObject dialoguePanel;
+    [SerializeField] public Text dialogueText;
+    [SerializeField] public Text nameText;
+    [SerializeField] public GameObject photoPanel;
 
-    public float wordSpeed;
-    public bool playerIsClose;
-    protected bool isTalkable;
-    protected bool skipTalk;
-    protected bool lastLine = false;
+    [Header("NPC Data")]
+    [SerializeField] public string[] dialogues;
+    [SerializeField] public string npcName;
+    [SerializeField] public Sprite photo;
 
-    // Start is called before the first frame update
-    void Start()
+    [Header("Audio")]
+    [SerializeField] public AudioSource audioSource;
+
+    [Header("Settings")]
+    [SerializeField] public float wordSpeed = 0.05f;
+
+    public int dialogueIndex = 0;
+    public bool playerIsClose = false;
+    public bool isTalkable = false;
+    public bool skipTalk = false;
+
+    private void Awake()
     {
-        dialogueText.text = "";
-        sound = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        dialogueText.text = string.Empty;
+    }
+
+    private void Update()
+    {
+        HandleDialogueInput();
+    }
+
+    protected virtual void HandleDialogueInput()
     {
         if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
         {
             isTalkable = false;
             if (!dialoguePanel.activeInHierarchy)
             {
-                if (sound)
-                {
-                    sound.Play();
-                }
-                dialoguePanel.SetActive(true);
-                nameText.text = nameOfNPC;
-                photoPanel.GetComponent<Image>().overrideSprite = photo;
-                StartCoroutine(Typing());
+                PlayAudio();
+                ShowDialoguePanel();
+                StartCoroutine(TypeDialogue());
             }
-            else if (dialogueText.text == dialogues[index])
+            else if (IsCurrentDialogueFullyDisplayed())
             {
-                NextLine();
+                ShowNextDialogueLine();
             }
-
         }
+
         if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
         {
-            RemoveText();
+            CloseDialogue();
         }
     }
 
-    public void RemoveText()
+    private void PlayAudio()
     {
-        dialogueText.text = "";
-        index = 0;
-        dialoguePanel.SetActive(false);
+        if (audioSource != null)
+            audioSource.Play();
     }
 
-    protected IEnumerator Typing()
+    private void ShowDialoguePanel()
     {
-        int count = 0;
-        foreach(char letter in dialogues[index].ToCharArray())
+        dialoguePanel.SetActive(true);
+        nameText.text = npcName;
+        if (photoPanel != null)
         {
-            if(skipTalk && count > 1)
+            var image = photoPanel.GetComponent<Image>();
+            if (image != null)
+                image.overrideSprite = photo;
+        }
+    }
+
+    private bool IsCurrentDialogueFullyDisplayed()
+    {
+        return dialogueText.text == dialogues[dialogueIndex];
+    }
+
+    private IEnumerator TypeDialogue()
+    {
+        dialogueText.text = string.Empty;
+        foreach (char letter in dialogues[dialogueIndex])
+        {
+            if (skipTalk)
             {
                 skipTalk = false;
-                dialogueText.text = dialogues[index];
+                dialogueText.text = dialogues[dialogueIndex];
                 break;
             }
-            skipTalk = false;
             dialogueText.text += letter;
-            count++;
             yield return new WaitForSeconds(wordSpeed);
         }
     }
 
-    public void NextLine()
+    private void ShowNextDialogueLine()
     {
-        if(index < dialogues.Length - 1)
+        if (dialogueIndex < dialogues.Length - 1)
         {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
-        } else
+            dialogueIndex++;
+            StartCoroutine(TypeDialogue());
+        }
+        else
         {
-            RemoveText();
+            CloseDialogue();
         }
     }
 
-    public void SkipTalk()
+    private void CloseDialogue()
+    {
+        dialogueText.text = string.Empty;
+        dialogueIndex = 0;
+        dialoguePanel.SetActive(false);
+    }
+
+    public void SkipCurrentDialogue()
     {
         if (!skipTalk)
-        {
             skipTalk = true;
-        }
-        if (dialogueText.text == dialogues[index])
-        {
-            NextLine();
-        }
-    }
-    public void LetsTalk()
-    {
-        if(playerIsClose) isTalkable = true;
+
+        if (IsCurrentDialogueFullyDisplayed())
+            ShowNextDialogueLine();
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void TriggerDialogue()
     {
-        if(other.CompareTag("Player"))
-        {
-            playerIsClose = true;
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        }
+        if (playerIsClose)
+            isTalkable = true;
     }
 
-    public void OnTriggerExit2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerIsClose = false;
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            RemoveText();
-        }
+        if (!other.CompareTag("Player")) return;
+
+        playerIsClose = true;
+        SetIndicatorActive(true);
+    }
+
+    protected virtual void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        playerIsClose = false;
+        SetIndicatorActive(false);
+        CloseDialogue();
+    }
+
+    private void SetIndicatorActive(bool isActive)
+    {
+        if (transform.childCount > 0)
+            transform.GetChild(0).gameObject.SetActive(isActive);
     }
 }

@@ -106,7 +106,7 @@ MonoBehaviour:
   playerSpeed: 5
   atkDuration: 0.5
   atkButton: {fileID: 0}
-  talkPanel: {fileID: 0}
+  dialoguePanel: {fileID: 4598906017910182293, guid: 436ab4b4298d7e7ff94fb5c1f00f6274, type: 3}
   hp: 100
   animatorLife: {fileID: 0}
 --- !u!95 &3290884205052919017

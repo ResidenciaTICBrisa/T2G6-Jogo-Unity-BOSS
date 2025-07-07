@@ -307,7 +307,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 823395567
-  m_SortingLayer: 9
+  m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: -1907510948, guid: c048acb736fdf9a49b3c207e25ba9a00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -863,7 +863,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1842671187
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1672,7 +1672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4201638480485992765, guid: 436ab4b4298d7e7ff94fb5c1f00f6274, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SkipTalk
+      value: SkipCurrentDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 4201638480485992765, guid: 436ab4b4298d7e7ff94fb5c1f00f6274, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1942,18 +1942,21 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1858301391}
   dialogueText: {fileID: 536382081}
   nameText: {fileID: 1382282105}
+  photoPanel: {fileID: 1958362512}
   dialogues:
   - "Ol\xE1, Sofia! Espero que esteja bem!"
   - "Da \xFAltima vez que esteve aqui, esqueceu seu di\xE1rio! Deixei ele separado
     no balc\xE3o para voc\xEA."
   - "N\xE3o esque\xE7a de falar com meu filho Cesinha quando ver ele! Est\xE1 na
     cidade de Ogama te esperando."
-  nameOfNPC: Sergio
+  npcName: Sergio
   photo: {fileID: 21300000, guid: dc31094251d0e0e43a713e7e8ca51e67, type: 3}
-  photoPanel: {fileID: 1958362512}
-  sound: {fileID: 0}
+  audioSource: {fileID: 0}
   wordSpeed: 0.04
+  dialogueIndex: 0
   playerIsClose: 0
+  isTalkable: 0
+  skipTalk: 0
 --- !u!61 &774743746
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2502,7 +2505,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2099591865
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -3035,7 +3038,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 383826649
-  m_SortingLayer: 8
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7323,7 +7326,7 @@ Transform:
   m_GameObject: {fileID: 1527145355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.552093, y: -7.553996, z: -10}
+  m_LocalPosition: {x: -8.552091, y: -7.552865, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9236,7 +9239,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -282637137
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -11072,7 +11075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156408338238638416, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LetsTalk
+      value: TriggerDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 3156408338238638416, guid: 0e29e512070b9114490cf8f37a9ff37e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

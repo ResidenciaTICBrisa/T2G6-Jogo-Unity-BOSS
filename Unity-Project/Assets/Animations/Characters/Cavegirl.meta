@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Unity-Project/Assets/Animations/Characters/Cavegirl.meta
 guid: 29ec2701efd68118a9855eadffccf31b
+========
+guid: 40c3353432bc9474c89a22e78aca8698
+>>>>>>>> 3aa524b8 (feat #47 : Adicao do robo ao citymap):Unity-Project/Assets/Sprites/FX.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

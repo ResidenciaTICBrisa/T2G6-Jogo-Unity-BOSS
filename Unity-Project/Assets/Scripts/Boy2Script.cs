@@ -1,130 +1,176 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>
+/// Boy NPC that randomly patrols within defined boundaries.
+/// Inherits dialogue functionality from NPCScript and adds random movement behavior.
+/// </summary>
 public class Boy2Script : NPCScript
 {
-
+    [Header("Movement")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float speed;
-    [SerializeField] private float leftPatrolX, rightPatrolX, upPatrolY, bottomPatrolY;
+    [SerializeField] private float speed = 2f;
     [SerializeField] private int facingDirection = 1;
-    [SerializeField] private float minPauseTime, maxPauseTime;
-    [SerializeField] private float minWalkTime, maxWalkTime;
-    [SerializeField] private Animator anim;
 
-    private float randomTime, timer;
+    [Header("Patrol Boundaries")]
+    [SerializeField] private float leftPatrolX;
+    [SerializeField] private float rightPatrolX;
+    [SerializeField] private float upPatrolY;
+    [SerializeField] private float bottomPatrolY;
+
+    [Header("Timing")]
+    [SerializeField] private float minPauseTime = 1f;
+    [SerializeField] private float maxPauseTime = 3f;
+    [SerializeField] private float minWalkTime = 2f;
+    [SerializeField] private float maxWalkTime = 5f;
+
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+
+    private float currentStateTimer;
+    private float targetStateTime;
     private bool isFlipping;
     private bool isWalking = true;
-    private bool isWalkingUp;
-    private bool isWalkingDown;
-    private bool isWalkingLeft;
-    private bool isWalkingRight;
 
-    // Start is called before the first frame update
-    void Start()
+    private const float FLIP_DURATION = 0.5f;
+    private const string WALKING_LEFT_ANIMATION_PARAMETER = "isWalkingLeft";
+
+    protected virtual void Start()
     {
-        dialogueText.text = "";
-        sound = GetComponent<AudioSource>();
-        randomTime = Random.Range(minWalkTime, maxWalkTime);
-        anim.SetBool("isWalkingLeft", isWalking ? true : false);
+        InitializeComponents();
+        InitializeMovementState();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.E) || isTalkable) && playerIsClose)
-        {
-            isTalkable = false;
-            if (!dialoguePanel.activeInHierarchy)
-            {
-                if (sound)
-                {
-                    sound.Play();
-                }
-                dialoguePanel.SetActive(true);
-                nameText.text = nameOfNPC;
-                photoPanel.GetComponent<Image>().overrideSprite = photo;
-                StartCoroutine(Typing());
-            }
-            else if (dialogueText.text == dialogues[index])
-            {
-                NextLine();
-            }
+        base.HandleDialogueInput();
 
-        }
-        if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy)
+        if (playerIsClose)
         {
-            RemoveText();
-        }
-
-        if(playerIsClose)
-        {
-            rb.velocity = new Vector2(0, 0);
-            isWalking = false;
-            anim.SetBool("isWalkingLeft", isWalking ? true : false);
+            HandlePlayerInteraction();
             return;
         }
 
-        timer += Time.deltaTime;
+        UpdateMovementTimer();
+        HandlePatrolBoundaries();
+        ApplyMovement();
+    }
 
-        if(timer >= randomTime)
-        {
-            StateChange();
-        }
+    private void InitializeComponents()
+    {
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+            
+        dialogueText.text = string.Empty;
+    }
 
-        if(!isFlipping && (transform.position.x > rightPatrolX || transform.position.x < leftPatrolX))
-        {
-            StartCoroutine(FlipX());
-        }
-        if((transform.position.y > upPatrolY || transform.position.y < bottomPatrolY))
-        {
-            //FlipY();
-        }
+    private void InitializeMovementState()
+    {
+        SetRandomStateTime();
+        SetWalkingAnimation(isWalking);
+    }
 
+    private void HandlePlayerInteraction()
+    {
+        StopMovement();
+        SetWalkingAnimation(false);
+    }
+
+    private void UpdateMovementTimer()
+    {
+        currentStateTimer += Time.deltaTime;
+
+        if (currentStateTimer >= targetStateTime)
+        {
+            ToggleMovementState();
+        }
+    }
+
+    private void HandlePatrolBoundaries()
+    {
+        if (ShouldFlipHorizontally() && !isFlipping)
+        {
+            StartCoroutine(FlipHorizontally());
+        }
+    }
+
+    private bool ShouldFlipHorizontally()
+    {
+        return transform.position.x > rightPatrolX || transform.position.x < leftPatrolX;
+    }
+
+    private void ApplyMovement()
+    {
         if (isWalking)
         {
             rb.velocity = Vector2.right * facingDirection * speed;
         }
     }
 
-    IEnumerator FlipX()
+    private IEnumerator FlipHorizontally()
     {
         isFlipping = true;
-        transform.Rotate(0,180,0);
+        transform.Rotate(0, 180, 0);
         facingDirection *= -1;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(FLIP_DURATION);
         isFlipping = false;
     }
 
-    void FlipY()
-    {
-        transform.Rotate(180,0,0);
-    }
-
-    void StateChange()
+    private void ToggleMovementState()
     {
         isWalking = !isWalking;
-        anim.SetBool("isWalkingLeft", isWalking ? true : false);
-        if (!isWalking) { rb.velocity = new Vector2(0, 0); }
-        else { rb.velocity = Vector2.right * facingDirection * speed; }
-        randomTime = isWalking ? Random.Range(minWalkTime, maxWalkTime) : Random.Range(minPauseTime, maxPauseTime);
-        timer = 0;
+        SetWalkingAnimation(isWalking);
+        
+        if (!isWalking)
+        {
+            StopMovement();
+        }
+        else
+        {
+            StartMovement();
+        }
+        
+        SetRandomStateTime();
+        ResetTimer();
     }
 
-    public new void OnTriggerExit2D(Collider2D other)
+    private void SetWalkingAnimation(bool walking)
     {
-        if (other.CompareTag("Player"))
+        if (animator != null)
+            animator.SetBool(WALKING_LEFT_ANIMATION_PARAMETER, walking);
+    }
+
+    private void StopMovement()
+    {
+        rb.velocity = Vector2.zero;
+    }
+
+    private void StartMovement()
+    {
+        rb.velocity = Vector2.right * facingDirection * speed;
+    }
+
+    private void SetRandomStateTime()
+    {
+        targetStateTime = isWalking 
+            ? Random.Range(minWalkTime, maxWalkTime) 
+            : Random.Range(minPauseTime, maxPauseTime);
+    }
+
+    private void ResetTimer()
+    {
+        currentStateTimer = 0f;
+    }
+
+    protected override void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        base.OnTriggerExit2D(other);
+        
+        if (!isWalking)
         {
-            playerIsClose = false;
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            RemoveText();
-            if (isWalking)
-            {
-                StateChange();
-            }
+            ToggleMovementState();
         }
     }
 }

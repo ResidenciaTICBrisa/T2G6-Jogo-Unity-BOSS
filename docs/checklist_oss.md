@@ -1,0 +1,36 @@
+## Checklist para o projeto se tornar um software livre.
+
+- [x] Usar Git Flow para estratégias de branchs;
+- [x] Fazer um versionamento;
+- [x] Releases com Notes claras;
+- [x] Build automatizado;
+- [ ] Testes automatizados (unitários/integrados);
+- [ ] Testes end-to-end automatizados (se aplicável);
+- [ ] Monitoramento de qualidade com badges (ex: Codecov, SonarCloud);
+- [ ] Linter (ex: ESLint, Flake8, etc.);
+- [ ] Validação de segurança e dependências (ex: Dependabot, Snyk);
+- [ ] Arquivos de configuração de ambiente: Dockerfile, docker-compose.yml, .env.example;
+- [x] Visão geral do projeto (com prints de como funciona o projeto);
+- [x] Tecnologias utilizadas;
+- [x] Como rodar localmente (instalação + execução);
+- [x] CONTRIBUTING.md - Como contribuir (passo a passo);
+- [x] Como usar a aplicação (guia de usuário);
+- [x] CODE_OF_CONDUCT.md com boas práticas de convivência;
+- [x] CHANGELOG.md com histórico de alterações;
+- [x] Landing page;
+- [x] Arquitetura da solução;
+- [x] Roadmap e backlog público;
+- [ ] Dicionário de dados (se aplicável);
+- [x] Sistema de governança (ex: mantenedores, comitês, votação);
+- [x] Templates para issues e pull requests;
+- [x] Etiquetas (labels) para organizar issues (ex: good first issue, bug, enhancement);
+- [ ] Agendas públicas de reuniões (caso ocorram);
+- [x] LICENSE com licença de software livre (ex: MIT, GPL, Apache 2.0);
+- [ ] Verificação de licenças das dependências utilizadas;
+- [ ] Ferramentas de análise estática de código;
+- [x] Planejamento de onboarding de novos contribuidores (documentação de onboarding);
+- [x] Deploy automatizado (CI/CD) para ambiente de homologação/produção (opcional);
+- [ ] Infraestrutura como código (IaC) para ambientes cloud (ex: Terraform, Ansible) (opcional);
+- [ ] Observabilidade básica: logs, métricas e alertas (ex: Prometheus, Grafana, Sentry) (opcional).
+- [x] Indicar no README.md que o projeto é um software livre (uso, modificação e redistribuição permitidos);
+- [x] Tornar o repositório público (ex: GitHub, GitLab, etc.).
